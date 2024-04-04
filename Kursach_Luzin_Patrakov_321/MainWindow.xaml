@@ -8,36 +8,52 @@
         WindowStartupLocation="CenterScreen"
         Title="MainWindow" Height="922.071" Width="1275.749">
     <Grid>
-        <StackPanel Margin="0,105,0,433" Orientation="Horizontal">
-            <Label HorizontalAlignment="Left" Height="310" VerticalAlignment="Top" Width="190" Margin="100,10,0,0" Background="#FFDEDEDE">
-                <Label.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="20"/>
-                    </Style>
-                </Label.Resources>
-            </Label>
-            <Label HorizontalAlignment="Left" Height="310" VerticalAlignment="Top" Width="190" Margin="100,10,0,0" Background="#FFDEDEDE">
-                <Label.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="20"/>
-                    </Style>
-                </Label.Resources>
-            </Label>
-            <Label HorizontalAlignment="Left" Height="310" VerticalAlignment="Top" Width="190" Margin="100,10,0,0" Background="#FFDEDEDE" >
-                <Label.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="20"/>
-                    </Style>
-                </Label.Resources>
-            </Label>
-            <Label HorizontalAlignment="Left" Height="310" VerticalAlignment="Top" Width="190" Margin="100,10,0,0" Background="#FFDEDEDE">
-                <Label.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="20"/>
-                    </Style>
-                </Label.Resources>
-            </Label>
+        <Label HorizontalAlignment="Left" Height="310" VerticalAlignment="Top" Width="190" Margin="122,105,0,0" Background="#FFDEDEDE" >
+            <Label.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="20"/>
+                </Style>
+            </Label.Resources>
+        </Label>
 
+        <Label HorizontalAlignment="Left" Height="310" VerticalAlignment="Top" Width="190" Margin="930,105,0,0" Background="#FFDEDEDE">
+            <Label.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="20"/>
+                </Style>
+            </Label.Resources>
+        </Label>
+        <Label HorizontalAlignment="Left" Height="226" VerticalAlignment="Top" Width="190" Background="#FF727272" Margin="122,105,0,0" >
+            <Label.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="20"/>
+                </Style>
+            </Label.Resources>
+        </Label>
+        <Label HorizontalAlignment="Left" Height="310" VerticalAlignment="Top" Width="190" Margin="658,105,0,0" Background="#FFDEDEDE">
+            <Label.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="20"/>
+                </Style>
+            </Label.Resources>
+        </Label>
+        <Label HorizontalAlignment="Left" Height="310" VerticalAlignment="Top" Width="190" Margin="382,105,0,0" Background="#FFDEDEDE">
+            <Label.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="20"/>
+                </Style>
+            </Label.Resources>
+        </Label>
+
+        <StackPanel Margin="0,0,0,791" Orientation="Horizontal">
+            <Button HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="110" Margin="30,10,0,0" BorderBrush="{x:Null}" Foreground="{x:Null}">
+                <Button.Background>
+                    <ImageBrush ImageSource="file.png"/>
+                </Button.Background>
+            </Button>
+            <Button HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="190" Margin="10,10,0,0" Background="#FFDEDEDE"/>
+            <Button HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="190" Margin="10,10,0,0" Background="#FFDEDEDE"/>
+            <Button HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="190" Margin="10,10,0,0" Background="#FFDEDEDE"/>
         </StackPanel>
 
         <Label Content="Label" HorizontalAlignment="Left" Margin="880,463,0,0" VerticalAlignment="Top" Height="380" Width="282" BorderBrush="Black" Background="#FFDEDEDE">
@@ -47,7 +63,9 @@
                 </Style>
             </Label.Resources>
         </Label>
-        <StackPanel HorizontalAlignment="Left" Height="105" VerticalAlignment="Top" Width="1268" Background="#FFECECEC"/>
+
+
+
         <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="123" Margin="122,736,0,0" Height="34">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
@@ -57,5 +75,26 @@
         </Button>
         <Label Content="ESCAPE FROM NANBA" HorizontalAlignment="Left" Margin="92,463,0,0" VerticalAlignment="Top" Height="60" Width="386" FontSize="36"/>
         <Label Content="Anime fest" HorizontalAlignment="Left" Margin="92,523,0,0" VerticalAlignment="Top" Height="60" Width="386" FontSize="22"/>
+        <Label HorizontalAlignment="Left" Height="226" VerticalAlignment="Top" Width="190" Background="#FF727272" Margin="382,105,0,0" >
+            <Label.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="20"/>
+                </Style>
+            </Label.Resources>
+        </Label>
+        <Label HorizontalAlignment="Left" Height="226" VerticalAlignment="Top" Width="190" Background="#FF727272" Margin="658,105,0,0" >
+            <Label.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="20"/>
+                </Style>
+            </Label.Resources>
+        </Label>
+        <Label HorizontalAlignment="Left" Height="226" VerticalAlignment="Top" Width="190" Background="#FF727272" Margin="930,105,0,0" >
+            <Label.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="20"/>
+                </Style>
+            </Label.Resources>
+        </Label>
     </Grid>
 </Window>

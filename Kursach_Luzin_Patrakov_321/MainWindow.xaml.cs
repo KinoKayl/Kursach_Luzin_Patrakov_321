@@ -24,5 +24,10 @@ namespace Kursach_Luzin_Patrakov_321
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
