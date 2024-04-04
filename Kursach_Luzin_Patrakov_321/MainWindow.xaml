@@ -23,12 +23,15 @@
                 </Style>
             </Label.Resources>
         </Label>
-        <Label HorizontalAlignment="Left" Height="226" VerticalAlignment="Top" Width="190" Background="#FF727272" Margin="122,105,0,0" >
+        <Label HorizontalAlignment="Left" Height="226" VerticalAlignment="Top" Width="190" Margin="122,105,0,0" ToolTip="Берсеневская наб., 6, стр. 3">
             <Label.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="20"/>
                 </Style>
             </Label.Resources>
+            <Label.Background>
+                <ImageBrush ImageSource="красный октябрь.png"/>
+            </Label.Background>
         </Label>
         <Label HorizontalAlignment="Left" Height="310" VerticalAlignment="Top" Width="190" Margin="658,105,0,0" Background="#FFDEDEDE">
             <Label.Resources>
@@ -75,19 +78,26 @@
         </Button>
         <Label Content="ESCAPE FROM NANBA" HorizontalAlignment="Left" Margin="92,463,0,0" VerticalAlignment="Top" Height="60" Width="386" FontSize="36"/>
         <Label Content="Anime fest" HorizontalAlignment="Left" Margin="92,523,0,0" VerticalAlignment="Top" Height="60" Width="386" FontSize="22"/>
-        <Label HorizontalAlignment="Left" Height="226" VerticalAlignment="Top" Width="190" Background="#FF727272" Margin="382,105,0,0" >
+
+        <Label HorizontalAlignment="Left" Height="226" VerticalAlignment="Top" Width="190" Margin="382,105,0,0" ToolTip="Энергетический проезд, 3с1, Москва">
             <Label.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="20"/>
                 </Style>
             </Label.Resources>
+            <Label.Background>
+                <ImageBrush ImageSource="ubr jy.png"/>
+            </Label.Background>
         </Label>
-        <Label HorizontalAlignment="Left" Height="226" VerticalAlignment="Top" Width="190" Background="#FF727272" Margin="658,105,0,0" >
+        <Label HorizontalAlignment="Left" Height="226" VerticalAlignment="Top" Width="190" Margin="658,105,0,0" ToolTip="Спартаковская пл., 16/15 строение 5">
             <Label.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="20"/>
                 </Style>
             </Label.Resources>
+            <Label.Background>
+                <ImageBrush ImageSource="COFFE.png"/>
+            </Label.Background>
         </Label>
         <Label HorizontalAlignment="Left" Height="226" VerticalAlignment="Top" Width="190" Background="#FF727272" Margin="930,105,0,0" >
             <Label.Resources>
