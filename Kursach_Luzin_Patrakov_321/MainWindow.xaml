@@ -57,7 +57,7 @@
                     <ImageBrush ImageSource="file.png"/>
                 </Button.Background>
             </Button>
-            <Button Content="INFO" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="190" Margin="10,10,0,0" Background="{x:Null}" FontSize="22" BorderBrush="{x:Null}" Click="Button_Click_2"/>
+            <Button Content="INFO" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="190" Margin="10,10,0,0" Background="{x:Null}" FontSize="22" BorderBrush="{x:Null}"/>
             <Button Content="IVENTS" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="190" Margin="10,10,0,0" Background="{x:Null}" FontSize="22" BorderBrush="{x:Null}"/>
             <Button Content="ABOUT US" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="190" Margin="10,10,0,0" Background="{x:Null}" FontSize="22" BorderBrush="{x:Null}"/>
         </StackPanel>
@@ -72,7 +72,7 @@
 
 
 
-        <Button x:Name="BuyButton" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="123" Margin="122,736,0,0" Height="34">
+        <Button x:Name="BuyButton" Content="Купить билет" HorizontalAlignment="Left" VerticalAlignment="Top" Width="123" Margin="122,736,0,0" Height="34" Click="BuyButton_Click" FontSize="18">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="5"/>

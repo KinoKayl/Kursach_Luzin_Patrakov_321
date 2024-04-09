@@ -55,19 +55,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="AboutUsPage.xaml">
+    <Page Include="AboutUsWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="BuyPage.xaml">
+    <Page Include="BuyWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="InfoPage.xaml">
+    <Page Include="InfoWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="IventsPage.xaml">
+    <Page Include="IventsWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -75,21 +75,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="AboutUsPage.xaml.cs">
-      <DependentUpon>AboutUsPage.xaml</DependentUpon>
+    <Compile Include="AboutUsWindow.xaml.cs">
+      <DependentUpon>AboutUsWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BuyPage.xaml.cs">
-      <DependentUpon>BuyPage.xaml</DependentUpon>
+    <Compile Include="BuyWindow.xaml.cs">
+      <DependentUpon>BuyWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="InfoPage.xaml.cs">
-      <DependentUpon>InfoPage.xaml</DependentUpon>
+    <Compile Include="InfoWindow.xaml.cs">
+      <DependentUpon>InfoWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="IventsPage.xaml.cs">
-      <DependentUpon>IventsPage.xaml</DependentUpon>
+    <Compile Include="IventsWindow.xaml.cs">
+      <DependentUpon>IventsWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

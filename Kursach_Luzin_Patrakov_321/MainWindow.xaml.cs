@@ -25,19 +25,11 @@ namespace Kursach_Luzin_Patrakov_321
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+
+        private void BuyButton_Click(object sender, RoutedEventArgs e)
         {
-
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-
+            BuyWindow buyWindow = new BuyWindow();
+            buyWindow.Show();
         }
     }
 }

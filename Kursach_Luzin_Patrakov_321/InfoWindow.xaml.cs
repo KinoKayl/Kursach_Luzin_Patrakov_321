@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Kursach_Luzin_Patrakov_321
 {
     /// <summary>
-    /// Логика взаимодействия для AboutUsPage.xaml
+    /// Логика взаимодействия для InfoWindow.xaml
     /// </summary>
-    public partial class AboutUsPage : Page
+    public partial class InfoWindow : Window
     {
-        public AboutUsPage()
+        public InfoWindow()
         {
             InitializeComponent();
         }
