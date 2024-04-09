@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         Title="MainWindow" Height="922.071" Width="1275.749">
-    <Grid>
+    <Grid Margin="-1,0,1,0">
         <Label HorizontalAlignment="Left" Height="310" VerticalAlignment="Top" Width="190" Margin="122,105,0,0" Background="#FFDEDEDE" >
             <Label.Resources>
                 <Style TargetType="{x:Type Border}">
@@ -29,6 +29,9 @@
                     <Setter Property="CornerRadius" Value="20"/>
                 </Style>
             </Label.Resources>
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="1" Direction="270" Opacity="0.2"/>
+            </Label.Effect>
             <Label.Background>
                 <ImageBrush ImageSource="красный октябрь.png"/>
             </Label.Background>
@@ -49,14 +52,14 @@
         </Label>
 
         <StackPanel Margin="0,0,0,791" Orientation="Horizontal">
-            <Button HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="110" Margin="30,10,0,0" BorderBrush="{x:Null}" Foreground="{x:Null}">
+            <Button x:Name="MainButton" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="110" Margin="30,10,0,0" BorderBrush="{x:Null}" Foreground="{x:Null}">
                 <Button.Background>
                     <ImageBrush ImageSource="file.png"/>
                 </Button.Background>
             </Button>
-            <Button HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="190" Margin="10,10,0,0" Background="#FFDEDEDE"/>
-            <Button HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="190" Margin="10,10,0,0" Background="#FFDEDEDE"/>
-            <Button HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="190" Margin="10,10,0,0" Background="#FFDEDEDE"/>
+            <Button Content="INFO" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="190" Margin="10,10,0,0" Background="{x:Null}" FontSize="22" BorderBrush="{x:Null}" Click="Button_Click_2"/>
+            <Button Content="IVENTS" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="190" Margin="10,10,0,0" Background="{x:Null}" FontSize="22" BorderBrush="{x:Null}"/>
+            <Button Content="ABOUT US" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="190" Margin="10,10,0,0" Background="{x:Null}" FontSize="22" BorderBrush="{x:Null}"/>
         </StackPanel>
 
         <Label Content="Label" HorizontalAlignment="Left" Margin="880,463,0,0" VerticalAlignment="Top" Height="380" Width="282" BorderBrush="Black" Background="#FFDEDEDE">
@@ -69,7 +72,7 @@
 
 
 
-        <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="123" Margin="122,736,0,0" Height="34">
+        <Button x:Name="BuyButton" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="123" Margin="122,736,0,0" Height="34">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="5"/>
@@ -85,6 +88,9 @@
                     <Setter Property="CornerRadius" Value="20"/>
                 </Style>
             </Label.Resources>
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="1" Direction="270" Opacity="0.2"/>
+            </Label.Effect>
             <Label.Background>
                 <ImageBrush ImageSource="ubr jy.png"/>
             </Label.Background>
@@ -95,16 +101,43 @@
                     <Setter Property="CornerRadius" Value="20"/>
                 </Style>
             </Label.Resources>
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="1" Direction="270" Opacity="0.2"/>
+            </Label.Effect>
             <Label.Background>
                 <ImageBrush ImageSource="COFFE.png"/>
             </Label.Background>
         </Label>
-        <Label HorizontalAlignment="Left" Height="226" VerticalAlignment="Top" Width="190" Background="#FF727272" Margin="930,105,0,0" >
+        <Label HorizontalAlignment="Left" Height="226" VerticalAlignment="Top" Width="190" Margin="930,105,0,0" ToolTip="улица Генерала Глаголева, 15к1" >
             <Label.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="20"/>
                 </Style>
             </Label.Resources>
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="1" Direction="270" Opacity="0.2"/>
+            </Label.Effect>
+            <Label.Background>
+                <ImageBrush ImageSource="генералглаголев.png"/>
+            </Label.Background>
         </Label>
+        <TextBlock HorizontalAlignment="Left" Margin="136,346,0,0" TextWrapping="Wrap" Text="6 Июля" VerticalAlignment="Top" FontSize="16"/>
+        <TextBlock HorizontalAlignment="Left" Margin="136,376,0,0" TextWrapping="Wrap" Text="7 Июля" VerticalAlignment="Top" FontSize="16"/>
+        <TextBlock HorizontalAlignment="Left" Margin="208,377,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"><Run Text="11"/><Run Text=":00 - 19:00"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="208,347,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"><Run Text="11"/><Run Text=":00 - 19:00"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="397,345,0,0" TextWrapping="Wrap" Text="13 Июля" VerticalAlignment="Top" FontSize="16"/>
+        <TextBlock HorizontalAlignment="Left" Margin="397,375,0,0" TextWrapping="Wrap" Text="14 Июля" VerticalAlignment="Top" FontSize="16"/>
+        <TextBlock HorizontalAlignment="Left" Margin="469,376,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"><Run Text="11"/><Run Text=":00 - 19:00"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="469,346,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"><Run Text="11"/><Run Text=":00 - 19:00"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="672,344,0,0" TextWrapping="Wrap" Text="27 Июля" VerticalAlignment="Top" FontSize="16"/>
+        <TextBlock HorizontalAlignment="Left" Margin="672,374,0,0" TextWrapping="Wrap" Text="28 Июля" VerticalAlignment="Top" FontSize="16"/>
+        <TextBlock HorizontalAlignment="Left" Margin="744,375,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"><Run Text="11"/><Run Text=":00 - 19:00"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="744,345,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"><Run Text="11"/><Run Text=":00 - 19:00"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="938,344,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"><Run Text="10 "/><Run Text="Августа"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="938,374,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"><Run Text="11"/><Run Text=" "/><Run Text="Августа"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="1021,375,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"><Run Text="11"/><Run Text=":00 - 19:00"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="1021,345,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"><Run Text="11"/><Run Text=":00 - 19:00"/></TextBlock>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="76" Margin="345,12,0,0" Stroke="Black" VerticalAlignment="Top" Width="1"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="76" Margin="545,12,0,0" Stroke="Black" VerticalAlignment="Top" Width="1"/>
     </Grid>
 </Window>

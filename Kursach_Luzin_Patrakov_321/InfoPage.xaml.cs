@@ -16,28 +16,13 @@ using System.Windows.Shapes;
 namespace Kursach_Luzin_Patrakov_321
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для InfoPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class InfoPage : Page
     {
-        public MainWindow()
+        public InfoPage()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
