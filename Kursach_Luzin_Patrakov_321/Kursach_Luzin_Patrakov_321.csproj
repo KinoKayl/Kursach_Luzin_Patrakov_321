@@ -63,6 +63,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="CospayersPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="InfoWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -84,6 +88,9 @@
     </Compile>
     <Compile Include="BuyWindow.xaml.cs">
       <DependentUpon>BuyWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CospayersPage.xaml.cs">
+      <DependentUpon>CospayersPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="InfoWindow.xaml.cs">
       <DependentUpon>InfoWindow.xaml</DependentUpon>
@@ -145,6 +152,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="6617bf22b0d60_1712832366_6617bf22b0d59.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="пиццерия_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="пиццерия_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="dominos-logo-4169.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Kursach_Luzin_Patrakov_321"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="MainWindow" Height="922.071" Width="1275.749">
+        Title="Eape from Nanba" Height="922.071" Width="1275.749">
     <Grid Margin="-1,0,1,0">
         <Grid.Background>
             <RadialGradientBrush GradientOrigin="1,1" Center="1,1" RadiusY="1" RadiusX="1">
@@ -14,7 +14,7 @@
                 <GradientStop Color="#FF17498F" Offset="0.13"/>
             </RadialGradientBrush>
         </Grid.Background>
-        <Label HorizontalAlignment="Left" Height="310" VerticalAlignment="Top" Width="190" Margin="122,105,0,0" >
+        <Label HorizontalAlignment="Left" Height="310" VerticalAlignment="Top" Width="190" Margin="128,105,0,0" >
             <Label.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="20"/>
@@ -29,7 +29,7 @@
             </Label.Background>
         </Label>
 
-        <Label HorizontalAlignment="Left" Height="310" VerticalAlignment="Top" Width="190" Margin="930,105,0,0">
+        <Label HorizontalAlignment="Left" Height="310" VerticalAlignment="Top" Width="190" Margin="952,105,0,0">
             <Label.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="20"/>
@@ -43,7 +43,7 @@
                 </LinearGradientBrush>
             </Label.Background>
         </Label>
-        <Label HorizontalAlignment="Left" Height="226" VerticalAlignment="Top" Width="190" Margin="122,105,0,0" ToolTip="Берсеневская наб., 6, стр. 3">
+        <Label HorizontalAlignment="Left" Height="226" VerticalAlignment="Top" Width="190" Margin="128,105,0,0" ToolTip="Берсеневская наб., 6, стр. 3">
             <Label.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="20"/>
@@ -56,7 +56,7 @@
                 <ImageBrush ImageSource="красный октябрь.png"/>
             </Label.Background>
         </Label>
-        <Label HorizontalAlignment="Left" Height="310" VerticalAlignment="Top" Width="190" Margin="658,105,0,0">
+        <Label HorizontalAlignment="Left" Height="310" VerticalAlignment="Top" Width="190" Margin="680,105,0,0">
             <Label.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="20"/>
@@ -70,7 +70,7 @@
                 </LinearGradientBrush>
             </Label.Background>
         </Label>
-        <Label HorizontalAlignment="Left" Height="310" VerticalAlignment="Top" Width="190" Margin="382,105,0,0">
+        <Label HorizontalAlignment="Left" Height="310" VerticalAlignment="Top" Width="190" Margin="404,105,0,0">
             <Label.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="20"/>
@@ -92,18 +92,18 @@
                 </Button.Background>
             </Button>
             <Button Content="INFO" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="190" Margin="10,10,0,0" Background="{x:Null}" FontSize="22" BorderBrush="{x:Null}" Foreground="White"/>
-            <Button Content="IVENTS" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="190" Margin="10,10,0,0" Background="{x:Null}" FontSize="22" BorderBrush="{x:Null}" Foreground="White"/>
+            <Button Content="EVENTS" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="190" Margin="10,10,0,0" Background="{x:Null}" FontSize="22" BorderBrush="{x:Null}" Foreground="White"/>
             <Button Content="ABOUT US" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="190" Margin="10,10,0,0" Background="{x:Null}" FontSize="22" BorderBrush="{x:Null}" Foreground="White"/>
         </StackPanel>
 
-        <Label Content="Label" HorizontalAlignment="Left" Margin="880,463,0,0" VerticalAlignment="Top" Height="380" Width="341" BorderBrush="Black">
+        <Label Content="" HorizontalAlignment="Left" Margin="916,463,0,0" VerticalAlignment="Top" Height="380" Width="297" BorderBrush="Black">
             <Label.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="20"/>
                 </Style>
             </Label.Resources>
             <Label.Background>
-                <ImageBrush ImageSource="08eba1de6100c1f367c847c512ba0ad4.gif"/>
+                <ImageBrush ImageSource="пиццерия_2.png"/>
             </Label.Background>
         </Label>
 
@@ -123,9 +123,9 @@
             </Button.Background>
         </Button>
         <Label Content="ESCAPE FROM NANBA" HorizontalAlignment="Left" Margin="92,463,0,0" VerticalAlignment="Top" Height="60" Width="386" FontSize="36" Foreground="White"/>
-        <Label Content="Anime fest" HorizontalAlignment="Left" Margin="92,523,0,0" VerticalAlignment="Top" Height="60" Width="386" FontSize="22" Foreground="White"/>
+        <Label Content="Аниме фестиваль по мотивам аниме&#xD;&#xA;Nanbaka" HorizontalAlignment="Left" Margin="92,525,0,0" VerticalAlignment="Top" Height="75" Width="386" FontSize="22" Foreground="White"/>
 
-        <Label HorizontalAlignment="Left" Height="226" VerticalAlignment="Top" Width="190" Margin="382,105,0,0" ToolTip="Энергетический проезд, 3с1, Москва">
+        <Label HorizontalAlignment="Left" Height="226" VerticalAlignment="Top" Width="190" Margin="404,105,0,0" ToolTip="Энергетический проезд, 3с1, Москва">
             <Label.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="20"/>
@@ -138,7 +138,7 @@
                 <ImageBrush ImageSource="ubr jy.png"/>
             </Label.Background>
         </Label>
-        <Label HorizontalAlignment="Left" Height="226" VerticalAlignment="Top" Width="190" Margin="658,105,0,0" ToolTip="Спартаковская пл., 16/15 строение 5">
+        <Label HorizontalAlignment="Left" Height="226" VerticalAlignment="Top" Width="190" Margin="680,105,0,0" ToolTip="Спартаковская пл., 16/15 строение 5">
             <Label.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="20"/>
@@ -151,7 +151,7 @@
                 <ImageBrush ImageSource="COFFE.png"/>
             </Label.Background>
         </Label>
-        <Label HorizontalAlignment="Left" Height="226" VerticalAlignment="Top" Width="190" Margin="930,105,0,0" ToolTip="улица Генерала Глаголева, 15к1" >
+        <Label HorizontalAlignment="Left" Height="226" VerticalAlignment="Top" Width="190" Margin="952,105,0,0" ToolTip="улица Генерала Глаголева, 15к1" >
             <Label.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="20"/>
@@ -164,23 +164,32 @@
                 <ImageBrush ImageSource="генералглаголев.png"/>
             </Label.Background>
         </Label>
-        <TextBlock HorizontalAlignment="Left" Margin="136,346,0,0" TextWrapping="Wrap" Text="6 Июля" VerticalAlignment="Top" FontSize="16" Foreground="White"/>
-        <TextBlock HorizontalAlignment="Left" Margin="136,376,0,0" TextWrapping="Wrap" Text="7 Июля" VerticalAlignment="Top" FontSize="16" Foreground="White"/>
-        <TextBlock HorizontalAlignment="Left" Margin="208,377,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Foreground="White"><Run Text="11"/><Run Text=":00 - 19:00"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="208,347,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Foreground="White"><Run Text="11"/><Run Text=":00 - 19:00"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="397,345,0,0" TextWrapping="Wrap" Text="13 Июля" VerticalAlignment="Top" FontSize="16" Foreground="White"/>
-        <TextBlock HorizontalAlignment="Left" Margin="397,375,0,0" TextWrapping="Wrap" Text="14 Июля" VerticalAlignment="Top" FontSize="16" Foreground="White"/>
-        <TextBlock HorizontalAlignment="Left" Margin="469,376,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Foreground="White"><Run Text="11"/><Run Text=":00 - 19:00"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="469,346,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Foreground="White"><Run Text="11"/><Run Text=":00 - 19:00"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="672,344,0,0" TextWrapping="Wrap" Text="27 Июля" VerticalAlignment="Top" FontSize="16" Foreground="#FFFFFCFC"/>
-        <TextBlock HorizontalAlignment="Left" Margin="672,374,0,0" TextWrapping="Wrap" Text="28 Июля" VerticalAlignment="Top" FontSize="16" Foreground="#FFFFFCFC"/>
-        <TextBlock HorizontalAlignment="Left" Margin="744,375,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Foreground="#FFFFFCFC"><Run Text="11"/><Run Text=":00 - 19:00"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="744,345,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Foreground="#FFFFFCFC"><Run Text="11"/><Run Text=":00 - 19:00"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="938,344,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Foreground="#FFFFFCFC"><Run Text="10 "/><Run Text="Августа"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="938,374,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Foreground="#FFFFFCFC"><Run Text="11"/><Run Text=" "/><Run Text="Августа"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="1021,375,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Foreground="#FFFFFCFC"><Run Text="11"/><Run Text=":00 - 19:00"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="1021,345,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Foreground="#FFFFFCFC"><Run Text="11"/><Run Text=":00 - 19:00"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="142,346,0,0" TextWrapping="Wrap" Text="6 Июля" VerticalAlignment="Top" FontSize="16" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="142,376,0,0" TextWrapping="Wrap" Text="7 Июля" VerticalAlignment="Top" FontSize="16" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="214,377,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Foreground="White"><Run Text="11"/><Run Text=":00 - 19:00"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="214,347,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Foreground="White"><Run Text="11"/><Run Text=":00 - 19:00"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="419,345,0,0" TextWrapping="Wrap" Text="13 Июля" VerticalAlignment="Top" FontSize="16" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="419,375,0,0" TextWrapping="Wrap" Text="14 Июля" VerticalAlignment="Top" FontSize="16" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="491,376,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Foreground="White"><Run Text="11"/><Run Text=":00 - 19:00"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="491,346,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Foreground="White"><Run Text="11"/><Run Text=":00 - 19:00"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="694,344,0,0" TextWrapping="Wrap" Text="27 Июля" VerticalAlignment="Top" FontSize="16" Foreground="#FFFFFCFC"/>
+        <TextBlock HorizontalAlignment="Left" Margin="694,374,0,0" TextWrapping="Wrap" Text="28 Июля" VerticalAlignment="Top" FontSize="16" Foreground="#FFFFFCFC"/>
+        <TextBlock HorizontalAlignment="Left" Margin="766,375,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Foreground="#FFFFFCFC"><Run Text="11"/><Run Text=":00 - 19:00"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="766,345,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Foreground="#FFFFFCFC"><Run Text="11"/><Run Text=":00 - 19:00"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="960,344,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Foreground="#FFFFFCFC"><Run Text="10 "/><Run Text="Августа"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="960,374,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Foreground="#FFFFFCFC"><Run Text="11"/><Run Text=" "/><Run Text="Августа"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="1043,375,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Foreground="#FFFFFCFC"><Run Text="11"/><Run Text=":00 - 19:00"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="1043,345,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Foreground="#FFFFFCFC"><Run Text="11"/><Run Text=":00 - 19:00"/></TextBlock>
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="76" Margin="345,12,0,0" Stroke="White" VerticalAlignment="Top" Width="1"/>
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="76" Margin="545,12,0,0" Stroke="White" VerticalAlignment="Top" Width="1"/>
+        <Label Content="Domino's Pizza" HorizontalAlignment="Left" Margin="643,463,0,0" VerticalAlignment="Top" Height="60" Width="256" FontSize="36" Foreground="White"/>
+        <Label Content="" HorizontalAlignment="Left" Margin="579,465,0,0" VerticalAlignment="Top" Height="60" Width="60">
+            <Label.Background>
+                <ImageBrush ImageSource="dominos-logo-4169.png"/>
+            </Label.Background>
+        </Label>
+        <TextBlock HorizontalAlignment="Left" Margin="649,527,0,0" TextWrapping="Wrap" Text="На территории фестиваля вы в любое время можете посетить нашего партнера Domino's Pizza" VerticalAlignment="Top" Foreground="White" Height="105" Width="242" FontSize="18"/>
+        <TextBlock HorizontalAlignment="Left" Margin="649,632,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" Height="105" Width="255" FontSize="18"><Run Text="Если на кассе вы покажете билет"/><Run Text=", "/><Run Text="то получите скидку 15%"/><LineBreak/><Run Text="Для косплееров 20%"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="649,718,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" Height="105" Width="255" FontSize="18"><Run Text="Только в пиццериях на территори нашего "/><Run Text="фестиваля вы сможете поробовать  особую"/><Run Text=" Rock's Pizza"/></TextBlock>
     </Grid>
 </Window>

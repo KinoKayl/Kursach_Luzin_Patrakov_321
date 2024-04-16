@@ -8,46 +8,51 @@
         WindowStartupLocation="CenterScreen"
         Title="BuyWindow" Height="450" Width="566.962">
     <Grid>
-        <TextBlock HorizontalAlignment="Left" Margin="10,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"><Run Text="Оплата билета"/><LineBreak/><Run Text="На Аниме фестиваль"/></TextBlock>
+        <Grid.Background>
+            <RadialGradientBrush GradientOrigin="1,1" Center="1,1" RadiusY="1" RadiusX="1">
+                <GradientStop Color="#FF021A43" Offset="0.75"/>
+                <GradientStop Color="#FF17498F" Offset="0.13"/>
+            </RadialGradientBrush>
+        </Grid.Background>
+        <TextBlock HorizontalAlignment="Left" Margin="10,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Foreground="White"><Run Text="Оплата билета"/><LineBreak/><Run Text="На Аниме фестиваль"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="10,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="10,9,0,0" TextWrapping="Wrap" Text="ESCAPE FROM NANBA" VerticalAlignment="Top" FontSize="20"/>
-        <TextBlock HorizontalAlignment="Left" Margin="10,84,0,0" TextWrapping="Wrap" Text="Адрес" VerticalAlignment="Top" FontSize="16"/>
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="11,127,0,0" Height="22" Width="40" FontSize="16"><Run Text="Дата"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="11,170,0,0" Height="22" Width="88" FontSize="16" Text="Тип билета"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,9,0,0" TextWrapping="Wrap" Text="ESCAPE FROM NANBA" VerticalAlignment="Top" FontSize="20" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,84,0,0" TextWrapping="Wrap" Text="Адрес" VerticalAlignment="Top" FontSize="16" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="11,127,0,0" Height="22" Width="40" FontSize="16" Foreground="White"><Run Text="Дата"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="11,170,0,0" Height="22" Width="88" FontSize="16" Text="Тип билета" Foreground="White"/>
         <StackPanel Margin="56,132,198,254" Orientation="Horizontal">
-            <RadioButton x:Name="FirstDateButton" Content=" . . ." HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="14" Margin="0,0,10,0"/>
-            <RadioButton x:Name="SecondDateButton" Content=" . . ." HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="14"/>
+            <RadioButton x:Name="FirstDateButton" Content=" . . ." HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="14" Margin="0,0,10,0" Foreground="White"/>
+            <RadioButton x:Name="SecondDateButton" Content=" . . ." HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="14" Foreground="White"/>
 
         </StackPanel>
         <StackPanel Margin="104,175,78,217" Orientation="Horizontal">
-            <RadioButton x:Name="GuestButton" Content="Гостевой" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="14" Margin="0,0,10,0" Checked="GuestButton_Checked"/>
-            <RadioButton x:Name="ZakulisButton" Content="Закулисье" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="14" Margin="0,0,10,0" Checked="ZakulisButton_Checked"/>
-            <RadioButton x:Name="VIPButton" Content="VIP" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="14" Margin="0,0,10,0" Checked="VIPButton_Checked"/>
+            <RadioButton x:Name="GuestButton" Content="Гостевой" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="14" Margin="0,0,10,0" Checked="GuestButton_Checked" Foreground="White"/>
+            <RadioButton x:Name="CosButton" Content="Косплеер" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="14" Margin="0,0,10,0" Checked="CosButton_Checked" Foreground="White"/>
+            <RadioButton x:Name="VIPButton" Content="VIP" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="14" Margin="0,0,10,0" Checked="VIPButton_Checked" Foreground="White"/>
 
         </StackPanel>
         <StackPanel Margin="60,89,0,302" Orientation="Horizontal">
-            <RadioButton x:Name="BersenevButton" Content="Берсеневская" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="14" Margin="0,0,10,0" Checked="BersenevButton_Checked"/>
-            <RadioButton x:Name="EnergButton" Content="Энерг. проезд" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="14" Margin="0,0,10,0" Checked="EnergButton_Checked"/>
-            <RadioButton x:Name="SpartButton" Content="Спартаковская" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="14" Margin="0,0,10,0" Checked="SpartButton_Checked"/>
-            <RadioButton x:Name="GlagolButton" Content="Ул.Ген.Глаголева" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="14" Margin="0,0,10,0" Checked="GlagolButton_Checked"/>
+            <RadioButton x:Name="BersenevButton" Content="Берсеневская" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="14" Margin="0,0,10,0" Checked="BersenevButton_Checked" Foreground="White"/>
+            <RadioButton x:Name="EnergButton" Content="Энерг. проезд" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="14" Margin="0,0,10,0" Checked="EnergButton_Checked" Foreground="White"/>
+            <RadioButton x:Name="SpartButton" Content="Спартаковская" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="14" Margin="0,0,10,0" Checked="SpartButton_Checked" Foreground="White"/>
+            <RadioButton x:Name="GlagolButton" Content="Ул.Ген.Глаголева" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="14" Margin="0,0,10,0" Checked="GlagolButton_Checked" Foreground="White"/>
 
         </StackPanel>
-        <Button x:Name="BuyButton" Content="Купить билет" HorizontalAlignment="Left" Margin="24,347,0,0" VerticalAlignment="Top" Width="86" BorderBrush="{x:Null}" Height="29" Click="BuyButton_Click">
+        <Button x:Name="BuyButton" Content="Купить билет" HorizontalAlignment="Left" Margin="24,347,0,0" VerticalAlignment="Top" Width="86" BorderBrush="{x:Null}" Height="29" Click="BuyButton_Click" Foreground="White">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="10"/>
+                    <Setter Property="CornerRadius" Value="15"/>
                 </Style>
             </Button.Resources>
             <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF71EFF5" Offset="1"/>
-                    <GradientStop Color="White"/>
-                    <GradientStop Color="#FF96EBF0" Offset="0.723"/>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="1,0">
+                    <GradientStop Color="#FF07A7D6" Offset="0"/>
+                    <GradientStop Color="#FF007ACC" Offset="1"/>
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <TextBlock x:Name="TicketTextBlock" Text="Цена билета: " HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="11,282,0,0" Height="22" Width="99" FontSize="16"></TextBlock>
-        <TextBlock x:Name="TicketPriceTextBlock" Text="" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="115,282,0,0" Height="22" Width="99" FontSize="16"/>
+        <TextBlock x:Name="TicketTextBlock" Text="Цена билета: " HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="11,282,0,0" Height="22" Width="99" FontSize="16" Foreground="White"></TextBlock>
+        <TextBlock x:Name="TicketPriceTextBlock" Text="" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="115,282,0,0" Height="22" Width="99" FontSize="16" Foreground="White"/>
 
     </Grid>
 </Window>

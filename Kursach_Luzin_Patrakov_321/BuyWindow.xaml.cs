@@ -54,7 +54,7 @@ namespace Kursach_Luzin_Patrakov_321
             TicketPriceTextBlock.Text = "850 руб.";
         }
 
-        private void ZakulisButton_Checked(object sender, RoutedEventArgs e)
+        private void CosButton_Checked(object sender, RoutedEventArgs e)
         {
             TicketPriceTextBlock.Text = "950 руб.";
         }
@@ -66,10 +66,39 @@ namespace Kursach_Luzin_Patrakov_321
 
         private void BuyButton_Click(object sender, RoutedEventArgs e)
         {
-            if (BersenevButton.IsChecked != true)
+            if (BersenevButton.IsChecked != true && EnergButton.IsChecked != true && SpartButton.IsChecked != true  && GlagolButton.IsChecked != true) //Проверка выбора адреса
             {
-                MessageBox.Show("qdwd");
+                MessageBox.Show("Выберите адрес фестиваля который хотите посетить");
+                
             }
+            else if (FirstDateButton.IsChecked != true && SecondDateButton.IsChecked != true) //Проверка выбора даты
+            {
+                MessageBox.Show("Выберите дату посещения");
+
+            }
+            else if (FirstDateButton.IsChecked != true && SecondDateButton.IsChecked != true) //Проверка выбора типа билета
+            {
+                MessageBox.Show("Выберите тип билета");
+
+            }
+            else
+            {
+                //Функционал кнопки
+
+                //Внесение пармаетров билета в бд
+
+                //Вывод страницы заполнения анкеты косплеера
+                if (CosButton.IsChecked == true) 
+                {
+                    CospayersPage cospayers = new CospayersPage();
+                    cospayers.Show();
+
+                }
+            }
+            
+            
+            
+            
         }
     }
 }
