@@ -154,9 +154,6 @@
     <Resource Include="6617bf22b0d60_1712832366_6617bf22b0d59.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="пиццерия_1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="пиццерия_2.png" />
   </ItemGroup>
   <ItemGroup>

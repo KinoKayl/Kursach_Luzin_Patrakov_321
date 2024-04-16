@@ -31,5 +31,23 @@ namespace Kursach_Luzin_Patrakov_321
             BuyWindow buyWindow = new BuyWindow();
             buyWindow.Show();
         }
+
+        private void InfoButton_Click(object sender, RoutedEventArgs e)
+        {
+            InfoWindow infoWindow = new InfoWindow();
+            infoWindow.Show();
+        }
+
+        private void EventsButton_Click(object sender, RoutedEventArgs e)
+        {
+            IventsWindow iventsWindow = new IventsWindow();
+            iventsWindow.Show();
+        }
+
+        private void AboutUsButton_Click(object sender, RoutedEventArgs e)
+        {
+            AboutUsWindow AuWindow = new AboutUsWindow();
+            AuWindow.Show();
+        }
     }
 }

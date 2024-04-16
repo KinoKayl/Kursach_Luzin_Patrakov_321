@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="IventsWindow" Height="450" Width="800">
     <Grid>
-        
+        <TextBlock HorizontalAlignment="Left" Margin="46,47,0,0" TextWrapping="Wrap" Text="Ывенты" VerticalAlignment="Top"/>
+
     </Grid>
 </Window>

@@ -91,9 +91,9 @@
                     <ImageBrush ImageSource="file.png"/>
                 </Button.Background>
             </Button>
-            <Button Content="INFO" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="190" Margin="10,10,0,0" Background="{x:Null}" FontSize="22" BorderBrush="{x:Null}" Foreground="White"/>
-            <Button Content="EVENTS" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="190" Margin="10,10,0,0" Background="{x:Null}" FontSize="22" BorderBrush="{x:Null}" Foreground="White"/>
-            <Button Content="ABOUT US" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="190" Margin="10,10,0,0" Background="{x:Null}" FontSize="22" BorderBrush="{x:Null}" Foreground="White"/>
+            <Button x:Name="InfoButton" Content="INFO" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="190" Margin="10,10,0,0" Background="{x:Null}" FontSize="22" BorderBrush="{x:Null}" Foreground="White" Click="InfoButton_Click"/>
+            <Button x:Name="EventsButton" Content="EVENTS" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="190" Margin="10,10,0,0" Background="{x:Null}" FontSize="22" BorderBrush="{x:Null}" Foreground="White" Click="EventsButton_Click"/>
+            <Button x:Name="AboutUsButton" Content="ABOUT US" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="190" Margin="10,10,0,0" Background="{x:Null}" FontSize="22" BorderBrush="{x:Null}" Foreground="White" Click="AboutUsButton_Click"/>
         </StackPanel>
 
         <Label Content="" HorizontalAlignment="Left" Margin="916,463,0,0" VerticalAlignment="Top" Height="380" Width="297" BorderBrush="Black">
@@ -102,6 +102,9 @@
                     <Setter Property="CornerRadius" Value="20"/>
                 </Style>
             </Label.Resources>
+            <Label.Effect>
+                <DropShadowEffect Opacity="0.2" Direction="300"/>
+            </Label.Effect>
             <Label.Background>
                 <ImageBrush ImageSource="пиццерия_2.png"/>
             </Label.Background>
@@ -122,7 +125,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Label Content="ESCAPE FROM NANBA" HorizontalAlignment="Left" Margin="92,463,0,0" VerticalAlignment="Top" Height="60" Width="386" FontSize="36" Foreground="White"/>
+        <Label Content="ESCAPE FROM NANBA" HorizontalAlignment="Left" Margin="92,463,0,0" VerticalAlignment="Top" Height="60" Width="386" FontSize="36" Foreground="White" ToolTip="Фу анимешник"/>
         <Label Content="Аниме фестиваль по мотивам аниме&#xD;&#xA;Nanbaka" HorizontalAlignment="Left" Margin="92,525,0,0" VerticalAlignment="Top" Height="75" Width="386" FontSize="22" Foreground="White"/>
 
         <Label HorizontalAlignment="Left" Height="226" VerticalAlignment="Top" Width="190" Margin="404,105,0,0" ToolTip="Энергетический проезд, 3с1, Москва">
