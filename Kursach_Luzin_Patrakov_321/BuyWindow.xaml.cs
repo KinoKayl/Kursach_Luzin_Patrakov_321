@@ -23,6 +23,50 @@ namespace Kursach_Luzin_Patrakov_321
         {
             InitializeComponent();
         }
+
+        //Текст Имени и фамилии
+        private void GotFocus(TextBox textBox, string placeholderText, string replacementText)
+        {
+            if (textBox != null && textBox.Text == placeholderText)
+            {
+                textBox.Text = replacementText;
+                textBox.Foreground = Brushes.Black;
+            }
+        }
+
+        private void LostFocus(TextBox textBox, string replacementText, string placeholderText)
+        {
+            if (textBox != null && textBox.Text == placeholderText)
+            {
+                textBox.Text = replacementText;
+                textBox.Foreground = Brushes.Gray;
+            }
+        }
+
+        //Пропадющий текст
+        private void FirsttextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox textBox = sender as TextBox;
+            GotFocus(textBox, "Введите Имя", "");
+        }
+        private void FirsttextBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox textBox = sender as TextBox;
+            LostFocus(textBox, "Введите Имя", "");
+        }
+
+        private void SecondtextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox textBox = sender as TextBox;
+            GotFocus(textBox, "Введите Фамилию", "");
+        }
+        private void SecondtextBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox textBox = sender as TextBox;
+            LostFocus(textBox, "Введите Фамилию", "");
+        }
+
+
         // Радиобаттоны адресов
         private void BersenevButton_Checked(object sender, RoutedEventArgs e)
         {
@@ -66,6 +110,14 @@ namespace Kursach_Luzin_Patrakov_321
 
         private void BuyButton_Click(object sender, RoutedEventArgs e)
         {
+            if (FirstTextBox.Text == "" || FirstTextBox.Text == "Введите Имя")
+            {
+                MessageBox.Show("Выберите Имя участника");
+            }
+            if (SecondTextBox.Text == "" || SecondTextBox.Text == "Введите Фамилию")
+            {
+                MessageBox.Show("Выберите Фамилию участника");
+            }
             if (BersenevButton.IsChecked != true && EnergButton.IsChecked != true && SpartButton.IsChecked != true  && GlagolButton.IsChecked != true) //Проверка выбора адреса
             {
                 MessageBox.Show("Выберите адрес фестиваля который хотите посетить");

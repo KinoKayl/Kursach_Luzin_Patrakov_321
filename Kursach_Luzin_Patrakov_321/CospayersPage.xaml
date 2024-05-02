@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Kursach_Luzin_Patrakov_321"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="CospayersPage" Height="542.213" Width="716.393">
+        Title="Анкета косплеера" Height="486" Width="531">
     <Grid>
         <Grid.Background>
             <RadialGradientBrush GradientOrigin="1,1" Center="1,1" RadiusY="1" RadiusX="1">
@@ -14,14 +14,12 @@
                 <GradientStop Color="#FF17498F" Offset="0.13"/>
             </RadialGradientBrush>
         </Grid.Background>
-        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="22" Foreground="White" Text="Анкета косплеера"/>
-        <TextBlock HorizontalAlignment="Left" Margin="10,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="10,84,0,0" TextWrapping="Wrap" Text="Аниме" VerticalAlignment="Top" FontSize="16" Foreground="White"/>
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="11,127,0,0" Height="22" Width="121" FontSize="16" Foreground="White" Text="Имя персонажа"/>
-        <Button x:Name="FormButton" Content="Заполнить анкету" HorizontalAlignment="Left" Margin="24,405,0,0" VerticalAlignment="Top" Width="122" BorderBrush="{x:Null}" Height="44" Foreground="White" Click="FormButton_Click">
+        <TextBlock FontFamily="Montserrat" HorizontalAlignment="Left" Margin="28,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Foreground="White" Text="Анкета косплеера"/>
+        <TextBlock FontFamily="Montserrat" HorizontalAlignment="Left" Margin="10,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button FontFamily="Montserrat" x:Name="FormButton" Content="Заполнить анкету" HorizontalAlignment="Center" Margin="0,394,0,0" VerticalAlignment="Top" Width="181" BorderBrush="{x:Null}" Height="46" Foreground="White" Click="FormButton_Click" FontSize="18">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="20"/>
+                    <Setter Property="CornerRadius" Value="5"/>
                 </Style>
             </Button.Resources>
             <Button.Background>
@@ -31,10 +29,21 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <TextBlock x:Name="СostumeTextBlock" Text="Название костюма :" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="11,247,0,0" Height="22" Width="147" FontSize="16" Foreground="White"></TextBlock>
-        <TextBlock x:Name="CostumeNameTextBlock" Text="" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="163,247,0,0" Height="64" Width="522" FontSize="16" Foreground="White"/>
-        <TextBox x:Name="AnimeTextBox" HorizontalAlignment="Left" Height="23" Margin="71,84,0,0" TextWrapping="Wrap" Text="Введите название аниме..." VerticalAlignment="Top" Width="223" Foreground="Gray" GotFocus="AnimeTextBox_GotFocus" LostFocus="AnimeTextBox_LostFocus" TextChanged="AnimeTextBox_TextChanged"/>
-        <TextBox x:Name="CharacterTextBox" HorizontalAlignment="Left" Height="23" Margin="137,130,0,0" TextWrapping="Wrap" Text="Введите имя персонажа..." VerticalAlignment="Top" Width="216" Foreground="Gray" GotFocus="CharTextBox_GotFocus" LostFocus="CharTextBox_LostFocus" TextChanged="CharacterTextBox_TextChanged"/>
+        <TextBlock FontFamily="Montserrat" x:Name="CostumeNameTextBlock" Text="" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Margin="0,255,0,0" Height="113" Width="398" FontSize="16" Foreground="White"/>
+        <TextBox  FontFamily="Montserrat" x:Name="AnimeTextBox" HorizontalAlignment="Center" Height="41" Margin="0,111,0,0" TextWrapping="Wrap" Text="Введите название аниме..." VerticalAlignment="Top" Width="398" Foreground="Gray" GotFocus="AnimeTextBox_GotFocus" LostFocus="AnimeTextBox_LostFocus" TextChanged="AnimeTextBox_TextChanged">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <TextBox FontFamily="Montserrat" x:Name="CharacterTextBox" HorizontalAlignment="Center" Height="41" Margin="0,168,0,0" TextWrapping="Wrap" Text="Введите имя персонажа..." VerticalAlignment="Top" Width="398" Foreground="Gray" GotFocus="CharTextBox_GotFocus" LostFocus="CharTextBox_LostFocus" TextChanged="CharacterTextBox_TextChanged">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
         <TextBlock x:Name="CostumeNameTextBlock_memory" Visibility="Hidden" Text="" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="163,351,0,0" Height="64" Width="522" FontSize="16" Foreground="White"/>
 
     </Grid>
