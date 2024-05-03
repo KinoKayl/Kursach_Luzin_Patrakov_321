@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Kursach_Luzin_Patrakov_321"
         mc:Ignorable="d"
+        Closed="Window_Closed"
         WindowStartupLocation="CenterScreen"
         Title="Анкета косплеера" Height="486" Width="531">
     <Grid>

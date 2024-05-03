@@ -7,14 +7,14 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         Title="Регистрация билета" Height="624" Width="566.962">
-    <Grid Margin="0,0,0,-69">
+    <Grid Margin="0,-2,0,-67">
         <Grid.Background>
             <RadialGradientBrush GradientOrigin="1,1" Center="1,1" RadiusY="1" RadiusX="1">
                 <GradientStop Color="#FF021A43" Offset="0.75"/>
                 <GradientStop Color="#FF17498F" Offset="0.13"/>
             </RadialGradientBrush>
         </Grid.Background>
-        <Label Content="" HorizontalAlignment="Left" Margin="173,245,0,0" VerticalAlignment="Top" Width="134" Height="26">
+        <Label Content="" HorizontalAlignment="Left" Margin="160,170,0,0" VerticalAlignment="Top" Width="134" Height="26">
             <Label.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="15"/>
@@ -27,7 +27,7 @@
                 </LinearGradientBrush>
             </Label.Background>
         </Label>
-        <Label Content="" HorizontalAlignment="Left" Margin="316,246,0,0" VerticalAlignment="Top" Width="148" Height="26">
+        <Label Content="" HorizontalAlignment="Left" Margin="303,171,0,0" VerticalAlignment="Top" Width="148" Height="26">
             <Label.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="15"/>
@@ -40,7 +40,7 @@
                 </LinearGradientBrush>
             </Label.Background>
         </Label>
-        <Label Content="" HorizontalAlignment="Left" Margin="173,275,0,0" VerticalAlignment="Top" Width="134" Height="26">
+        <Label Content="" HorizontalAlignment="Left" Margin="160,200,0,0" VerticalAlignment="Top" Width="134" Height="26">
             <Label.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="15"/>
@@ -53,7 +53,7 @@
                 </LinearGradientBrush>
             </Label.Background>
         </Label>
-        <Label Content="" HorizontalAlignment="Left" Margin="316,275,0,0" VerticalAlignment="Top" Width="148" Height="26">
+        <Label Content="" HorizontalAlignment="Left" Margin="303,200,0,0" VerticalAlignment="Top" Width="148" Height="26">
             <Label.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="15"/>
@@ -66,7 +66,7 @@
                 </LinearGradientBrush>
             </Label.Background>
         </Label>
-        <StackPanel Margin="176,250,82,96" Orientation="Horizontal">
+        <StackPanel Margin="163,175,95,171" Orientation="Horizontal">
             <RadioButton FontFamily="Montserrat" x:Name="BersenevButton" Content="Берсеневская" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="14" Margin="0,0,10,0" Checked="BersenevButton_Checked" Foreground="White">
                 <RadioButton.Resources>
                     <Style TargetType="{x:Type Border}">
@@ -122,7 +122,7 @@
 
         </StackPanel>
 
-        <Label Content="" HorizontalAlignment="Left" Margin="285,310,0,0" VerticalAlignment="Top" Width="97" Height="26">
+        <Label Content="" HorizontalAlignment="Left" Margin="272,235,0,0" VerticalAlignment="Top" Width="97" Height="26">
             <Label.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="15"/>
@@ -135,21 +135,7 @@
                 </LinearGradientBrush>
             </Label.Background>
         </Label>
-        <Label Content="" HorizontalAlignment="Left" Margin="174,310,0,0" VerticalAlignment="Top" Width="97" Height="26">
-            <Label.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="15"/>
-                </Style>
-            </Label.Resources>
-            <Label.Background>
-                <LinearGradientBrush EndPoint="0,1" StartPoint="1,0">
-                    <GradientStop Color="#FF07A7D6" Offset="0"/>
-                    <GradientStop Color="#FF007ACC" Offset="1"/>
-                </LinearGradientBrush>
-            </Label.Background>
-        </Label>
-
-        <Label Content="" HorizontalAlignment="Left" Margin="301,353,0,0" VerticalAlignment="Top" Width="96" Height="26">
+        <Label Content="" HorizontalAlignment="Left" Margin="161,235,0,0" VerticalAlignment="Top" Width="97" Height="26">
             <Label.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="15"/>
@@ -163,7 +149,7 @@
             </Label.Background>
         </Label>
 
-        <Label Content="" HorizontalAlignment="Left" Margin="403,353,0,0" VerticalAlignment="Top" Width="53" Height="26">
+        <Label Content="" HorizontalAlignment="Left" Margin="288,278,0,0" VerticalAlignment="Top" Width="96" Height="26">
             <Label.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="15"/>
@@ -177,7 +163,21 @@
             </Label.Background>
         </Label>
 
-        <Label Content="" HorizontalAlignment="Left" Margin="210,353,0,0" VerticalAlignment="Top" Width="87" Height="26">
+        <Label Content="" HorizontalAlignment="Left" Margin="390,278,0,0" VerticalAlignment="Top" Width="53" Height="26">
+            <Label.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Label.Resources>
+            <Label.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="1,0">
+                    <GradientStop Color="#FF07A7D6" Offset="0"/>
+                    <GradientStop Color="#FF007ACC" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.Background>
+        </Label>
+
+        <Label Content="" HorizontalAlignment="Left" Margin="197,278,0,0" VerticalAlignment="Top" Width="87" Height="26">
             <Label.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="15"/>
@@ -192,12 +192,12 @@
         </Label>
 
         <TextBlock FontFamily="Montserrat" HorizontalAlignment="Left" Margin="14,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Foreground="White"><Run Text="Регистрация билета"/></TextBlock>
-        <TextBlock FontFamily="Montserrat" HorizontalAlignment="Left" Margin="105,251,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock FontFamily="Montserrat" HorizontalAlignment="Left" Margin="92,176,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBlock FontFamily="Montserrat" HorizontalAlignment="Left" Margin="14,36,0,0" TextWrapping="Wrap" Text="ESCAPE FROM NANBA" VerticalAlignment="Top" FontSize="20" Foreground="White"/>
-        <TextBlock FontFamily="Montserrat" HorizontalAlignment="Left" Margin="105,262,0,0" TextWrapping="Wrap" Text="Адрес" VerticalAlignment="Top" FontSize="16" Foreground="White"/>
-        <TextBlock FontFamily="Montserrat" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="106,310,0,0" Height="22" Width="40" FontSize="16" Foreground="White"><Run Text="Дата" FontFamily="Montserrat"/></TextBlock>
-        <TextBlock FontFamily="Montserrat" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="106,353,0,0" Height="22" Width="114" FontSize="16" Text="Тип билета" Foreground="White"/>
-        <StackPanel Margin="176,314,78,298" Orientation="Horizontal">
+        <TextBlock FontFamily="Montserrat" HorizontalAlignment="Left" Margin="92,187,0,0" TextWrapping="Wrap" Text="Адрес" VerticalAlignment="Top" FontSize="16" Foreground="White"/>
+        <TextBlock FontFamily="Montserrat" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="93,235,0,0" Height="22" Width="40" FontSize="16" Foreground="White"><Run Text="Дата" FontFamily="Montserrat"/></TextBlock>
+        <TextBlock FontFamily="Montserrat" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="93,278,0,0" Height="22" Width="114" FontSize="16" Text="Тип билета" Foreground="White"/>
+        <StackPanel Margin="163,239,91,373" Orientation="Horizontal">
             <RadioButton FontFamily="Montserrat" x:Name="FirstDateButton" Content=" . . ." VerticalAlignment="Top" FontSize="14" Margin="0,0,10,0" Foreground="White" Width="97">
                 <RadioButton.Resources>
                     <Style TargetType="{x:Type Border}">
@@ -226,7 +226,7 @@
             </RadioButton>
 
         </StackPanel>
-        <StackPanel Margin="211,359,82,209" Orientation="Horizontal">
+        <StackPanel Margin="198,284,95,284" Orientation="Horizontal">
             <RadioButton FontFamily="Montserrat" x:Name="GuestButton" Content="Гостевой" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="14" Margin="0,0,10,0" Checked="GuestButton_Checked" Foreground="White">
                 <RadioButton.Resources>
                     <Style TargetType="{x:Type Border}">
@@ -268,7 +268,7 @@
             </RadioButton>
 
         </StackPanel>
-        <Button FontFamily="Montserrat" x:Name="BuyButton" Content="Купить билет" HorizontalAlignment="Left" Margin="208,514,0,0" VerticalAlignment="Top" Width="154" Height="39" Click="BuyButton_Click" Foreground="White" FontSize="18">
+        <Button FontFamily="Montserrat" x:Name="BuyButton" Content="Купить билет" HorizontalAlignment="Left" Margin="195,503,0,0" VerticalAlignment="Top" Width="154" Height="39" Click="BuyButton_Click" Foreground="White" FontSize="18">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="5"/>
@@ -284,22 +284,8 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <TextBlock FontFamily="Montserrat" x:Name="TicketTextBlock" Text="Цена билета: " HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="106,457,0,0" Height="22" Width="114" FontSize="16" Foreground="White"/>
-        <TextBlock FontFamily="Montserrat" x:Name="TicketPriceTextBlock" Text="" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="231,457,0,0" Height="22" Width="99" FontSize="16" Foreground="White"/>
-        <TextBox FontFamily="Montserrat" x:Name="FirstTextBox" HorizontalAlignment="Left" Margin="105,170,0,0" TextWrapping="Wrap" Text="Введите Имя" VerticalAlignment="Top" Width="166" Height="44" FontSize="18" Foreground="Gray" GotFocus="FirsttextBox_GotFocus" LostFocus="FirsttextBox_LostFocus">
-            <TextBox.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="5"/>
-                </Style>
-            </TextBox.Resources>
-        </TextBox>
-        <TextBox FontFamily="Montserrat" x:Name="SecondTextBox" HorizontalAlignment="Left" Margin="287,170,0,0" TextWrapping="Wrap" Text="Введите Фамилию" VerticalAlignment="Top" Width="177" Height="44" FontSize="18" Foreground="Gray" GotFocus="SecondtextBox_GotFocus" LostFocus="SecondtextBox_LostFocus">
-            <TextBox.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="5"/>
-                </Style>
-            </TextBox.Resources>
-        </TextBox>
+        <TextBlock FontFamily="Montserrat" x:Name="TicketTextBlock" Text="Цена билета: " HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="93,446,0,0" Height="22" Width="114" FontSize="16" Foreground="White"/>
+        <TextBlock FontFamily="Montserrat" x:Name="TicketPriceTextBlock" Text="" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="218,446,0,0" Height="22" Width="99" FontSize="16" Foreground="White"/>
 
     </Grid>
 </Window>

@@ -100,7 +100,7 @@ namespace Kursach_Luzin_Patrakov_321
 
         private void CosButton_Checked(object sender, RoutedEventArgs e)
         {
-            TicketPriceTextBlock.Text = "950 руб.";
+            TicketPriceTextBlock.Text = "750 руб.";
         }
 
         private void VIPButton_Checked(object sender, RoutedEventArgs e)
@@ -110,11 +110,6 @@ namespace Kursach_Luzin_Patrakov_321
 
         private void BuyButton_Click(object sender, RoutedEventArgs e)
         {
-            if (FirstTextBox.Text == "" || FirstTextBox.Text == "Введите Имя")
-            {
-                MessageBox.Show("Выберите Имя участника");
-            }
-            if (SecondTextBox.Text == "" || SecondTextBox.Text == "Введите Фамилию")
             {
                 MessageBox.Show("Выберите Фамилию участника");
             }
@@ -135,22 +130,32 @@ namespace Kursach_Luzin_Patrakov_321
             }
             else
             {
-                //Функционал кнопки
-
-                //Внесение пармаетров билета в бд
-
                 //Вывод страницы заполнения анкеты косплеера
-                if (CosButton.IsChecked == true) 
+                if (CosButton.IsChecked == true)
                 {
                     CospayersPage cospayers = new CospayersPage();
+                    cospayers.Closed += Window_Closed();
                     cospayers.Show();
-
                 }
+
+                MessageBox.Show("Билет оформлен");
+
+                    //Функционал кнопки
+
+                    //Внесение пармаетров билета в бд
+
+
+                
             }
             
             
             
             
+        }
+
+        private void FirstTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

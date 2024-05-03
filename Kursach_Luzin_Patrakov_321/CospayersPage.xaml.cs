@@ -102,10 +102,22 @@ namespace Kursach_Luzin_Patrakov_321
                 MessageBox.Show("Введите имя персонажа");
 
             }
+            else
+            {
+                //Функционал
+                App.Current.Resources["CosName"] = CostumeNameTextBlock.Text;
+                CospayersPage cospayersPage = new CospayersPage();
+                cospayersPage.Close();
 
-            //Функционал
+            }
+
 
             //Из CostumeNameTextBlock_memory занести в бд
+        }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+
         }
     }
 }
