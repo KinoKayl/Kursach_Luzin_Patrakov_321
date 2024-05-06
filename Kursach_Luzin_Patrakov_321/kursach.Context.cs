@@ -24,7 +24,7 @@ namespace Kursach_Luzin_Patrakov_321
         {
             throw new UnintentionalCodeFirstException();
         }
-    
+    /*
         public virtual DbSet<Addresses> Addresses { get; set; }
         public virtual DbSet<ContactInfo> ContactInfo { get; set; }
         public virtual DbSet<Cosplayers> Cosplayers { get; set; }
@@ -43,5 +43,6 @@ namespace Kursach_Luzin_Patrakov_321
         public virtual DbSet<Tickets> Tickets { get; set; }
         public virtual DbSet<TicketTypes> TicketTypes { get; set; }
         public virtual DbSet<Users> Users { get; set; }
+    */
     }
 }

@@ -28,8 +28,15 @@ namespace Kursach_Luzin_Patrakov_321
 
         private void BuyButton_Click(object sender, RoutedEventArgs e)
         {
-            BuyWindow buyWindow = new BuyWindow();
-            buyWindow.Show();
+            Boolean WindowOpened = false;
+
+            if (!WindowOpened)
+            {
+                BuyWindow buyWindow = new BuyWindow();
+                buyWindow.Show();
+                WindowOpened = true;
+            }
+            
         }
 
         private void InfoButton_Click(object sender, RoutedEventArgs e)

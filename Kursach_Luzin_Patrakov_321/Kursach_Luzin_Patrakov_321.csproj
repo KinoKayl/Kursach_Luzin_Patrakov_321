@@ -91,6 +91,9 @@
     <Compile Include="AboutUsWindow.xaml.cs">
       <DependentUpon>AboutUsWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AnimeFestivalNews.cs" />
+    <Compile Include="class\LocationInfo.cs" />
+    <Compile Include="class\Addresses.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -98,12 +101,17 @@
     <Compile Include="BuyWindow.xaml.cs">
       <DependentUpon>BuyWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="class\ContactInfo.cs" />
     <Compile Include="CospayersPage.xaml.cs">
       <DependentUpon>CospayersPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="class\Events.cs" />
+    <Compile Include="class\Cosplayers.cs" />
+    <Compile Include="info.cs" />
     <Compile Include="InfoWindow.xaml.cs">
       <DependentUpon>InfoWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="class\InvitedUsers.cs" />
     <Compile Include="IventsWindow.xaml.cs">
       <DependentUpon>IventsWindow.xaml</DependentUpon>
     </Compile>
@@ -112,11 +120,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>kursach.Context.tt</DependentUpon>
     </Compile>
+    <Compile Include="kursach.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kursach.tt</DependentUpon>
+    </Compile>
     <Compile Include="kursach.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>kursach.edmx</DependentUpon>
     </Compile>
+    <Compile Include="class\LocationParticipants.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -157,43 +171,31 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="file.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="красный октябрь.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="ubr jy.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="COFFE.png" />
-  </ItemGroup>
-  <ItemGroup>
+    <Resource Include="настолки.jpg" />
+    <Resource Include="весело.png" />
+    <Resource Include="выступление.jpg" />
     <Resource Include="генералглаголев.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="кафе_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="08eba1de6100c1f367c847c512ba0ad4.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="6617bf22b0d60_1712832366_6617bf22b0d59.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="пиццерия_2.png" />
-  </ItemGroup>
-  <ItemGroup>
+    <Resource Include="COFFE.png" />
     <Resource Include="dominos-logo-4169.png" />
-  </ItemGroup>
-  <ItemGroup>
+    <Resource Include="file.png" />
+    <Resource Include="justdance.jpg" />
     <Content Include="kursach.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>kursach.Context.cs</LastGenOutput>
+      <DependentUpon>kursach.edmx</DependentUpon>
     </Content>
+    <Content Include="kursach.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>kursach.edmx</DependentUpon>
+      <LastGenOutput>kursach.cs</LastGenOutput>
+    </Content>
+    <Resource Include="ubr jy.png" />
+    <Resource Include="красный октябрь.png" />
+    <Resource Include="пиццерия_2.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

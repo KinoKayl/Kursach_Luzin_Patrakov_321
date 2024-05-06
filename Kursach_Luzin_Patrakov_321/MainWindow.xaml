@@ -53,7 +53,7 @@
                 <DropShadowEffect BlurRadius="1" Direction="270" Opacity="0.2"/>
             </Label.Effect>
             <Label.Background>
-                <ImageBrush ImageSource="красный октябрь.png"/>
+                <ImageBrush ImageSource="/красный октябрь.png"/>
             </Label.Background>
         </Label>
         <Label HorizontalAlignment="Left" Height="310" VerticalAlignment="Top" Width="190" Margin="680,105,0,0">
@@ -88,7 +88,7 @@
         <StackPanel Margin="0,0,0,791" Orientation="Horizontal">
             <Button x:Name="MainButton" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="110" Margin="30,10,0,0" BorderBrush="{x:Null}" Foreground="{x:Null}">
                 <Button.Background>
-                    <ImageBrush ImageSource="file.png"/>
+                    <ImageBrush ImageSource="/file.png"/>
                 </Button.Background>
             </Button>
             <Button x:Name="InfoButton" Content="INFO" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="190" Margin="10,10,0,0" Background="{x:Null}" FontSize="22" BorderBrush="{x:Null}" Foreground="White" Click="InfoButton_Click"/>
@@ -106,7 +106,7 @@
                 <DropShadowEffect Opacity="0.2" Direction="300"/>
             </Label.Effect>
             <Label.Background>
-                <ImageBrush ImageSource="пиццерия_2.png"/>
+                <ImageBrush ImageSource="/пиццерия_2.png"/>
             </Label.Background>
         </Label>
 
@@ -138,7 +138,7 @@
                 <DropShadowEffect BlurRadius="1" Direction="270" Opacity="0.2"/>
             </Label.Effect>
             <Label.Background>
-                <ImageBrush ImageSource="ubr jy.png"/>
+                <ImageBrush ImageSource="/ubr jy.png"/>
             </Label.Background>
         </Label>
         <Label HorizontalAlignment="Left" Height="226" VerticalAlignment="Top" Width="190" Margin="680,105,0,0" ToolTip="Спартаковская пл., 16/15 строение 5">
@@ -151,7 +151,7 @@
                 <DropShadowEffect BlurRadius="1" Direction="270" Opacity="0.2"/>
             </Label.Effect>
             <Label.Background>
-                <ImageBrush ImageSource="COFFE.png"/>
+                <ImageBrush ImageSource="/COFFE.png"/>
             </Label.Background>
         </Label>
         <Label HorizontalAlignment="Left" Height="226" VerticalAlignment="Top" Width="190" Margin="952,105,0,0" ToolTip="улица Генерала Глаголева, 15к1" >
@@ -164,7 +164,7 @@
                 <DropShadowEffect BlurRadius="1" Direction="270" Opacity="0.2"/>
             </Label.Effect>
             <Label.Background>
-                <ImageBrush ImageSource="генералглаголев.png"/>
+                <ImageBrush ImageSource="/генералглаголев.png"/>
             </Label.Background>
         </Label>
         <TextBlock HorizontalAlignment="Left" Margin="142,346,0,0" TextWrapping="Wrap" Text="6 Июля" VerticalAlignment="Top" FontSize="16" Foreground="White"/>
@@ -188,7 +188,7 @@
         <Label FontFamily="Montserrat" Content="Domino's Pizza" HorizontalAlignment="Left" Margin="633,463,0,0" VerticalAlignment="Top" Height="60" Width="282" FontSize="36" Foreground="White"/>
         <Label FontFamily="Montserrat" Content="" HorizontalAlignment="Left" Margin="567,465,0,0" VerticalAlignment="Top" Height="60" Width="62">
             <Label.Background>
-                <ImageBrush ImageSource="dominos-logo-4169.png"/>
+                <ImageBrush ImageSource="/dominos-logo-4169.png"/>
             </Label.Background>
         </Label>
         <TextBlock FontFamily="Montserrat" HorizontalAlignment="Left" Margin="649,527,0,0" TextWrapping="Wrap" Text="На территории фестиваля вы в любое время можете посетить нашего партнера Domino's Pizza" VerticalAlignment="Top" Foreground="White" Height="105" Width="242" FontSize="18"/>

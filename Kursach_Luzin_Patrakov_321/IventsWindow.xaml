@@ -5,9 +5,148 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Kursach_Luzin_Patrakov_321"
         mc:Ignorable="d"
-        Title="IventsWindow" Height="450" Width="800">
+        Title="IventsWindow" Height="797" Width="1184">
     <Grid>
-        <TextBlock HorizontalAlignment="Left" Margin="46,47,0,0" TextWrapping="Wrap" Text="Ывенты" VerticalAlignment="Top"/>
+        <Grid.Background>
+            <RadialGradientBrush GradientOrigin="1,1" Center="1,1" RadiusY="1" RadiusX="1">
+                <GradientStop Color="#FF021A43" Offset="0.75"/>
+                <GradientStop Color="#FF17498F" Offset="0.13"/>
+            </RadialGradientBrush>
+        </Grid.Background>
+        <Label Content="" HorizontalAlignment="Left" Margin="53,397,0,0" VerticalAlignment="Top" Width="230" Height="231" BorderThickness="5" BorderBrush="#FF0183CE" Background="{x:Null}">
+            <Label.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="150                             "/>
+                </Style>
+            </Label.Resources>
+        </Label>
+
+        <Label Content="" HorizontalAlignment="Left" Margin="53,147,0,0" VerticalAlignment="Top" Width="230" Height="231" BorderThickness="5" BorderBrush="#FF0183CE" Background="{x:Null}">
+            <Label.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="150                             "/>
+                </Style>
+            </Label.Resources>
+        </Label>
+
+        <Label HorizontalAlignment="Left" Margin="176,212,0,0" VerticalAlignment="Top" Width="405" Height="89">
+            <Label.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="40"/>
+                </Style>
+            </Label.Resources>
+            <Label.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="1,0">
+                    <GradientStop Color="#FF07A7D6" Offset="0"/>
+                    <GradientStop Color="#FF007ACC" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.Background>
+        </Label>
+        <Label Content="" HorizontalAlignment="Left" Margin="72,162,0,0" VerticalAlignment="Top" Width="192" Height="202">
+            <Label.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="100"/>
+                </Style>
+            </Label.Resources>
+            <Label.Background>
+                <ImageBrush ImageSource="/выступление.jpg"/>
+            </Label.Background>
+        </Label>
+        <TextBlock FontFamily="Montserrat" HorizontalAlignment="Left" Margin="270,218,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="89" Width="311" Foreground="White" FontSize="18"><Run Text="Выступления на сцене"/><LineBreak/><Run Language="ru-ru" Text="И выступления с дефиле"/></TextBlock>
+        <TextBlock FontFamily="Montserrat" HorizontalAlignment="Left" Margin="270,271,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="38" Width="311" Foreground="#FFE2E2E2"><Run Language="ru-ru" Text="Покажите себя и свой образ публике"/></TextBlock>
+        <TextBlock FontFamily="Montserrat" HorizontalAlignment="Left" Margin="262,309,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="38" Width="311" Foreground="#FFE2E2E2"><Run Language="ru-ru" Text="Выступите со своей программой под комментарии наших прекрасных ведущих"/></TextBlock>
+        <Label HorizontalAlignment="Left" Margin="176,462,0,0" VerticalAlignment="Top" Width="405" Height="89">
+            <Label.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="40"/>
+                </Style>
+            </Label.Resources>
+            <Label.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="1,0">
+                    <GradientStop Color="#FF07A7D6" Offset="0"/>
+                    <GradientStop Color="#FF007ACC" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.Background>
+        </Label>
+        <Label Content="" HorizontalAlignment="Left" Margin="72,412,0,0" VerticalAlignment="Top" Width="192" Height="202">
+            <Label.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="100"/>
+                </Style>
+            </Label.Resources>
+            <Label.Background>
+                <ImageBrush ImageSource="/весело.png"/>
+            </Label.Background>
+        </Label>
+        <TextBlock FontFamily="Montserrat" HorizontalAlignment="Left" Margin="270,470,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="311" Foreground="White" FontSize="18"><Run Text="Участвуйте в мини-играх"/></TextBlock>
+        <TextBlock FontFamily="Montserrat" HorizontalAlignment="Left" Margin="270,497,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="38" Width="311" Foreground="#FFE2E2E2" Text="Проходите мини-игры по путеводителю и соберите все наклейки, чтобы получить мерч"/>
+        <TextBlock FontFamily="Montserrat" HorizontalAlignment="Left" Margin="262,559,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="38" Width="311" Foreground="#FFE2E2E2"><Run Text="Путеводитель вы получите на в"/><Run Language="ru-ru" Text="х"/><Run Text="оде после проверки билета"/></TextBlock>
+        <Label Content="" HorizontalAlignment="Left" Margin="603,397,0,0" VerticalAlignment="Top" Width="230" Height="231" BorderThickness="5" BorderBrush="#FF0183CE" Background="{x:Null}">
+            <Label.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="150                             "/>
+                </Style>
+            </Label.Resources>
+        </Label>
+        <Label Content="" HorizontalAlignment="Left" Margin="603,147,0,0" VerticalAlignment="Top" Width="230" Height="231" BorderThickness="5" BorderBrush="#FF0183CE" Background="{x:Null}">
+            <Label.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="150                             "/>
+                </Style>
+            </Label.Resources>
+        </Label>
+        <Label HorizontalAlignment="Left" Margin="725,212,0,0" VerticalAlignment="Top" Width="405" Height="89">
+            <Label.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="40"/>
+                </Style>
+            </Label.Resources>
+            <Label.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="1,0">
+                    <GradientStop Color="#FF07A7D6" Offset="0"/>
+                    <GradientStop Color="#FF007ACC" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.Background>
+        </Label>
+        <Label Content="" HorizontalAlignment="Left" Margin="622,162,0,0" VerticalAlignment="Top" Width="192" Height="202">
+            <Label.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="100"/>
+                </Style>
+            </Label.Resources>
+            <Label.Background>
+                <ImageBrush ImageSource="/justdance.jpg"/>
+            </Label.Background>
+        </Label>
+        <TextBlock FontFamily="Montserrat" HorizontalAlignment="Left" Margin="825,224,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="89" Width="311" Foreground="White" FontSize="24"><Run Language="ru-ru" Text="Танцуют все!"/></TextBlock>
+        <TextBlock FontFamily="Montserrat" HorizontalAlignment="Left" Margin="829,263,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="38" Width="311" Foreground="#FFE2E2E2"><Run Text="Денсите на танцполе и играйте"/><LineBreak/><Run Text="со всеми в JustDance!"/></TextBlock>
+        <TextBlock FontFamily="Montserrat" HorizontalAlignment="Left" Margin="811,309,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="38" Width="311" Foreground="#FFE2E2E2"><Run Text="Постарайтесь не порвать костюм"/><Run Text=" и"/><Run Text=" наберите как можно больше баллов"/></TextBlock>
+        <Label HorizontalAlignment="Left" Margin="725,462,0,0" VerticalAlignment="Top" Width="405" Height="89">
+            <Label.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="40"/>
+                </Style>
+            </Label.Resources>
+            <Label.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="1,0">
+                    <GradientStop Color="#FF07A7D6" Offset="0"/>
+                    <GradientStop Color="#FF007ACC" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.Background>
+        </Label>
+        <Label Content="" HorizontalAlignment="Left" Margin="622,412,0,0" VerticalAlignment="Top" Width="192" Height="202">
+            <Label.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="100"/>
+                </Style>
+            </Label.Resources>
+            <Label.Background>
+                <ImageBrush ImageSource="/настолки.jpg"/>
+            </Label.Background>
+        </Label>
+        <TextBlock FontFamily="Montserrat" HorizontalAlignment="Left" Margin="819,470,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="311" Foreground="White" FontSize="18"><Run Language="ru-ru" Text="Задротские войны в настолках"/></TextBlock>
+        <TextBlock FontFamily="Montserrat" HorizontalAlignment="Left" Margin="819,497,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="38" Width="311" Foreground="#FFE2E2E2" Text="Заходите к нашим друзьям из HobbyGames и играйте с ними в настолки на лб"/>
+        <TextBlock FontFamily="Montserrat" HorizontalAlignment="Left" Margin="811,559,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="38" Width="311" Foreground="#FFE2E2E2"><Run Text="По секрету,,, Если с ними поиграть, то можно получить скидочку в их магазин"/></TextBlock>
 
     </Grid>
 </Window>

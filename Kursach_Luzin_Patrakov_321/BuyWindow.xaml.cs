@@ -134,7 +134,7 @@ namespace Kursach_Luzin_Patrakov_321
                 if (CosButton.IsChecked == true)
                 {
                     CospayersPage cospayers = new CospayersPage();
-                    cospayers.Closed += Window_Closed();
+                   // cospayers.Closed += Window_Closed();
                     cospayers.Show();
                 }
 
