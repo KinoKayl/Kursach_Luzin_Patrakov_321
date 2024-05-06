@@ -1,0 +1,73 @@
+﻿<Window x:Class="Kursach_Luzin_Patrakov_321.AuthPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kursach_Luzin_Patrakov_321"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Title="AuthPage" Height="515" Width="383">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0,0">
+            <GradientStop Color="#FF7BA6F7" Offset="0"/>
+            <GradientStop Color="#FFAF87E0" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="70,239,0,0" VerticalAlignment="Top" Height="2" Width="258">
+            <Label.Background>
+                <SolidColorBrush Color="White" Opacity="0.7"/>
+            </Label.Background>
+        </Label>
+        <Label Content="" HorizontalAlignment="Center" Margin="0,25,0,0" VerticalAlignment="Top" Height="84" Width="102" >
+            <Label.Background>
+                <ImageBrush ImageSource="/file.png" RenderOptions.BitmapScalingMode="HighQuality"/>
+            </Label.Background>
+        </Label>
+        <TextBlock HorizontalAlignment="Left" Margin="140,109,0,0" TextWrapping="Wrap" Text="ESCAPE FROM" VerticalAlignment="Top" Height="23" Width="122" FontSize="18" Foreground="#FFFBEFEF"/>
+        <TextBlock HorizontalAlignment="Left" Margin="170,14,0,0" TextWrapping="Wrap" Text="NANBA" VerticalAlignment="Top" Height="23" Width="150" FontSize="20" RenderTransformOrigin="0.5,0.5" Foreground="#FFFBEFEF">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Button x:Name="AuthButton" FontFamily="Montserrat" Content="Войти" HorizontalAlignment="Center" Margin="0,347,0,0" VerticalAlignment="Top" Height="38" Width="66" BorderThickness="3" Background="{x:Null}" Foreground="White" Click="AuthButton_Click">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="18"/>
+                </Style>
+            </Button.Resources>
+            <Button.BorderBrush>
+                <SolidColorBrush Color="White" Opacity="0.7"/>
+            </Button.BorderBrush>
+        </Button>
+        <TextBox x:Name="SecNameTextBox"  FontFamily="Montserrat" HorizontalAlignment="Left" Margin="70,214,0,0" TextWrapping="Wrap" Text="Введите логин" VerticalAlignment="Top" Height="26" Width="258" FontSize="16" Foreground="#FFFBF4F4" Background="{x:Null}" BorderBrush="{x:Null}" GotFocus="SecondtextBox_GotFocus" LostFocus="SecondtextBox_LostFocus"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="70,298,0,0" VerticalAlignment="Top" Height="2" Width="258">
+            <Label.Background>
+                <SolidColorBrush Color="White" Opacity="0.7"/>
+            </Label.Background>
+        </Label>
+        <PasswordBox x:Name="PassBox" Password="fvfvfvffvfvfvfvfvfvfvfvfvfvfvfvvfvvf" HorizontalAlignment="Left" Margin="70,270,0,0" VerticalAlignment="Top" Width="258" Height="26" Background="{x:Null}" BorderBrush="{x:Null}" GotFocus="thirdtextBox_GotFocus" LostFocus="thirdtextBox_LostFocus">
+            <PasswordBox.Foreground>
+                <SolidColorBrush Color="White" Opacity="0.7"/>
+            </PasswordBox.Foreground>
+        </PasswordBox>
+        <Button x:Name="RegButton" FontFamily="Montserrat" Content="Зарегистрироваться" HorizontalAlignment="Center" Margin="0,399,0,0" VerticalAlignment="Top" Height="38" Width="142" BorderThickness="3" Background="{x:Null}" Foreground="White" Click="RegButton_Click">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="18"/>
+                </Style>
+            </Button.Resources>
+            <Button.BorderBrush>
+                <SolidColorBrush Color="White" Opacity="0.7"/>
+            </Button.BorderBrush>
+        </Button>
+        <Frame x:Name="RegFrame"  Visibility="Hidden" Content="" Margin="0,-33,0,0"/>
+
+    </Grid>
+</Window>

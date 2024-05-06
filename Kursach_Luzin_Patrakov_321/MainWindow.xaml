@@ -88,7 +88,7 @@
         <StackPanel Margin="0,0,0,791" Orientation="Horizontal">
             <Button x:Name="MainButton" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="110" Margin="30,10,0,0" BorderBrush="{x:Null}" Foreground="{x:Null}">
                 <Button.Background>
-                    <ImageBrush ImageSource="/file.png"/>
+                    <ImageBrush ImageSource="/file.png" RenderOptions.BitmapScalingMode="HighQuality"/>
                 </Button.Background>
             </Button>
             <Button x:Name="InfoButton" Content="INFO" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="190" Margin="10,10,0,0" Background="{x:Null}" FontSize="22" BorderBrush="{x:Null}" Foreground="White" Click="InfoButton_Click"/>

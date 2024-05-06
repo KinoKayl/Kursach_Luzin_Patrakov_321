@@ -23,6 +23,9 @@ namespace Kursach_Luzin_Patrakov_321
         public MainWindow()
         {
             InitializeComponent();
+            
+            AuthPage auth = new AuthPage();
+            auth.Show();
         }
 
 

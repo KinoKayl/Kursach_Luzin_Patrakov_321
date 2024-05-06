@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         Title="Регистрация билета" Height="624" Width="566.962">
-    <Grid Margin="0,-2,0,-67">
+    <Grid Margin="0,-2,0,-6">
         <Grid.Background>
             <RadialGradientBrush GradientOrigin="1,1" Center="1,1" RadiusY="1" RadiusX="1">
                 <GradientStop Color="#FF021A43" Offset="0.75"/>
