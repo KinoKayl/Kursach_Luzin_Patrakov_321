@@ -20,13 +20,13 @@
                 <SolidColorBrush Color="White" Opacity="0.7"/>
             </Label.Background>
         </Label>
-        <Label Content="" HorizontalAlignment="Center" Margin="0,25,0,0" VerticalAlignment="Top" Height="84" Width="102" >
+        <Label Content="" HorizontalAlignment="Left" Margin="142,25,0,0" VerticalAlignment="Top" Height="84" Width="102" >
             <Label.Background>
                 <ImageBrush ImageSource="/file.png" RenderOptions.BitmapScalingMode="HighQuality"/>
             </Label.Background>
         </Label>
         <TextBlock HorizontalAlignment="Left" Margin="140,109,0,0" TextWrapping="Wrap" Text="ESCAPE FROM" VerticalAlignment="Top" Height="23" Width="122" FontSize="18" Foreground="#FFFBEFEF"/>
-        <TextBlock HorizontalAlignment="Left" Margin="170,14,0,0" TextWrapping="Wrap" Text="NANBA" VerticalAlignment="Top" Height="23" Width="150" FontSize="20" RenderTransformOrigin="0.5,0.5" Foreground="#FFFBEFEF">
+        <TextBlock HorizontalAlignment="Left" Margin="204,48,0,0" TextWrapping="Wrap" Text="NANBA" VerticalAlignment="Top" Height="23" Width="82" FontSize="20" RenderTransformOrigin="0.5,0.5" Foreground="#FFFBEFEF">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

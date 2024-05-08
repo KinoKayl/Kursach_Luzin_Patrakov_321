@@ -136,21 +136,6 @@
     <Compile Include="IventsWindow.xaml.cs">
       <DependentUpon>IventsWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="kursach.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>kursach.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="kursach.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>kursach.tt</DependentUpon>
-    </Compile>
-    <Compile Include="kursach.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>kursach.edmx</DependentUpon>
-    </Compile>
     <Compile Include="class\LocationParticipants.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -179,13 +164,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="kursach.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>kursach.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="kursach.edmx.diagram">
-      <DependentUpon>kursach.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -204,16 +182,6 @@
     <Resource Include="dominos-logo-4169.png" />
     <Resource Include="file.png" />
     <Resource Include="justdance.jpg" />
-    <Content Include="kursach.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>kursach.Context.cs</LastGenOutput>
-      <DependentUpon>kursach.edmx</DependentUpon>
-    </Content>
-    <Content Include="kursach.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>kursach.edmx</DependentUpon>
-      <LastGenOutput>kursach.cs</LastGenOutput>
-    </Content>
     <Resource Include="ubr jy.png" />
     <Resource Include="красный октябрь.png" />
     <Resource Include="пиццерия_2.png" />
