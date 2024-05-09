@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Kursach_Luzin_Patrakov_321
 {
-    internal class LocationInfo
+    public class LocationInfo
     {
         public int LocationInfoID { get; set; }
         public int LocationID { get; set; }

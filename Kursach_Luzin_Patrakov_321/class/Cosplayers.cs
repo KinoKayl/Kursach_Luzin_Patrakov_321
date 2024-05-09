@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Kursach_Luzin_Patrakov_321
 {
-    internal class Cosplayers
+    public class Cosplayers
     {
         public int CosplayerID { get; set; }
         public int UserID { get; set; }

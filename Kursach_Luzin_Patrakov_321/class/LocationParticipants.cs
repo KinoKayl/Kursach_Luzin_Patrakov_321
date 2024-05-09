@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Kursach_Luzin_Patrakov_321
 {
-    internal class LocationParticipants
+    public class LocationParticipants
     {
         public int ParticipantID { get; set; }
         public int UserID { get; set; }

@@ -13,48 +13,57 @@
             <GradientStop Color="#FFAF87E0" Offset="1"/>
         </LinearGradientBrush>
     </Page.Background>
-    <Grid>
-        <Label Content="Label" HorizontalAlignment="Center" Margin="0,83,0,0" VerticalAlignment="Top" Height="2" Width="258">
-            <Label.Background>
-                <SolidColorBrush Color="White" Opacity="0.7"/>
-            </Label.Background>
-        </Label>
-        <Label Content="Label" HorizontalAlignment="Center" Margin="0,137,0,0" VerticalAlignment="Top" Height="2" Width="258">
-            <Label.Background>
-                <SolidColorBrush Color="White" Opacity="0.7"/>
-            </Label.Background>
-        </Label>
-        <Button x:Name="AuthButton" FontFamily="Montserrat" Content="Войти" HorizontalAlignment="Center" Margin="0,356,0,0" VerticalAlignment="Top" Height="38" Width="66" BorderThickness="3" Background="{x:Null}" Foreground="White" Click="AuthButton_Click">
+    <Grid Margin="0,0,0,10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto" MinHeight="45.96"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0"/>
+            <ColumnDefinition Width="112.953"/>
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Content="Имя:" Grid.Row="0" Grid.Column="0" Margin="35,10,18,10" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="TextBoxFirstName" Text="Введите имя..." Foreground="Gray" Grid.Row="0" Margin="12,5,40,5" GotFocus="LoginTextBox_GotFocus" LostFocus="LoginTextBox_LostFocus" Grid.Column="2"/>
+        <Label Content="Фамилия:" Grid.Row="1" Grid.Column="0" Margin="35,10,18,10" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="TextBoxLastName" Text="Введите фамилию..." Foreground="Gray" Grid.Row="1" Margin="12,5,40,5" GotFocus="LoginTextBox_GotFocus" LostFocus="LoginTextBox_LostFocus" Grid.Column="2"/>
+        
+        <Label Content="Логин:" Grid.Row="2" Grid.Column="0" Margin="35,10,18,10" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="TextBoxUsername" Text="Введите логин..." Foreground="Gray" Grid.Row="2" Margin="12,5,40,5" GotFocus="LoginTextBox_GotFocus" LostFocus="LoginTextBox_LostFocus" Grid.Column="2"/>
+
+        <Label Content="Пароль:" Grid.Row="3" Grid.Column="0" Margin="35,10,18,10" Grid.ColumnSpan="2"/>
+        <PasswordBox x:Name="PasswordBox" Grid.Row="3" Margin="12,5,40,5" Grid.Column="2"/>
+
+        <Label Content="Гендер:" Grid.Row="5" Grid.Column="0" Margin="35,10,18,10" Grid.ColumnSpan="2"/>
+        <ComboBox x:Name="ComboBoxGender" Grid.Row="5" Margin="12,5,40,5" Grid.Column="2">
+            <ComboBoxItem Content="Мужской"/>
+            <ComboBoxItem Content="Женский"/>
+        </ComboBox>
+
+        <Label Content="Фото:" Grid.Row="6" Grid.Column="0" Margin="35,10,18,10" Grid.ColumnSpan="2" Visibility="Hidden"/>
+        <TextBox x:Name="TextBoxPhoto" ToolTip="Вводить без кода страны" Text="Введите адрес фото..." Foreground="Gray" Grid.Row="6" Visibility="Hidden" Margin="12,5,40,5" Grid.Column="2"/>
+
+        <Button x:Name="RegisterButton" Content="Sign up" Grid.Row="7" Grid.Column="2" Margin="29,27,56,0" Click="RegisterButton_Click" ToolTip="Завершить регистрацию">
             <Button.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="18"/>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="3"/>
                 </Style>
             </Button.Resources>
-            <Button.BorderBrush>
-                <SolidColorBrush Color="White" Opacity="0.7"/>
-            </Button.BorderBrush>
         </Button>
-        <TextBox x:Name="SecNameTextBox"  FontFamily="Montserrat" HorizontalAlignment="Center" Margin="0,112,0,0" TextWrapping="Wrap" Text="Введите фамилию" VerticalAlignment="Top" Height="26" Width="258" FontSize="16" Foreground="#FFFBF4F4" Background="{x:Null}" BorderBrush="{x:Null}" GotFocus="SecondtextBox_GotFocus" LostFocus="SecondtextBox_LostFocus"/>
-        <TextBox x:Name="NameTextBox" FontFamily="Montserrat" HorizontalAlignment="Center" Margin="0,58,0,0" TextWrapping="Wrap" Text="Введите имя" VerticalAlignment="Top" Height="26" Width="258" FontSize="16" Foreground="#FFFBF4F4" BorderBrush="{x:Null}" Background="{x:Null}" GotFocus="FirsttextBox_GotFocus" LostFocus="FirsttextBox_LostFocus"/>
-        <Label Content="Label" HorizontalAlignment="Center" Margin="0,323,0,0" VerticalAlignment="Top" Height="2" Width="258">
-            <Label.Background>
-                <SolidColorBrush Color="White" Opacity="0.7"/>
-            </Label.Background>
-        </Label>
-        <PasswordBox x:Name="PassBox" Password="fvfvfvffvfvfvfvfvfvfvfvfvfvfvfvvfvvf" HorizontalAlignment="Left" Margin="55,295,0,0" VerticalAlignment="Top" Width="258" Height="26" Background="{x:Null}" BorderBrush="{x:Null}" GotFocus="thirdtextBox_GotFocus" LostFocus="thirdtextBox_LostFocus">
-            <PasswordBox.Foreground>
-                <SolidColorBrush Color="White" Opacity="0.7"/>
-            </PasswordBox.Foreground>
-        </PasswordBox>
-        <Button x:Name="RegButton" FontFamily="Montserrat" Content="Зарегистрироваться" HorizontalAlignment="Center" Margin="0,399,0,0" VerticalAlignment="Top" Height="38" Width="142" BorderThickness="3" Background="{x:Null}" Foreground="White" Click="RegButton_Click">
+
+        <Button x:Name="CancelButton" Content="Отмена" Grid.Row="7" Grid.Column="2" Margin="66,61,94,-35" Click="CancelButton_Click" ToolTip="Отменить регистрацию">
             <Button.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="18"/>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="3"/>
                 </Style>
             </Button.Resources>
-            <Button.BorderBrush>
-                <SolidColorBrush Color="White" Opacity="0.7"/>
-            </Button.BorderBrush>
         </Button>
     </Grid>
 </Page>

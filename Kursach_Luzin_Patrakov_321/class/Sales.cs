@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Kursach_Luzin_Patrakov_321
 {
-    internal class Sales
+    public class Sales
     {
         public int SalesID { get; set; }
         public int UserID { get; set; }

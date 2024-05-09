@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Kursach_Luzin_Patrakov_321
 {
-    public class Reviews
+    public class Stalls
     {
-        public int ReviewID { get; set; }
-        public int UserID { get; set; }
+        public int StallID { get; set; }
         public int LocationID { get; set; }
-        public string Review { get; set; }
-        public int Rating { get; set; }
+        public string VendorID { get; set; }
+        public string StallName { get; set; }
+        public string Description { get; set; }
     }
 }

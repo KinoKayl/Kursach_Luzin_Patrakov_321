@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Kursach_Luzin_Patrakov_321
 {
-    internal class Organizers
+    public class Organizers
     {
         public int OrganizerID { get; set; }
         public int UserID { get; set; }

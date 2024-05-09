@@ -76,9 +76,10 @@ namespace Kursach_Luzin_Patrakov_321
         private void RegButton_Click(object sender, RoutedEventArgs e)
         {
             RegPage reg = new RegPage();
-            RegFrame.Content = reg;
+            MainFrame.Content = reg;
 
-            RegFrame.Visibility = Visibility.Visible;
+            MainFrame.Visibility = Visibility.Visible;
+            
         }
 
         private void AuthButton_Click(object sender, RoutedEventArgs e)

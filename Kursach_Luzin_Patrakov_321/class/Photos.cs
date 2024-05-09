@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Kursach_Luzin_Patrakov_321
 {
-    internal class Photos
+    public class Photos
     {
         public int PhotoID { get; set; }
         public int Photo { get; set; }

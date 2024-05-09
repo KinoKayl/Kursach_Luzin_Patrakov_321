@@ -67,7 +67,7 @@
                 <SolidColorBrush Color="White" Opacity="0.7"/>
             </Button.BorderBrush>
         </Button>
-        <Frame x:Name="RegFrame"  Visibility="Hidden" Content="" Margin="0,-33,0,0"/>
+        <Frame x:Name="MainFrame"  Visibility="Hidden" Content="" Margin="0,-33,0,0"/>
 
     </Grid>
 </Window>
