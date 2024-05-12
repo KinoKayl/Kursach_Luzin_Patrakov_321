@@ -59,5 +59,10 @@ namespace Kursach_Luzin_Patrakov_321
             AboutUsWindow AuWindow = new AboutUsWindow();
             AuWindow.Show();
         }
+
+        private void AdminButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

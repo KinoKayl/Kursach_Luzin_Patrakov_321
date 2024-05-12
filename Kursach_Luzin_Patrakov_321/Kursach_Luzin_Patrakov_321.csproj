@@ -172,11 +172,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="class\Locations.cs" />
-    <Compile Include="class\Organizers.cs" />
-    <Compile Include="class\Photos.cs" />
-    <Compile Include="class\PurchasedItems.cs" />
-    <Compile Include="FrameManager.cs" />
+    <Compile Include="AdminPages\ReportPage.xaml.cs">
+      <DependentUpon>ReportPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\SalesPage.xaml.cs">
+      <DependentUpon>SalesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\UsersPage.xaml.cs">
+      <DependentUpon>UsersPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Widows\AdminWindow.xaml.cs">
+      <DependentUpon>AdminWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="class\DB_Classes\Locations.cs" />
+    <Compile Include="class\DB_Classes\Organizers.cs" />
+    <Compile Include="class\DB_Classes\Photos.cs" />
+    <Compile Include="class\DB_Classes\PurchasedItems.cs" />
+    <Compile Include="class\FrameManager.cs" />
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -192,39 +204,55 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
-    <Compile Include="RegPage.xaml.cs">
+    <Compile Include="Widows\auth\RegPage.xaml.cs">
       <DependentUpon>RegPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="class\Reviews.cs" />
-    <Compile Include="class\Sales.cs" />
-    <Compile Include="class\Schedule.cs" />
-    <Compile Include="class\TicketInfo.cs" />
-    <Compile Include="class\Tickets.cs" />
-    <Compile Include="class\TicketTypes.cs" />
-    <Compile Include="class\Stalls.cs" />
-    <Compile Include="class\Users.cs" />
-    <Compile Include="class\Vendors.cs" />
-    <Page Include="AboutUsWindow.xaml">
+    <Compile Include="class\DB_Classes\Reviews.cs" />
+    <Compile Include="class\DB_Classes\Sales.cs" />
+    <Compile Include="class\DB_Classes\Schedule.cs" />
+    <Compile Include="class\DB_Classes\TicketInfo.cs" />
+    <Compile Include="class\DB_Classes\Tickets.cs" />
+    <Compile Include="class\DB_Classes\TicketTypes.cs" />
+    <Compile Include="class\DB_Classes\Stalls.cs" />
+    <Compile Include="class\DB_Classes\Users.cs" />
+    <Compile Include="class\DB_Classes\Vendors.cs" />
+    <Page Include="Widows\AboutUsWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="AuthPage.xaml">
+    <Page Include="AdminPages\ReportPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="BuyWindow.xaml">
+    <Page Include="AdminPages\SalesPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="CospayersPage.xaml">
+    <Page Include="AdminPages\UsersPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="InfoWindow.xaml">
+    <Page Include="Widows\AdminWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="IventsWindow.xaml">
+    <Page Include="Widows\auth\AuthPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Widows\BuyWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Widows\auth\CospayersPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Widows\InfoWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Widows\IventsWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -232,42 +260,42 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="AboutUsWindow.xaml.cs">
+    <Compile Include="Widows\AboutUsWindow.xaml.cs">
       <DependentUpon>AboutUsWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AnimeFestivalNews.cs" />
-    <Compile Include="AuthPage.xaml.cs">
+    <Compile Include="class\AnimeFestivalNews.cs" />
+    <Compile Include="Widows\auth\AuthPage.xaml.cs">
       <DependentUpon>AuthPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="class\LocationInfo.cs" />
-    <Compile Include="class\Addresses.cs" />
+    <Compile Include="class\DB_Classes\LocationInfo.cs" />
+    <Compile Include="class\DB_Classes\Addresses.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BuyWindow.xaml.cs">
+    <Compile Include="Widows\BuyWindow.xaml.cs">
       <DependentUpon>BuyWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="class\ContactInfo.cs" />
-    <Compile Include="CospayersPage.xaml.cs">
+    <Compile Include="class\DB_Classes\ContactInfo.cs" />
+    <Compile Include="Widows\auth\CospayersPage.xaml.cs">
       <DependentUpon>CospayersPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="class\Events.cs" />
-    <Compile Include="class\Cosplayers.cs" />
-    <Compile Include="info.cs" />
-    <Compile Include="InfoWindow.xaml.cs">
+    <Compile Include="class\DB_Classes\Events.cs" />
+    <Compile Include="class\DB_Classes\Cosplayers.cs" />
+    <Compile Include="class\info.cs" />
+    <Compile Include="Widows\InfoWindow.xaml.cs">
       <DependentUpon>InfoWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="class\InvitedUsers.cs" />
-    <Compile Include="IventsWindow.xaml.cs">
+    <Compile Include="class\DB_Classes\InvitedUsers.cs" />
+    <Compile Include="Widows\IventsWindow.xaml.cs">
       <DependentUpon>IventsWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="class\LocationParticipants.cs" />
+    <Compile Include="class\DB_Classes\LocationParticipants.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="RegPage.xaml">
+    <Page Include="Widows\auth\RegPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -307,17 +335,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="настолки.jpg" />
-    <Resource Include="весело.png" />
-    <Resource Include="выступление.jpg" />
-    <Resource Include="генералглаголев.png" />
-    <Resource Include="COFFE.png" />
-    <Resource Include="dominos-logo-4169.png" />
-    <Resource Include="file.png" />
-    <Resource Include="justdance.jpg" />
-    <Resource Include="ubr jy.png" />
-    <Resource Include="красный октябрь.png" />
-    <Resource Include="пиццерия_2.png" />
+    <Resource Include="img\настолки.jpg" />
+    <Resource Include="img\весело.png" />
+    <Resource Include="img\выступление.jpg" />
+    <Resource Include="img\генералглаголев.png" />
+    <Resource Include="img\COFFE.png" />
+    <Resource Include="img\dominos-logo-4169.png" />
+    <Resource Include="img\file.png" />
+    <Resource Include="img\justdance.jpg" />
+    <Resource Include="img\ubr jy.png" />
+    <Resource Include="img\красный октябрь.png" />
+    <Resource Include="img\пиццерия_2.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

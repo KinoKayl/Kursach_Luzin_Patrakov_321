@@ -22,7 +22,7 @@
         </Label>
         <Label Content="" HorizontalAlignment="Left" Margin="142,25,0,0" VerticalAlignment="Top" Height="84" Width="102" >
             <Label.Background>
-                <ImageBrush ImageSource="/file.png" RenderOptions.BitmapScalingMode="HighQuality"/>
+                <ImageBrush ImageSource="/img/file.png" RenderOptions.BitmapScalingMode="HighQuality"/>
             </Label.Background>
         </Label>
         <TextBlock HorizontalAlignment="Left" Margin="140,109,0,0" TextWrapping="Wrap" Text="ESCAPE FROM" VerticalAlignment="Top" Height="23" Width="122" FontSize="18" Foreground="#FFFBEFEF"/>
@@ -67,7 +67,7 @@
                 <SolidColorBrush Color="White" Opacity="0.7"/>
             </Button.BorderBrush>
         </Button>
-        <Frame x:Name="MainFrame"  Visibility="Hidden" Content="" Margin="0,-33,0,0"/>
+        <Frame x:Name="MainFrame"  Visibility="Hidden" Content="" Margin="0,-16,0,0"/>
 
     </Grid>
 </Window>
