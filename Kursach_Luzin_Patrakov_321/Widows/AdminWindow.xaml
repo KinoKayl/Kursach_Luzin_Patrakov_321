@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Kursach_Luzin_Patrakov_321"
         mc:Ignorable="d"
-        Title="Админка" Height="450" Width="800">
+        Title="Админка" Height="853" Width="926">
     <Grid>
         <Grid.Background>
             <RadialGradientBrush GradientOrigin="1,1" Center="1,1" RadiusY="1" RadiusX="1">
@@ -13,12 +13,27 @@
                 <GradientStop Color="#FF17498F" Offset="0.13"/>
             </RadialGradientBrush>
         </Grid.Background>
-        <Frame Content="" Margin="139,-25,0,0"/>
+        <Label Content="" HorizontalAlignment="Left" BorderThickness="3" VerticalAlignment="Top" Height="809" Width="134" Margin="0,4,0,0">
+            <Label.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Label.Resources>
+            <Label.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.5">
+                    <GradientStop Color="#FF173E91"/>
+                    <GradientStop Color="#FF00C5D2" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.BorderBrush>
+        </Label>
+
+        <Frame x:Name="PageFrame" Content="" Margin="139,-25,0,0"/>
         <StackPanel Margin="0,0,666,0" Orientation="Horizontal">
-            <Button x:Name="InfoButton" VerticalAlignment="Top" Content="Users" Height="52" Width="135" Background="{x:Null}" FontSize="22" BorderBrush="{x:Null}" Foreground="White"/>
-            <Button x:Name="EventsButton" Content="Sales" Height="52" VerticalAlignment="Top" Width="134" Margin="-136,55,0,0" Background="{x:Null}" FontSize="22" BorderBrush="{x:Null}" Foreground="White" />
-            <Button x:Name="AboutUsButton" Content="Report" HorizontalAlignment="Left" Height="52" VerticalAlignment="Top" Width="135" Margin="-136,110,0,0" Background="{x:Null}" FontSize="22" BorderBrush="{x:Null}" Foreground="White" />
-            <Button x:Name="AdminButton" Content="ADMINISTRATION" HorizontalAlignment="Left" Height="52" VerticalAlignment="Top" Width="135" Margin="-136,160,0,0" Background="{x:Null}" FontSize="22" BorderBrush="{x:Null}" Foreground="White" />
+
+            <Button x:Name="UsersButton" VerticalAlignment="Top" Content="Users" Height="52" Width="135" Background="{x:Null}" FontSize="22" BorderBrush="{x:Null}" Foreground="White" Click="UsersButton_Click"/>
+            <Button x:Name="SalesButton" Content="Sales" Height="52" VerticalAlignment="Top" Width="134" Margin="-136,55,0,0" Background="{x:Null}" FontSize="22" BorderBrush="{x:Null}" Foreground="White" Click="SalesButton_Click" />
+            <Button x:Name="ReportButton" Content="Report" HorizontalAlignment="Left" Height="52" VerticalAlignment="Top" Width="135" Margin="-136,110,0,0" Background="{x:Null}" FontSize="22" BorderBrush="{x:Null}" Foreground="White" Click="ReportButton_Click" />
+            <Button x:Name="StallsButton" Content="Stalls" HorizontalAlignment="Left" Height="52" VerticalAlignment="Top" Width="135" Margin="-136,160,0,0" Background="{x:Null}" FontSize="22" BorderBrush="{x:Null}" Foreground="White" Click="StallsButton_Click" />
 
         </StackPanel>
 

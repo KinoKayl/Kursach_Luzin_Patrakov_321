@@ -178,9 +178,13 @@
     <Compile Include="AdminPages\SalesPage.xaml.cs">
       <DependentUpon>SalesPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AdminPages\StallsPage.xaml.cs">
+      <DependentUpon>StallsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AdminPages\UsersPage.xaml.cs">
       <DependentUpon>UsersPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="class\Users_ADMIN.cs" />
     <Compile Include="Widows\AdminWindow.xaml.cs">
       <DependentUpon>AdminWindow.xaml</DependentUpon>
     </Compile>
@@ -216,6 +220,10 @@
     <Compile Include="class\DB_Classes\Stalls.cs" />
     <Compile Include="class\DB_Classes\Users.cs" />
     <Compile Include="class\DB_Classes\Vendors.cs" />
+    <Page Include="AdminPages\StallsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Widows\AboutUsWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

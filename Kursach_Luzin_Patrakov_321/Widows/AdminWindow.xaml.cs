@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Kursach_Luzin_Patrakov_321.AdminPages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,30 @@ namespace Kursach_Luzin_Patrakov_321
         public AdminWindow()
         {
             InitializeComponent();
+        }
+
+        private void UsersButton_Click(object sender, RoutedEventArgs e)
+        {
+            UsersPage usersPage = new UsersPage(); 
+            PageFrame.Content = usersPage;
+        }
+
+        private void SalesButton_Click(object sender, RoutedEventArgs e)
+        {
+            SalesPage salesPage = new SalesPage();
+            PageFrame.Content = salesPage;
+        }
+
+        private void ReportButton_Click(object sender, RoutedEventArgs e)
+        {
+            ReportPage reportPage = new ReportPage();   
+            PageFrame.Content = reportPage;
+        }
+
+        private void StallsButton_Click(object sender, RoutedEventArgs e)
+        {
+            StallsPage stallsPage = new StallsPage();
+            PageFrame.Content = stallsPage;
         }
     }
 }

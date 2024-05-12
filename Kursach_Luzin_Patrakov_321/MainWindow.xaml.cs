@@ -62,7 +62,8 @@ namespace Kursach_Luzin_Patrakov_321
 
         private void AdminButton_Click(object sender, RoutedEventArgs e)
         {
-
+            AdminWindow AdminWindow = new AdminWindow();
+            AdminWindow.Show();
         }
     }
 }
