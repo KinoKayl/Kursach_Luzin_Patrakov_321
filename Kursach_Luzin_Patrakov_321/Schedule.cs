@@ -16,11 +16,10 @@ namespace Kursach_Luzin_Patrakov_321
     {
         public int ScheduleID { get; set; }
         public Nullable<int> LocationID { get; set; }
-        public Nullable<System.DateTime> Date { get; set; }
-        public Nullable<System.TimeSpan> StartTime { get; set; }
-        public Nullable<System.TimeSpan> EndTime { get; set; }
-        public string Event { get; set; }
+        public string Date { get; set; }
+        public int EventID { get; set; }
     
+        public virtual Events Events { get; set; }
         public virtual Locations Locations { get; set; }
     }
 }

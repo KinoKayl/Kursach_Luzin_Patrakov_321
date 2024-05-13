@@ -72,6 +72,15 @@ namespace Kursach_Luzin_Patrakov_321.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на .
         /// </summary>
+        internal static string Date {
+            get {
+                return ResourceManager.GetString("Date", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на .
+        /// </summary>
         internal static string FstResourse {
             get {
                 return ResourceManager.GetString("FstResourse", resourceCulture);
@@ -90,6 +99,24 @@ namespace Kursach_Luzin_Patrakov_321.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на .
         /// </summary>
+        internal static string Location {
+            get {
+                return ResourceManager.GetString("Location", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на .
+        /// </summary>
+        internal static string Price {
+            get {
+                return ResourceManager.GetString("Price", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на .
+        /// </summary>
         internal static string SndResourse {
             get {
                 return ResourceManager.GetString("SndResourse", resourceCulture);
@@ -99,9 +126,27 @@ namespace Kursach_Luzin_Patrakov_321.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на .
         /// </summary>
+        internal static string TicketType {
+            get {
+                return ResourceManager.GetString("TicketType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на .
+        /// </summary>
         internal static string TrdResourse {
             get {
                 return ResourceManager.GetString("TrdResourse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на .
+        /// </summary>
+        internal static string UserID {
+            get {
+                return ResourceManager.GetString("UserID", resourceCulture);
             }
         }
     }

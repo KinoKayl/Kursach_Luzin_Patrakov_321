@@ -105,9 +105,9 @@ namespace Kursach_Luzin_Patrakov_321
             else
             {
                 //Функционал
-                App.Current.Resources["CosName"] = CostumeNameTextBlock.Text;
+                App.Current.Resources["CosName"] = CostumeNameTextBlock_memory.Text;
                 CospayersPage cospayersPage = new CospayersPage();
-                cospayersPage.Close();
+                this.Close();
 
             }
 

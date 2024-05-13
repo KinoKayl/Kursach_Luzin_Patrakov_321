@@ -24,73 +24,40 @@ namespace Kursach_Luzin_Patrakov_321
             InitializeComponent();
         }
 
-        //Текст Имени и фамилии
-        private void GotFocus(TextBox textBox, string placeholderText, string replacementText)
-        {
-            if (textBox != null && textBox.Text == placeholderText)
-            {
-                textBox.Text = replacementText;
-                textBox.Foreground = Brushes.Black;
-            }
-        }
-
-        private void LostFocus(TextBox textBox, string replacementText, string placeholderText)
-        {
-            if (textBox != null && textBox.Text == placeholderText)
-            {
-                textBox.Text = replacementText;
-                textBox.Foreground = Brushes.Gray;
-            }
-        }
-
-        //Пропадющий текст
-        private void FirsttextBox_GotFocus(object sender, RoutedEventArgs e)
-        {
-            TextBox textBox = sender as TextBox;
-            GotFocus(textBox, "Введите Имя", "");
-        }
-        private void FirsttextBox_LostFocus(object sender, RoutedEventArgs e)
-        {
-            TextBox textBox = sender as TextBox;
-            LostFocus(textBox, "Введите Имя", "");
-        }
-
-        private void SecondtextBox_GotFocus(object sender, RoutedEventArgs e)
-        {
-            TextBox textBox = sender as TextBox;
-            GotFocus(textBox, "Введите Фамилию", "");
-        }
-        private void SecondtextBox_LostFocus(object sender, RoutedEventArgs e)
-        {
-            TextBox textBox = sender as TextBox;
-            LostFocus(textBox, "Введите Фамилию", "");
-        }
-
-
         // Радиобаттоны адресов
         private void BersenevButton_Checked(object sender, RoutedEventArgs e)
         {
             FirstDateButton.Content = "6 Июля";
             SecondDateButton.Content = "7 Июля";
-        }
 
-        private void EnergButton_Checked(object sender, RoutedEventArgs e)
-        {
-            FirstDateButton.Content = "13 Июля";
-            SecondDateButton.Content = "14 Июля";
-        }
-
-        private void SpartButton_Checked(object sender, RoutedEventArgs e)
-        {
-            FirstDateButton.Content = "27 Июля";
-            SecondDateButton.Content = "28 Июля";
+            App.Current.Resources["Location"] = 1;
         }
 
         private void GlagolButton_Checked(object sender, RoutedEventArgs e)
         {
             FirstDateButton.Content = "10 Августа";
             SecondDateButton.Content = "11 Августа";
+
+            App.Current.Resources["Location"] = 2;
         }
+
+        private void EnergButton_Checked(object sender, RoutedEventArgs e)
+        {
+            FirstDateButton.Content = "13 Июля";
+            SecondDateButton.Content = "14 Июля";
+
+            App.Current.Resources["Location"] = 3;
+        }
+
+        private void SpartButton_Checked(object sender, RoutedEventArgs e)
+        {
+            FirstDateButton.Content = "27 Июля";
+            SecondDateButton.Content = "28 Июля";
+
+            App.Current.Resources["Location"] = 4;
+        }
+
+       
 
         //Радиобаттоны типов билета
         private void GuestButton_Checked(object sender, RoutedEventArgs e)
@@ -108,24 +75,23 @@ namespace Kursach_Luzin_Patrakov_321
             TicketPriceTextBlock.Text = "1200 руб.";
         }
 
-        private void BuyButton_Click(object sender, RoutedEventArgs e)
+        public bool Buy(int locationId, string ticketType, decimal price, string purchaseDate, int userId)
         {
-            {
-                MessageBox.Show("Выберите Фамилию участника");
-            }
-            if (BersenevButton.IsChecked != true && EnergButton.IsChecked != true && SpartButton.IsChecked != true  && GlagolButton.IsChecked != true) //Проверка выбора адреса
+            if (BersenevButton.IsChecked != true && EnergButton.IsChecked != true && SpartButton.IsChecked != true && GlagolButton.IsChecked != true) //Проверка выбора адреса
             {
                 MessageBox.Show("Выберите адрес фестиваля который хотите посетить");
-                
+                return false;
+
             }
             else if (FirstDateButton.IsChecked != true && SecondDateButton.IsChecked != true) //Проверка выбора даты
             {
                 MessageBox.Show("Выберите дату посещения");
-
+                return false;
             }
             else if (FirstDateButton.IsChecked != true && SecondDateButton.IsChecked != true) //Проверка выбора типа билета
             {
                 MessageBox.Show("Выберите тип билета");
+                return false;
 
             }
             else
@@ -134,23 +100,42 @@ namespace Kursach_Luzin_Patrakov_321
                 if (CosButton.IsChecked == true)
                 {
                     CospayersPage cospayers = new CospayersPage();
-                   // cospayers.Closed += Window_Closed();
-                    cospayers.Show();
+                    cospayers.ShowDialog();
+                    CosName_memory.Text = (string)App.Current.Resources["CosName"];
                 }
 
-                MessageBox.Show("Билет оформлен");
+                //Функционал кнопки
+                Kursach_Luzin_Patrakov_321Entities1 db = new Kursach_Luzin_Patrakov_321Entities1();
 
-                    //Функционал кнопки
-
-                    //Внесение пармаетров билета в бд
-
+                Tickets newTicket = new Tickets
+                {
+                    LocationID = locationId,
+                    TicketType = ticketType,
+                    Price = price,
+                    PurchaseDate = purchaseDate,
+                    UserID = userId
+                };
 
                 
+                db.Tickets.Add(newTicket);
+
+                // Сохранение изменений в базе данных
+                db.SaveChanges();
+                
+
+
+                return true;
+                MessageBox.Show("Билет оформлен");
             }
             
-            
-            
-            
+        }
+
+        private void BuyButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (Buy(App.Current.Resources["Location"], App.Current.Resources["TicketType"], App.Current.Resources["Price"], App.Current.Resources["Date"], 1))
+            {
+                FrameManager.MainFrame.Navigate(new AuthPage());
+            }
         }
 
         private void FirstTextBox_TextChanged(object sender, TextChangedEventArgs e)

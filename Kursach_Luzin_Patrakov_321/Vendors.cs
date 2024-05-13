@@ -12,21 +12,22 @@ namespace Kursach_Luzin_Patrakov_321
     using System;
     using System.Collections.Generic;
     
-    public partial class ContactInfo
+    public partial class Vendors
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public ContactInfo()
+        public Vendors()
         {
-            this.Vendors = new HashSet<Vendors>();
+            this.Stalls = new HashSet<Stalls>();
         }
     
-        public int ContactID { get; set; }
+        public int VendorID { get; set; }
         public Nullable<int> UserID { get; set; }
-        public string PhoneNumber { get; set; }
-        public string Email { get; set; }
+        public string CompanyName { get; set; }
+        public Nullable<int> ContactInfoID { get; set; }
     
-        public virtual Users Users { get; set; }
+        public virtual ContactInfo ContactInfo { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Vendors> Vendors { get; set; }
+        public virtual ICollection<Stalls> Stalls { get; set; }
+        public virtual Users Users { get; set; }
     }
 }

@@ -85,18 +85,17 @@ namespace Kursach_Luzin_Patrakov_321
 
         public bool isAdmin(string UserLogin, string UserPassword)
         {
-            Kursach_Luzin_Patrakov_321Entities db = new Kursach_Luzin_Patrakov_321Entities();
+            Kursach_Luzin_Patrakov_321Entities1 db = new Kursach_Luzin_Patrakov_321Entities1();
 
             // Проверяем, существует ли пользователь с таким логином и паролем
             Users user = db.Users.AsNoTracking().FirstOrDefault(u => u.Login == UserLogin && u.Password == UserPassword);
 
-            // Если пользователь существует и его роль - Admin, возвращаем true
             return user != null && user.Role == "Admin";
         }
 
         public bool Auth(string UserLogin, string UserPassword)
         {
-            Kursach_Luzin_Patrakov_321Entities db = new Kursach_Luzin_Patrakov_321Entities();
+            Kursach_Luzin_Patrakov_321Entities1 db = new Kursach_Luzin_Patrakov_321Entities1();
 
             Users userObject = new Users()
             {
@@ -111,6 +110,9 @@ namespace Kursach_Luzin_Patrakov_321
                 AuthPage page = new AuthPage();
                 this.Close();
 
+                App.Current.Resources["FstResourse"] = LoginTextBox.Text;
+                App.Current.Resources["SndResourse"] = PassBox.Password;
+
                 if (isAdmin(UserLogin, UserPassword))
                 {
                     App.Current.Resources["isAdmin"] = "true";
@@ -119,7 +121,6 @@ namespace Kursach_Luzin_Patrakov_321
             else
             {
                 MessageBox.Show("Данный пользователь отсутствует");
-                
             }
 
             return true;

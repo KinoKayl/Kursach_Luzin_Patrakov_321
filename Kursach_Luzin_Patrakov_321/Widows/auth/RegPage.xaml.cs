@@ -133,7 +133,7 @@ namespace Kursach_Luzin_Patrakov_321
                 return false;
             }
 
-            Kursach_Luzin_Patrakov_321Entities db = new Kursach_Luzin_Patrakov_321Entities();
+            Kursach_Luzin_Patrakov_321Entities1 db = new Kursach_Luzin_Patrakov_321Entities1();
 
             Users userObject = new Users()
             {

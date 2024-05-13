@@ -233,6 +233,9 @@
     <Compile Include="Schedule.cs">
       <DependentUpon>Kursach.tt</DependentUpon>
     </Compile>
+    <Compile Include="Stalls.cs">
+      <DependentUpon>Kursach.tt</DependentUpon>
+    </Compile>
     <Compile Include="sysdiagrams.cs">
       <DependentUpon>Kursach.tt</DependentUpon>
     </Compile>
@@ -243,6 +246,9 @@
       <DependentUpon>Kursach.tt</DependentUpon>
     </Compile>
     <Compile Include="Users.cs">
+      <DependentUpon>Kursach.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Vendors.cs">
       <DependentUpon>Kursach.tt</DependentUpon>
     </Compile>
     <Compile Include="Widows\AdminWindow.xaml.cs">
@@ -284,7 +290,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Widows\auth\CospayersPage.xaml">
+    <Page Include="Widows\CospayersPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -314,7 +320,7 @@
     <Compile Include="Widows\BuyWindow.xaml.cs">
       <DependentUpon>BuyWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Widows\auth\CospayersPage.xaml.cs">
+    <Compile Include="Widows\CospayersPage.xaml.cs">
       <DependentUpon>CospayersPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="class\info.cs" />
@@ -384,10 +390,13 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="img\icons8-info-94.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Kursach.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Kursach.Context.cs</LastGenOutput>
       <DependentUpon>Kursach.edmx</DependentUpon>
+      <LastGenOutput>Kursach.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Kursach.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

@@ -24,16 +24,18 @@ namespace Kursach_Luzin_Patrakov_321
             this.Photos = new HashSet<Photos>();
             this.Reviews = new HashSet<Reviews>();
             this.Schedule = new HashSet<Schedule>();
+            this.Stalls = new HashSet<Stalls>();
             this.Tickets = new HashSet<Tickets>();
         }
     
         public int LocationID { get; set; }
         public string Name { get; set; }
-        public Nullable<System.DateTime> StartDate { get; set; }
-        public Nullable<System.DateTime> EndDate { get; set; }
-        public string Location { get; set; }
+        public string StartDate { get; set; }
+        public string EndDate { get; set; }
+        public int AddressID { get; set; }
         public string Description { get; set; }
     
+        public virtual Addresses Addresses { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Cosplayers> Cosplayers { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
@@ -48,6 +50,8 @@ namespace Kursach_Luzin_Patrakov_321
         public virtual ICollection<Reviews> Reviews { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Schedule> Schedule { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Stalls> Stalls { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Tickets> Tickets { get; set; }
     }

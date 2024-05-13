@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Kursach_Luzin_Patrakov_321"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
         Title="AboutUsWindow" Height="450" Width="800">
     <Grid>
         <TextBlock HorizontalAlignment="Left" Margin="40,43,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="О нас"/><LineBreak/><Run/></TextBlock>

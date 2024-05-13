@@ -22,9 +22,9 @@ namespace Kursach_Luzin_Patrakov_321
     
         public int TicketID { get; set; }
         public Nullable<int> LocationID { get; set; }
-        public Nullable<int> TicketType { get; set; }
+        public string TicketType { get; set; }
         public Nullable<decimal> Price { get; set; }
-        public Nullable<System.DateTime> PurchaseDate { get; set; }
+        public string PurchaseDate { get; set; }
         public Nullable<int> UserID { get; set; }
     
         public virtual Locations Locations { get; set; }

@@ -13,10 +13,10 @@ namespace Kursach_Luzin_Patrakov_321
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Kursach_Luzin_Patrakov_321Entities : DbContext
+    public partial class Kursach_Luzin_Patrakov_321Entities1 : DbContext
     {
-        public Kursach_Luzin_Patrakov_321Entities()
-            : base("name=Kursach_Luzin_Patrakov_321Entities")
+        public Kursach_Luzin_Patrakov_321Entities1()
+            : base("name=Kursach_Luzin_Patrakov_321Entities1")
         {
         }
     
@@ -36,9 +36,11 @@ namespace Kursach_Luzin_Patrakov_321
         public virtual DbSet<Reviews> Reviews { get; set; }
         public virtual DbSet<Sales> Sales { get; set; }
         public virtual DbSet<Schedule> Schedule { get; set; }
+        public virtual DbSet<Stalls> Stalls { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<TicketInfo> TicketInfo { get; set; }
         public virtual DbSet<Tickets> Tickets { get; set; }
         public virtual DbSet<Users> Users { get; set; }
+        public virtual DbSet<Vendors> Vendors { get; set; }
     }
 }

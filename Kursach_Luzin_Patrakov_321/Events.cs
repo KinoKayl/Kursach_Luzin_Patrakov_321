@@ -14,14 +14,19 @@ namespace Kursach_Luzin_Patrakov_321
     
     public partial class Events
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Events()
+        {
+            this.Schedule = new HashSet<Schedule>();
+        }
+    
         public int EventID { get; set; }
         public Nullable<int> LocationID { get; set; }
         public string EventName { get; set; }
         public string Description { get; set; }
-        public Nullable<System.DateTime> Date { get; set; }
-        public Nullable<System.TimeSpan> StartTime { get; set; }
-        public Nullable<System.TimeSpan> EndTime { get; set; }
     
         public virtual Locations Locations { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Schedule> Schedule { get; set; }
     }
 }

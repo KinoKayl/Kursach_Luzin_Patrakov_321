@@ -9,18 +9,17 @@
           <Key>
             <PropertyRef Name="AddressID" />
           </Key>
-          <Property Name="AddressID" Type="int" Nullable="false" />
-          <Property Name="UserID" Type="int" />
-          <Property Name="Country" Type="varchar" MaxLength="50" />
-          <Property Name="City" Type="varchar" MaxLength="50" />
-          <Property Name="Street" Type="varchar" MaxLength="100" />
-          <Property Name="PostalCode" Type="varchar" MaxLength="20" />
+          <Property Name="AddressID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Country" Type="nvarchar(max)" />
+          <Property Name="City" Type="nvarchar(max)" />
+          <Property Name="Street" Type="nvarchar(max)" />
+          <Property Name="Building" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="ContactInfo">
           <Key>
             <PropertyRef Name="ContactID" />
           </Key>
-          <Property Name="ContactID" Type="int" Nullable="false" />
+          <Property Name="ContactID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="UserID" Type="int" />
           <Property Name="PhoneNumber" Type="varchar" MaxLength="20" />
           <Property Name="Email" Type="varchar" MaxLength="100" />
@@ -29,28 +28,25 @@
           <Key>
             <PropertyRef Name="CosplayerID" />
           </Key>
-          <Property Name="CosplayerID" Type="int" Nullable="false" />
+          <Property Name="CosplayerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="UserID" Type="int" />
           <Property Name="LocationID" Type="int" />
-          <Property Name="Costume" Type="varchar" MaxLength="100" />
+          <Property Name="Costume" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="Events">
           <Key>
             <PropertyRef Name="EventID" />
           </Key>
-          <Property Name="EventID" Type="int" Nullable="false" />
+          <Property Name="EventID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="LocationID" Type="int" />
-          <Property Name="EventName" Type="varchar" MaxLength="100" />
+          <Property Name="EventName" Type="nvarchar(max)" />
           <Property Name="Description" Type="text" />
-          <Property Name="Date" Type="date" />
-          <Property Name="StartTime" Type="time" Precision="7" />
-          <Property Name="EndTime" Type="time" Precision="7" />
         </EntityType>
         <EntityType Name="InvitedUsers">
           <Key>
             <PropertyRef Name="InvitationID" />
           </Key>
-          <Property Name="InvitationID" Type="int" Nullable="false" />
+          <Property Name="InvitationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="UserID" Type="int" />
           <Property Name="LocationID" Type="int" />
         </EntityType>
@@ -58,28 +54,28 @@
           <Key>
             <PropertyRef Name="ParticipantID" />
           </Key>
-          <Property Name="ParticipantID" Type="int" Nullable="false" />
+          <Property Name="ParticipantID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="UserID" Type="int" />
-          <Property Name="LastName" Type="varchar" MaxLength="50" />
-          <Property Name="FirstName" Type="varchar" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar(max)" />
+          <Property Name="FirstName" Type="nvarchar(max)" />
           <Property Name="LocationID" Type="int" />
         </EntityType>
         <EntityType Name="Locations">
           <Key>
             <PropertyRef Name="LocationID" />
           </Key>
-          <Property Name="LocationID" Type="int" Nullable="false" />
-          <Property Name="Name" Type="varchar" MaxLength="100" />
-          <Property Name="StartDate" Type="date" />
-          <Property Name="EndDate" Type="date" />
-          <Property Name="Location" Type="varchar" MaxLength="100" />
-          <Property Name="Description" Type="text" />
+          <Property Name="LocationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="StartDate" Type="nvarchar" MaxLength="50" />
+          <Property Name="EndDate" Type="nvarchar" MaxLength="50" />
+          <Property Name="AddressID" Type="int" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="Photos">
           <Key>
             <PropertyRef Name="PhotoID" />
           </Key>
-          <Property Name="PhotoID" Type="int" Nullable="false" />
+          <Property Name="PhotoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Photo" Type="text" />
           <Property Name="UserID" Type="int" />
           <Property Name="LocationID" Type="int" />
@@ -88,7 +84,7 @@
           <Key>
             <PropertyRef Name="ReviewID" />
           </Key>
-          <Property Name="ReviewID" Type="int" Nullable="false" />
+          <Property Name="ReviewID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="UserID" Type="int" />
           <Property Name="LocationID" Type="int" />
           <Property Name="Review" Type="text" />
@@ -98,7 +94,7 @@
           <Key>
             <PropertyRef Name="SaleID" />
           </Key>
-          <Property Name="SaleID" Type="int" Nullable="false" />
+          <Property Name="SaleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="UserID" Type="int" />
           <Property Name="Amount" Type="decimal" Precision="10" Scale="2" />
           <Property Name="SaleDate" Type="date" />
@@ -107,12 +103,20 @@
           <Key>
             <PropertyRef Name="ScheduleID" />
           </Key>
-          <Property Name="ScheduleID" Type="int" Nullable="false" />
+          <Property Name="ScheduleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="LocationID" Type="int" />
-          <Property Name="Date" Type="date" />
-          <Property Name="StartTime" Type="time" Precision="7" />
-          <Property Name="EndTime" Type="time" Precision="7" />
-          <Property Name="Event" Type="varchar" MaxLength="100" />
+          <Property Name="Date" Type="nvarchar(max)" />
+          <Property Name="EventID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Stalls">
+          <Key>
+            <PropertyRef Name="StallID" />
+          </Key>
+          <Property Name="StallID" Type="int" Nullable="false" />
+          <Property Name="LocationID" Type="int" />
+          <Property Name="VendorID" Type="int" />
+          <Property Name="StallName" Type="varchar" MaxLength="100" />
+          <Property Name="Description" Type="text" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -128,7 +132,7 @@
           <Key>
             <PropertyRef Name="TicketInfoID" />
           </Key>
-          <Property Name="TicketInfoID" Type="int" Nullable="false" />
+          <Property Name="TicketInfoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TicketID" Type="int" />
           <Property Name="TicketInfo" Type="text" />
         </EntityType>
@@ -136,18 +140,18 @@
           <Key>
             <PropertyRef Name="TicketID" />
           </Key>
-          <Property Name="TicketID" Type="int" Nullable="false" />
+          <Property Name="TicketID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="LocationID" Type="int" />
-          <Property Name="TicketType" Type="int" />
+          <Property Name="TicketType" Type="nvarchar(max)" />
           <Property Name="Price" Type="decimal" Precision="10" Scale="2" />
-          <Property Name="PurchaseDate" Type="date" />
+          <Property Name="PurchaseDate" Type="nvarchar(max)" />
           <Property Name="UserID" Type="int" />
         </EntityType>
         <EntityType Name="Users">
           <Key>
             <PropertyRef Name="UserID" />
           </Key>
-          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Login" Type="varchar" MaxLength="50" />
           <Property Name="Password" Type="varchar" MaxLength="50" />
           <Property Name="LastName" Type="varchar" MaxLength="50" />
@@ -155,18 +159,15 @@
           <Property Name="Gender" Type="varchar" MaxLength="10" />
           <Property Name="Role" Type="varchar" MaxLength="50" />
         </EntityType>
-        <Association Name="FK__Addresses__UserI__46E78A0C">
-          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
-          <End Role="Addresses" Type="Self.Addresses" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Users">
-              <PropertyRef Name="UserID" />
-            </Principal>
-            <Dependent Role="Addresses">
-              <PropertyRef Name="UserID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
+        <EntityType Name="Vendors">
+          <Key>
+            <PropertyRef Name="VendorID" />
+          </Key>
+          <Property Name="VendorID" Type="int" Nullable="false" />
+          <Property Name="UserID" Type="int" />
+          <Property Name="CompanyName" Type="varchar" MaxLength="100" />
+          <Property Name="ContactInfoID" Type="int" />
+        </EntityType>
         <Association Name="FK__ContactIn__UserI__440B1D61">
           <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
           <End Role="ContactInfo" Type="Self.ContactInfo" Multiplicity="*" />
@@ -335,6 +336,30 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__Stalls__Location__4B7734FF">
+          <End Role="Locations" Type="Self.Locations" Multiplicity="0..1" />
+          <End Role="Stalls" Type="Self.Stalls" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Locations">
+              <PropertyRef Name="LocationID" />
+            </Principal>
+            <Dependent Role="Stalls">
+              <PropertyRef Name="LocationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Stalls__VendorID__4C6B5938">
+          <End Role="Vendors" Type="Self.Vendors" Multiplicity="0..1" />
+          <End Role="Stalls" Type="Self.Stalls" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vendors">
+              <PropertyRef Name="VendorID" />
+            </Principal>
+            <Dependent Role="Stalls">
+              <PropertyRef Name="VendorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__TicketInf__Ticke__2C3393D0">
           <End Role="Tickets" Type="Self.Tickets" Multiplicity="0..1" />
           <End Role="TicketInfo" Type="Self.TicketInfo" Multiplicity="*" />
@@ -368,6 +393,54 @@
             </Principal>
             <Dependent Role="Tickets">
               <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Vendors__Contact__489AC854">
+          <End Role="ContactInfo" Type="Self.ContactInfo" Multiplicity="0..1" />
+          <End Role="Vendors" Type="Self.Vendors" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ContactInfo">
+              <PropertyRef Name="ContactID" />
+            </Principal>
+            <Dependent Role="Vendors">
+              <PropertyRef Name="ContactInfoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Vendors__UserID__47A6A41B">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="Vendors" Type="Self.Vendors" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="Vendors">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Locations_Addresses">
+          <End Role="Addresses" Type="Self.Addresses" Multiplicity="1" />
+          <End Role="Locations" Type="Self.Locations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Addresses">
+              <PropertyRef Name="AddressID" />
+            </Principal>
+            <Dependent Role="Locations">
+              <PropertyRef Name="AddressID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Schedule_Events">
+          <End Role="Events" Type="Self.Events" Multiplicity="1" />
+          <End Role="Schedule" Type="Self.Schedule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Events">
+              <PropertyRef Name="EventID" />
+            </Principal>
+            <Dependent Role="Schedule">
+              <PropertyRef Name="EventID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -383,14 +456,12 @@
           <EntitySet Name="Reviews" EntityType="Self.Reviews" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Sales" EntityType="Self.Sales" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Schedule" EntityType="Self.Schedule" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Stalls" EntityType="Self.Stalls" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TicketInfo" EntityType="Self.TicketInfo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tickets" EntityType="Self.Tickets" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__Addresses__UserI__46E78A0C" Association="Self.FK__Addresses__UserI__46E78A0C">
-            <End Role="Users" EntitySet="Users" />
-            <End Role="Addresses" EntitySet="Addresses" />
-          </AssociationSet>
+          <EntitySet Name="Vendors" EntityType="Self.Vendors" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK__ContactIn__UserI__440B1D61" Association="Self.FK__ContactIn__UserI__440B1D61">
             <End Role="Users" EntitySet="Users" />
             <End Role="ContactInfo" EntitySet="ContactInfo" />
@@ -447,6 +518,14 @@
             <End Role="Locations" EntitySet="Locations" />
             <End Role="Schedule" EntitySet="Schedule" />
           </AssociationSet>
+          <AssociationSet Name="FK__Stalls__Location__4B7734FF" Association="Self.FK__Stalls__Location__4B7734FF">
+            <End Role="Locations" EntitySet="Locations" />
+            <End Role="Stalls" EntitySet="Stalls" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Stalls__VendorID__4C6B5938" Association="Self.FK__Stalls__VendorID__4C6B5938">
+            <End Role="Vendors" EntitySet="Vendors" />
+            <End Role="Stalls" EntitySet="Stalls" />
+          </AssociationSet>
           <AssociationSet Name="FK__TicketInf__Ticke__2C3393D0" Association="Self.FK__TicketInf__Ticke__2C3393D0">
             <End Role="Tickets" EntitySet="Tickets" />
             <End Role="TicketInfo" EntitySet="TicketInfo" />
@@ -459,6 +538,22 @@
             <End Role="Users" EntitySet="Users" />
             <End Role="Tickets" EntitySet="Tickets" />
           </AssociationSet>
+          <AssociationSet Name="FK__Vendors__Contact__489AC854" Association="Self.FK__Vendors__Contact__489AC854">
+            <End Role="ContactInfo" EntitySet="ContactInfo" />
+            <End Role="Vendors" EntitySet="Vendors" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Vendors__UserID__47A6A41B" Association="Self.FK__Vendors__UserID__47A6A41B">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Vendors" EntitySet="Vendors" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Locations_Addresses" Association="Self.FK_Locations_Addresses">
+            <End Role="Addresses" EntitySet="Addresses" />
+            <End Role="Locations" EntitySet="Locations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Schedule_Events" Association="Self.FK_Schedule_Events">
+            <End Role="Events" EntitySet="Events" />
+            <End Role="Schedule" EntitySet="Schedule" />
+          </AssociationSet>
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
@@ -469,32 +564,32 @@
           <Key>
             <PropertyRef Name="AddressID" />
           </Key>
-          <Property Name="AddressID" Type="Int32" Nullable="false" />
-          <Property Name="UserID" Type="Int32" />
-          <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Street" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="PostalCode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Users" Relationship="Self.FK__Addresses__UserI__46E78A0C" FromRole="Addresses" ToRole="Users" />
+          <Property Name="AddressID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Country" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Street" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Building" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Locations" Relationship="Self.FK_Locations_Addresses" FromRole="Addresses" ToRole="Locations" />
         </EntityType>
         <EntityType Name="ContactInfo">
           <Key>
             <PropertyRef Name="ContactID" />
           </Key>
-          <Property Name="ContactID" Type="Int32" Nullable="false" />
+          <Property Name="ContactID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="UserID" Type="Int32" />
           <Property Name="PhoneNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Users" Relationship="Self.FK__ContactIn__UserI__440B1D61" FromRole="ContactInfo" ToRole="Users" />
+          <NavigationProperty Name="Vendors" Relationship="Self.FK__Vendors__Contact__489AC854" FromRole="ContactInfo" ToRole="Vendors" />
         </EntityType>
         <EntityType Name="Cosplayers">
           <Key>
             <PropertyRef Name="CosplayerID" />
           </Key>
-          <Property Name="CosplayerID" Type="Int32" Nullable="false" />
+          <Property Name="CosplayerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="UserID" Type="Int32" />
           <Property Name="LocationID" Type="Int32" />
-          <Property Name="Costume" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Costume" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Locations" Relationship="Self.FK__Cosplayer__Locat__3A81B327" FromRole="Cosplayers" ToRole="Locations" />
           <NavigationProperty Name="Users" Relationship="Self.FK__Cosplayer__UserI__398D8EEE" FromRole="Cosplayers" ToRole="Users" />
         </EntityType>
@@ -502,20 +597,18 @@
           <Key>
             <PropertyRef Name="EventID" />
           </Key>
-          <Property Name="EventID" Type="Int32" Nullable="false" />
+          <Property Name="EventID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="LocationID" Type="Int32" />
-          <Property Name="EventName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="EventName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="Date" Type="DateTime" Precision="0" />
-          <Property Name="StartTime" Type="Time" Precision="7" />
-          <Property Name="EndTime" Type="Time" Precision="7" />
           <NavigationProperty Name="Locations" Relationship="Self.FK__Events__Location__49C3F6B7" FromRole="Events" ToRole="Locations" />
+          <NavigationProperty Name="Schedule" Relationship="Self.FK_Schedule_Events" FromRole="Events" ToRole="Schedule" />
         </EntityType>
         <EntityType Name="InvitedUsers">
           <Key>
             <PropertyRef Name="InvitationID" />
           </Key>
-          <Property Name="InvitationID" Type="Int32" Nullable="false" />
+          <Property Name="InvitationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="UserID" Type="Int32" />
           <Property Name="LocationID" Type="Int32" />
           <NavigationProperty Name="Locations" Relationship="Self.FK__InvitedUs__Locat__4D94879B" FromRole="InvitedUsers" ToRole="Locations" />
@@ -525,10 +618,10 @@
           <Key>
             <PropertyRef Name="ParticipantID" />
           </Key>
-          <Property Name="ParticipantID" Type="Int32" Nullable="false" />
+          <Property Name="ParticipantID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="UserID" Type="Int32" />
-          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="LocationID" Type="Int32" />
           <NavigationProperty Name="Locations" Relationship="Self.FK__LocationP__Locat__32E0915F" FromRole="LocationParticipants" ToRole="Locations" />
           <NavigationProperty Name="Users" Relationship="Self.FK__LocationP__UserI__31EC6D26" FromRole="LocationParticipants" ToRole="Users" />
@@ -537,12 +630,13 @@
           <Key>
             <PropertyRef Name="LocationID" />
           </Key>
-          <Property Name="LocationID" Type="Int32" Nullable="false" />
-          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="StartDate" Type="DateTime" Precision="0" />
-          <Property Name="EndDate" Type="DateTime" Precision="0" />
-          <Property Name="Location" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="LocationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="StartDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EndDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AddressID" Type="Int32" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Addresses" Relationship="Self.FK_Locations_Addresses" FromRole="Locations" ToRole="Addresses" />
           <NavigationProperty Name="Cosplayers" Relationship="Self.FK__Cosplayer__Locat__3A81B327" FromRole="Locations" ToRole="Cosplayers" />
           <NavigationProperty Name="Events" Relationship="Self.FK__Events__Location__49C3F6B7" FromRole="Locations" ToRole="Events" />
           <NavigationProperty Name="InvitedUsers" Relationship="Self.FK__InvitedUs__Locat__4D94879B" FromRole="Locations" ToRole="InvitedUsers" />
@@ -550,13 +644,14 @@
           <NavigationProperty Name="Photos" Relationship="Self.FK__Photos__Location__36B12243" FromRole="Locations" ToRole="Photos" />
           <NavigationProperty Name="Reviews" Relationship="Self.FK__Reviews__Locatio__412EB0B6" FromRole="Locations" ToRole="Reviews" />
           <NavigationProperty Name="Schedule" Relationship="Self.FK__Schedule__Locati__2F10007B" FromRole="Locations" ToRole="Schedule" />
+          <NavigationProperty Name="Stalls" Relationship="Self.FK__Stalls__Location__4B7734FF" FromRole="Locations" ToRole="Stalls" />
           <NavigationProperty Name="Tickets" Relationship="Self.FK__Tickets__Locatio__286302EC" FromRole="Locations" ToRole="Tickets" />
         </EntityType>
         <EntityType Name="Photos">
           <Key>
             <PropertyRef Name="PhotoID" />
           </Key>
-          <Property Name="PhotoID" Type="Int32" Nullable="false" />
+          <Property Name="PhotoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Photo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="UserID" Type="Int32" />
           <Property Name="LocationID" Type="Int32" />
@@ -567,7 +662,7 @@
           <Key>
             <PropertyRef Name="ReviewID" />
           </Key>
-          <Property Name="ReviewID" Type="Int32" Nullable="false" />
+          <Property Name="ReviewID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="UserID" Type="Int32" />
           <Property Name="LocationID" Type="Int32" />
           <Property Name="Review" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
@@ -579,7 +674,7 @@
           <Key>
             <PropertyRef Name="SaleID" />
           </Key>
-          <Property Name="SaleID" Type="Int32" Nullable="false" />
+          <Property Name="SaleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="UserID" Type="Int32" />
           <Property Name="Amount" Type="Decimal" Precision="10" Scale="2" />
           <Property Name="SaleDate" Type="DateTime" Precision="0" />
@@ -589,13 +684,24 @@
           <Key>
             <PropertyRef Name="ScheduleID" />
           </Key>
-          <Property Name="ScheduleID" Type="Int32" Nullable="false" />
+          <Property Name="ScheduleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="LocationID" Type="Int32" />
-          <Property Name="Date" Type="DateTime" Precision="0" />
-          <Property Name="StartTime" Type="Time" Precision="7" />
-          <Property Name="EndTime" Type="Time" Precision="7" />
-          <Property Name="Event" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Date" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EventID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Events" Relationship="Self.FK_Schedule_Events" FromRole="Schedule" ToRole="Events" />
           <NavigationProperty Name="Locations" Relationship="Self.FK__Schedule__Locati__2F10007B" FromRole="Schedule" ToRole="Locations" />
+        </EntityType>
+        <EntityType Name="Stalls">
+          <Key>
+            <PropertyRef Name="StallID" />
+          </Key>
+          <Property Name="StallID" Type="Int32" Nullable="false" />
+          <Property Name="LocationID" Type="Int32" />
+          <Property Name="VendorID" Type="Int32" />
+          <Property Name="StallName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Locations" Relationship="Self.FK__Stalls__Location__4B7734FF" FromRole="Stalls" ToRole="Locations" />
+          <NavigationProperty Name="Vendors" Relationship="Self.FK__Stalls__VendorID__4C6B5938" FromRole="Stalls" ToRole="Vendors" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -611,7 +717,7 @@
           <Key>
             <PropertyRef Name="TicketInfoID" />
           </Key>
-          <Property Name="TicketInfoID" Type="Int32" Nullable="false" />
+          <Property Name="TicketInfoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TicketID" Type="Int32" />
           <Property Name="TicketInfo1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Tickets" Relationship="Self.FK__TicketInf__Ticke__2C3393D0" FromRole="TicketInfo" ToRole="Tickets" />
@@ -620,11 +726,11 @@
           <Key>
             <PropertyRef Name="TicketID" />
           </Key>
-          <Property Name="TicketID" Type="Int32" Nullable="false" />
+          <Property Name="TicketID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="LocationID" Type="Int32" />
-          <Property Name="TicketType" Type="Int32" />
+          <Property Name="TicketType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Price" Type="Decimal" Precision="10" Scale="2" />
-          <Property Name="PurchaseDate" Type="DateTime" Precision="0" />
+          <Property Name="PurchaseDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="UserID" Type="Int32" />
           <NavigationProperty Name="Locations" Relationship="Self.FK__Tickets__Locatio__286302EC" FromRole="Tickets" ToRole="Locations" />
           <NavigationProperty Name="TicketInfo" Relationship="Self.FK__TicketInf__Ticke__2C3393D0" FromRole="Tickets" ToRole="TicketInfo" />
@@ -634,14 +740,13 @@
           <Key>
             <PropertyRef Name="UserID" />
           </Key>
-          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Gender" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="Role" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Addresses" Relationship="Self.FK__Addresses__UserI__46E78A0C" FromRole="Users" ToRole="Addresses" />
           <NavigationProperty Name="ContactInfo" Relationship="Self.FK__ContactIn__UserI__440B1D61" FromRole="Users" ToRole="ContactInfo" />
           <NavigationProperty Name="Cosplayers" Relationship="Self.FK__Cosplayer__UserI__398D8EEE" FromRole="Users" ToRole="Cosplayers" />
           <NavigationProperty Name="InvitedUsers" Relationship="Self.FK__InvitedUs__UserI__4CA06362" FromRole="Users" ToRole="InvitedUsers" />
@@ -650,16 +755,29 @@
           <NavigationProperty Name="Reviews" Relationship="Self.FK__Reviews__UserID__403A8C7D" FromRole="Users" ToRole="Reviews" />
           <NavigationProperty Name="Sales" Relationship="Self.FK__Sales__UserID__3D5E1FD2" FromRole="Users" ToRole="Sales" />
           <NavigationProperty Name="Tickets" Relationship="Self.FK__Tickets__UserID__29572725" FromRole="Users" ToRole="Tickets" />
+          <NavigationProperty Name="Vendors" Relationship="Self.FK__Vendors__UserID__47A6A41B" FromRole="Users" ToRole="Vendors" />
         </EntityType>
-        <Association Name="FK__Addresses__UserI__46E78A0C">
-          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
-          <End Role="Addresses" Type="Self.Addresses" Multiplicity="*" />
+        <EntityType Name="Vendors">
+          <Key>
+            <PropertyRef Name="VendorID" />
+          </Key>
+          <Property Name="VendorID" Type="Int32" Nullable="false" />
+          <Property Name="UserID" Type="Int32" />
+          <Property Name="CompanyName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ContactInfoID" Type="Int32" />
+          <NavigationProperty Name="ContactInfo" Relationship="Self.FK__Vendors__Contact__489AC854" FromRole="Vendors" ToRole="ContactInfo" />
+          <NavigationProperty Name="Stalls" Relationship="Self.FK__Stalls__VendorID__4C6B5938" FromRole="Vendors" ToRole="Stalls" />
+          <NavigationProperty Name="Users" Relationship="Self.FK__Vendors__UserID__47A6A41B" FromRole="Vendors" ToRole="Users" />
+        </EntityType>
+        <Association Name="FK_Locations_Addresses">
+          <End Role="Addresses" Type="Self.Addresses" Multiplicity="1" />
+          <End Role="Locations" Type="Self.Locations" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Users">
-              <PropertyRef Name="UserID" />
+            <Principal Role="Addresses">
+              <PropertyRef Name="AddressID" />
             </Principal>
-            <Dependent Role="Addresses">
-              <PropertyRef Name="UserID" />
+            <Dependent Role="Locations">
+              <PropertyRef Name="AddressID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -672,6 +790,18 @@
             </Principal>
             <Dependent Role="ContactInfo">
               <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Vendors__Contact__489AC854">
+          <End Role="ContactInfo" Type="Self.ContactInfo" Multiplicity="0..1" />
+          <End Role="Vendors" Type="Self.Vendors" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ContactInfo">
+              <PropertyRef Name="ContactID" />
+            </Principal>
+            <Dependent Role="Vendors">
+              <PropertyRef Name="ContactInfoID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -708,6 +838,18 @@
             </Principal>
             <Dependent Role="Events">
               <PropertyRef Name="LocationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Schedule_Events">
+          <End Role="Events" Type="Self.Events" Multiplicity="1" />
+          <End Role="Schedule" Type="Self.Schedule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Events">
+              <PropertyRef Name="EventID" />
+            </Principal>
+            <Dependent Role="Schedule">
+              <PropertyRef Name="EventID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -795,6 +937,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__Stalls__Location__4B7734FF">
+          <End Role="Locations" Type="Self.Locations" Multiplicity="0..1" />
+          <End Role="Stalls" Type="Self.Stalls" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Locations">
+              <PropertyRef Name="LocationID" />
+            </Principal>
+            <Dependent Role="Stalls">
+              <PropertyRef Name="LocationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__Tickets__Locatio__286302EC">
           <End Role="Locations" Type="Self.Locations" Multiplicity="0..1" />
           <End Role="Tickets" Type="Self.Tickets" Multiplicity="*" />
@@ -843,6 +997,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__Stalls__VendorID__4C6B5938">
+          <End Role="Vendors" Type="Self.Vendors" Multiplicity="0..1" />
+          <End Role="Stalls" Type="Self.Stalls" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vendors">
+              <PropertyRef Name="VendorID" />
+            </Principal>
+            <Dependent Role="Stalls">
+              <PropertyRef Name="VendorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__TicketInf__Ticke__2C3393D0">
           <End Role="Tickets" Type="Self.Tickets" Multiplicity="0..1" />
           <End Role="TicketInfo" Type="Self.TicketInfo" Multiplicity="*" />
@@ -867,7 +1033,19 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="Kursach_Luzin_Patrakov_321Entities" annotation:LazyLoadingEnabled="true">
+        <Association Name="FK__Vendors__UserID__47A6A41B">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="Vendors" Type="Self.Vendors" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="Vendors">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Kursach_Luzin_Patrakov_321Entities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Addresses" EntityType="Self.Addresses" />
           <EntitySet Name="ContactInfo" EntityType="Self.ContactInfo" />
           <EntitySet Name="Cosplayers" EntityType="Self.Cosplayers" />
@@ -879,17 +1057,23 @@
           <EntitySet Name="Reviews" EntityType="Self.Reviews" />
           <EntitySet Name="Sales" EntityType="Self.Sales" />
           <EntitySet Name="Schedule" EntityType="Self.Schedule" />
+          <EntitySet Name="Stalls" EntityType="Self.Stalls" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
           <EntitySet Name="TicketInfo" EntityType="Self.TicketInfo" />
           <EntitySet Name="Tickets" EntityType="Self.Tickets" />
           <EntitySet Name="Users" EntityType="Self.Users" />
-          <AssociationSet Name="FK__Addresses__UserI__46E78A0C" Association="Self.FK__Addresses__UserI__46E78A0C">
-            <End Role="Users" EntitySet="Users" />
+          <EntitySet Name="Vendors" EntityType="Self.Vendors" />
+          <AssociationSet Name="FK_Locations_Addresses" Association="Self.FK_Locations_Addresses">
             <End Role="Addresses" EntitySet="Addresses" />
+            <End Role="Locations" EntitySet="Locations" />
           </AssociationSet>
           <AssociationSet Name="FK__ContactIn__UserI__440B1D61" Association="Self.FK__ContactIn__UserI__440B1D61">
             <End Role="Users" EntitySet="Users" />
             <End Role="ContactInfo" EntitySet="ContactInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Vendors__Contact__489AC854" Association="Self.FK__Vendors__Contact__489AC854">
+            <End Role="ContactInfo" EntitySet="ContactInfo" />
+            <End Role="Vendors" EntitySet="Vendors" />
           </AssociationSet>
           <AssociationSet Name="FK__Cosplayer__Locat__3A81B327" Association="Self.FK__Cosplayer__Locat__3A81B327">
             <End Role="Locations" EntitySet="Locations" />
@@ -902,6 +1086,10 @@
           <AssociationSet Name="FK__Events__Location__49C3F6B7" Association="Self.FK__Events__Location__49C3F6B7">
             <End Role="Locations" EntitySet="Locations" />
             <End Role="Events" EntitySet="Events" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Schedule_Events" Association="Self.FK_Schedule_Events">
+            <End Role="Events" EntitySet="Events" />
+            <End Role="Schedule" EntitySet="Schedule" />
           </AssociationSet>
           <AssociationSet Name="FK__InvitedUs__Locat__4D94879B" Association="Self.FK__InvitedUs__Locat__4D94879B">
             <End Role="Locations" EntitySet="Locations" />
@@ -931,6 +1119,10 @@
             <End Role="Locations" EntitySet="Locations" />
             <End Role="Schedule" EntitySet="Schedule" />
           </AssociationSet>
+          <AssociationSet Name="FK__Stalls__Location__4B7734FF" Association="Self.FK__Stalls__Location__4B7734FF">
+            <End Role="Locations" EntitySet="Locations" />
+            <End Role="Stalls" EntitySet="Stalls" />
+          </AssociationSet>
           <AssociationSet Name="FK__Tickets__Locatio__286302EC" Association="Self.FK__Tickets__Locatio__286302EC">
             <End Role="Locations" EntitySet="Locations" />
             <End Role="Tickets" EntitySet="Tickets" />
@@ -947,6 +1139,10 @@
             <End Role="Users" EntitySet="Users" />
             <End Role="Sales" EntitySet="Sales" />
           </AssociationSet>
+          <AssociationSet Name="FK__Stalls__VendorID__4C6B5938" Association="Self.FK__Stalls__VendorID__4C6B5938">
+            <End Role="Vendors" EntitySet="Vendors" />
+            <End Role="Stalls" EntitySet="Stalls" />
+          </AssociationSet>
           <AssociationSet Name="FK__TicketInf__Ticke__2C3393D0" Association="Self.FK__TicketInf__Ticke__2C3393D0">
             <End Role="Tickets" EntitySet="Tickets" />
             <End Role="TicketInfo" EntitySet="TicketInfo" />
@@ -955,22 +1151,25 @@
             <End Role="Users" EntitySet="Users" />
             <End Role="Tickets" EntitySet="Tickets" />
           </AssociationSet>
+          <AssociationSet Name="FK__Vendors__UserID__47A6A41B" Association="Self.FK__Vendors__UserID__47A6A41B">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Vendors" EntitySet="Vendors" />
+          </AssociationSet>
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище Kursach_Luzin_Patrakov_321ModelContainer" CdmEntityContainer="Kursach_Luzin_Patrakov_321Entities">
+        <EntityContainerMapping StorageEntityContainer="Хранилище Kursach_Luzin_Patrakov_321ModelContainer" CdmEntityContainer="Kursach_Luzin_Patrakov_321Entities1">
           <EntitySetMapping Name="Addresses">
             <EntityTypeMapping TypeName="Kursach_Luzin_Patrakov_321Model.Addresses">
               <MappingFragment StoreEntitySet="Addresses">
                 <ScalarProperty Name="AddressID" ColumnName="AddressID" />
-                <ScalarProperty Name="UserID" ColumnName="UserID" />
                 <ScalarProperty Name="Country" ColumnName="Country" />
                 <ScalarProperty Name="City" ColumnName="City" />
                 <ScalarProperty Name="Street" ColumnName="Street" />
-                <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+                <ScalarProperty Name="Building" ColumnName="Building" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1001,9 +1200,6 @@
                 <ScalarProperty Name="LocationID" ColumnName="LocationID" />
                 <ScalarProperty Name="EventName" ColumnName="EventName" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="Date" ColumnName="Date" />
-                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
-                <ScalarProperty Name="EndTime" ColumnName="EndTime" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1034,7 +1230,7 @@
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="StartDate" ColumnName="StartDate" />
                 <ScalarProperty Name="EndDate" ColumnName="EndDate" />
-                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="AddressID" ColumnName="AddressID" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -1076,9 +1272,18 @@
                 <ScalarProperty Name="ScheduleID" ColumnName="ScheduleID" />
                 <ScalarProperty Name="LocationID" ColumnName="LocationID" />
                 <ScalarProperty Name="Date" ColumnName="Date" />
-                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
-                <ScalarProperty Name="EndTime" ColumnName="EndTime" />
-                <ScalarProperty Name="Event" ColumnName="Event" />
+                <ScalarProperty Name="EventID" ColumnName="EventID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Stalls">
+            <EntityTypeMapping TypeName="Kursach_Luzin_Patrakov_321Model.Stalls">
+              <MappingFragment StoreEntitySet="Stalls">
+                <ScalarProperty Name="StallID" ColumnName="StallID" />
+                <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+                <ScalarProperty Name="VendorID" ColumnName="VendorID" />
+                <ScalarProperty Name="StallName" ColumnName="StallName" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1124,6 +1329,16 @@
                 <ScalarProperty Name="FirstName" ColumnName="FirstName" />
                 <ScalarProperty Name="Gender" ColumnName="Gender" />
                 <ScalarProperty Name="Role" ColumnName="Role" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vendors">
+            <EntityTypeMapping TypeName="Kursach_Luzin_Patrakov_321Model.Vendors">
+              <MappingFragment StoreEntitySet="Vendors">
+                <ScalarProperty Name="VendorID" ColumnName="VendorID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+                <ScalarProperty Name="ContactInfoID" ColumnName="ContactInfoID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

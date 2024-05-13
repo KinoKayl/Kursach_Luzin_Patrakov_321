@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Kursach_Luzin_Patrakov_321"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
         Title="Админка" Height="853" Width="926">
     <Grid>
         <Grid.Background>

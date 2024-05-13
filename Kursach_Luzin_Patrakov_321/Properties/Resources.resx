@@ -120,16 +120,31 @@
   <data name="CosName" xml:space="preserve">
     <value />
   </data>
+  <data name="Date" xml:space="preserve">
+    <value />
+  </data>
   <data name="FstResourse" xml:space="preserve">
     <value />
   </data>
   <data name="isAdmin" xml:space="preserve">
     <value />
   </data>
+  <data name="Location" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value />
+  </data>
   <data name="SndResourse" xml:space="preserve">
     <value />
   </data>
+  <data name="TicketType" xml:space="preserve">
+    <value />
+  </data>
   <data name="TrdResourse" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UserID" xml:space="preserve">
     <value />
   </data>
 </root>

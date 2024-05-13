@@ -49,7 +49,7 @@
                 </Style>
             </Label.Resources>
             <Label.Background>
-                <ImageBrush ImageSource="/выступление.jpg"/>
+                <ImageBrush ImageSource="/img/выступление.jpg"/>
             </Label.Background>
         </Label>
         <TextBlock FontFamily="Montserrat" HorizontalAlignment="Left" Margin="270,218,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="89" Width="311" Foreground="White" FontSize="18"><Run Text="Выступления на сцене"/><LineBreak/><Run Language="ru-ru" Text="И выступления с дефиле"/></TextBlock>
@@ -75,7 +75,7 @@
                 </Style>
             </Label.Resources>
             <Label.Background>
-                <ImageBrush ImageSource="/весело.png"/>
+                <ImageBrush ImageSource="/img/весело.png"/>
             </Label.Background>
         </Label>
         <TextBlock FontFamily="Montserrat" HorizontalAlignment="Left" Margin="270,470,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="311" Foreground="White" FontSize="18"><Run Text="Участвуйте в мини-играх"/></TextBlock>
@@ -115,7 +115,7 @@
                 </Style>
             </Label.Resources>
             <Label.Background>
-                <ImageBrush ImageSource="/justdance.jpg"/>
+                <ImageBrush ImageSource="/img/justdance.jpg"/>
             </Label.Background>
         </Label>
         <TextBlock FontFamily="Montserrat" HorizontalAlignment="Left" Margin="825,224,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="89" Width="311" Foreground="White" FontSize="24"><Run Language="ru-ru" Text="Танцуют все!"/></TextBlock>
@@ -141,7 +141,7 @@
                 </Style>
             </Label.Resources>
             <Label.Background>
-                <ImageBrush ImageSource="/настолки.jpg"/>
+                <ImageBrush ImageSource="/img/настолки.jpg"/>
             </Label.Background>
         </Label>
         <TextBlock FontFamily="Montserrat" HorizontalAlignment="Left" Margin="819,470,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="311" Foreground="White" FontSize="18"><Run Language="ru-ru" Text="Задротские войны в настолках"/></TextBlock>

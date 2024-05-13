@@ -14,13 +14,19 @@ namespace Kursach_Luzin_Patrakov_321
     
     public partial class Addresses
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Addresses()
+        {
+            this.Locations = new HashSet<Locations>();
+        }
+    
         public int AddressID { get; set; }
-        public Nullable<int> UserID { get; set; }
         public string Country { get; set; }
         public string City { get; set; }
         public string Street { get; set; }
-        public string PostalCode { get; set; }
+        public string Building { get; set; }
     
-        public virtual Users Users { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Locations> Locations { get; set; }
     }
 }

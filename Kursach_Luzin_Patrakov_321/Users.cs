@@ -17,7 +17,6 @@ namespace Kursach_Luzin_Patrakov_321
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Users()
         {
-            this.Addresses = new HashSet<Addresses>();
             this.ContactInfo = new HashSet<ContactInfo>();
             this.Cosplayers = new HashSet<Cosplayers>();
             this.InvitedUsers = new HashSet<InvitedUsers>();
@@ -26,6 +25,7 @@ namespace Kursach_Luzin_Patrakov_321
             this.Reviews = new HashSet<Reviews>();
             this.Sales = new HashSet<Sales>();
             this.Tickets = new HashSet<Tickets>();
+            this.Vendors = new HashSet<Vendors>();
         }
     
         public int UserID { get; set; }
@@ -36,8 +36,6 @@ namespace Kursach_Luzin_Patrakov_321
         public string Gender { get; set; }
         public string Role { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Addresses> Addresses { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ContactInfo> ContactInfo { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
@@ -54,5 +52,7 @@ namespace Kursach_Luzin_Patrakov_321
         public virtual ICollection<Sales> Sales { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Tickets> Tickets { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Vendors> Vendors { get; set; }
     }
 }
