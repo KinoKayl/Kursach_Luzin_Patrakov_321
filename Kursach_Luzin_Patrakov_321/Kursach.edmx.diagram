@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="039c273c44ce4e63a61cd9c6741db493" Name="Diagram1">
+        <EntityTypeShape EntityType="Kursach_Luzin_Patrakov_321Model.Addresses" Width="1.5" PointX="3" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Kursach_Luzin_Patrakov_321Model.ContactInfo" Width="1.5" PointX="3" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Kursach_Luzin_Patrakov_321Model.Cosplayers" Width="1.5" PointX="3" PointY="17.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Kursach_Luzin_Patrakov_321Model.Events" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Kursach_Luzin_Patrakov_321Model.InvitedUsers" Width="1.5" PointX="6" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Kursach_Luzin_Patrakov_321Model.LocationParticipants" Width="1.5" PointX="6" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Kursach_Luzin_Patrakov_321Model.Locations" Width="1.5" PointX="0.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Kursach_Luzin_Patrakov_321Model.Photos" Width="1.5" PointX="6" PointY="17.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Kursach_Luzin_Patrakov_321Model.Reviews" Width="1.5" PointX="3" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Kursach_Luzin_Patrakov_321Model.Sales" Width="1.5" PointX="3" PointY="32" IsExpanded="true" />
+        <EntityTypeShape EntityType="Kursach_Luzin_Patrakov_321Model.Schedule" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Kursach_Luzin_Patrakov_321Model.sysdiagrams" Width="1.5" PointX="5.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Kursach_Luzin_Patrakov_321Model.TicketInfo" Width="1.5" PointX="11.25" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Kursach_Luzin_Patrakov_321Model.Tickets" Width="1.5" PointX="9" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Kursach_Luzin_Patrakov_321Model.Users" Width="1.5" PointX="0.75" PointY="13.25" IsExpanded="true" />
+        <AssociationConnector Association="Kursach_Luzin_Patrakov_321Model.FK__Addresses__UserI__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="Kursach_Luzin_Patrakov_321Model.FK__ContactIn__UserI__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="Kursach_Luzin_Patrakov_321Model.FK__Cosplayer__Locat__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="Kursach_Luzin_Patrakov_321Model.FK__Cosplayer__UserI__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="Kursach_Luzin_Patrakov_321Model.FK__Events__Location__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="Kursach_Luzin_Patrakov_321Model.FK__InvitedUs__Locat__4D94879B" ManuallyRouted="false" />
+        <AssociationConnector Association="Kursach_Luzin_Patrakov_321Model.FK__InvitedUs__UserI__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="Kursach_Luzin_Patrakov_321Model.FK__LocationP__Locat__32E0915F" ManuallyRouted="false" />
+        <AssociationConnector Association="Kursach_Luzin_Patrakov_321Model.FK__LocationP__UserI__31EC6D26" ManuallyRouted="false" />
+        <AssociationConnector Association="Kursach_Luzin_Patrakov_321Model.FK__Photos__Location__36B12243" ManuallyRouted="false" />
+        <AssociationConnector Association="Kursach_Luzin_Patrakov_321Model.FK__Reviews__Locatio__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="Kursach_Luzin_Patrakov_321Model.FK__Schedule__Locati__2F10007B" ManuallyRouted="false" />
+        <AssociationConnector Association="Kursach_Luzin_Patrakov_321Model.FK__Tickets__Locatio__286302EC" ManuallyRouted="false" />
+        <AssociationConnector Association="Kursach_Luzin_Patrakov_321Model.FK__Photos__UserID__35BCFE0A" ManuallyRouted="false" />
+        <AssociationConnector Association="Kursach_Luzin_Patrakov_321Model.FK__Reviews__UserID__403A8C7D" ManuallyRouted="false" />
+        <AssociationConnector Association="Kursach_Luzin_Patrakov_321Model.FK__Sales__UserID__3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="Kursach_Luzin_Patrakov_321Model.FK__TicketInf__Ticke__2C3393D0" ManuallyRouted="false" />
+        <AssociationConnector Association="Kursach_Luzin_Patrakov_321Model.FK__Tickets__UserID__29572725" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

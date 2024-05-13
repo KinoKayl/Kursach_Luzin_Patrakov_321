@@ -94,7 +94,7 @@
             <Button x:Name="InfoButton" Content="INFO" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="190" Margin="10,10,0,0" Background="{x:Null}" FontSize="22" BorderBrush="{x:Null}" Foreground="White" Click="InfoButton_Click"/>
             <Button x:Name="EventsButton" Content="EVENTS" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="190" Margin="10,10,0,0" Background="{x:Null}" FontSize="22" BorderBrush="{x:Null}" Foreground="White" Click="EventsButton_Click"/>
             <Button x:Name="AboutUsButton" Content="ABOUT US" Height="80" VerticalAlignment="Top" Width="172" Margin="15,10,0,0" Background="{x:Null}" FontSize="22" BorderBrush="{x:Null}" Foreground="White" Click="AboutUsButton_Click"/>
-            <Button x:Name="AdminButton" Content="ADMINISTRATION" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="190" Margin="20,10,0,0" Background="{x:Null}" FontSize="22" BorderBrush="{x:Null}" Foreground="White" Click="AdminButton_Click"/>
+            <Button x:Name="AdminButton" Content="ADMINISTRATION" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Visibility="Hidden" Width="190" Margin="20,10,0,0" Background="{x:Null}" FontSize="22" BorderBrush="{x:Null}" Foreground="White" Click="AdminButton_Click"/>
 
         </StackPanel>
 
@@ -187,7 +187,7 @@
         <TextBlock HorizontalAlignment="Left" Margin="1043,345,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Foreground="#FFFFFCFC"><Run Text="11"/><Run Text=":00 - 19:00"/></TextBlock>
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="76" Margin="345,12,0,0" Stroke="White" VerticalAlignment="Top" Width="1"/>
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="76" Margin="545,12,0,0" Stroke="White" VerticalAlignment="Top" Width="1"/>
-        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="76" Margin="730,12,0,0" Stroke="White" VerticalAlignment="Top" Width="1"/>
+        <Rectangle x:Name="AdminRectangle" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="76" Margin="730,12,0,0" Stroke="White" VerticalAlignment="Top" Width="1" Visibility="Hidden"/>
 
         <Label FontFamily="Montserrat" Content="Domino's Pizza" HorizontalAlignment="Left" Margin="633,463,0,0" VerticalAlignment="Top" Height="60" Width="282" FontSize="36" Foreground="White"/>
         <Label FontFamily="Montserrat" Content="" HorizontalAlignment="Left" Margin="567,465,0,0" VerticalAlignment="Top" Height="60" Width="62">

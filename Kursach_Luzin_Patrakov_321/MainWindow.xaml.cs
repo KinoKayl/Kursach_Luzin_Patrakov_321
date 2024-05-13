@@ -23,9 +23,16 @@ namespace Kursach_Luzin_Patrakov_321
         public MainWindow()
         {
             InitializeComponent();
-            
+
             AuthPage auth = new AuthPage();
-            auth.Show();
+            auth.ShowDialog(); 
+
+            
+            if (App.Current.Resources.Contains("isAdmin") && App.Current.Resources["isAdmin"] == "true")
+            {
+                AdminButton.Visibility = Visibility.Visible;
+                AdminRectangle.Visibility = Visibility.Visible; 
+            }
         }
 
 

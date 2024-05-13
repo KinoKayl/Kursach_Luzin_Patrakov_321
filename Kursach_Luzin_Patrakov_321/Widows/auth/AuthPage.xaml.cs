@@ -25,7 +25,7 @@ namespace Kursach_Luzin_Patrakov_321
         }
 
         //Текст Имени и фамилии
-        private void GotFocus(TextBox textBox, string placeholderText, string replacementText)
+        private new void GotFocus(TextBox textBox, string placeholderText, string replacementText)
         {
             if (textBox != null && textBox.Text == placeholderText)
             {
@@ -34,7 +34,7 @@ namespace Kursach_Luzin_Patrakov_321
             }
         }
 
-        private void LostFocus(TextBox textBox, string replacementText, string placeholderText)
+        private new void LostFocus(TextBox textBox, string replacementText, string placeholderText)
         {
             if (textBox != null && textBox.Text == placeholderText)
             {
@@ -76,15 +76,57 @@ namespace Kursach_Luzin_Patrakov_321
         private void RegButton_Click(object sender, RoutedEventArgs e)
         {
             RegPage reg = new RegPage();
+            //FrameManager.MainFrame.Navigate(reg);
             MainFrame.Content = reg;
 
             MainFrame.Visibility = Visibility.Visible;
             
         }
 
+        public bool isAdmin(string UserLogin, string UserPassword)
+        {
+            Kursach_Luzin_Patrakov_321Entities db = new Kursach_Luzin_Patrakov_321Entities();
+
+            // Проверяем, существует ли пользователь с таким логином и паролем
+            Users user = db.Users.AsNoTracking().FirstOrDefault(u => u.Login == UserLogin && u.Password == UserPassword);
+
+            // Если пользователь существует и его роль - Admin, возвращаем true
+            return user != null && user.Role == "Admin";
+        }
+
+        public bool Auth(string UserLogin, string UserPassword)
+        {
+            Kursach_Luzin_Patrakov_321Entities db = new Kursach_Luzin_Patrakov_321Entities();
+
+            Users userObject = new Users()
+            {
+                Login = UserLogin,
+                Password = UserPassword,
+            };
+
+            Users users = db.Users.AsNoTracking().FirstOrDefault(u => u.Login == UserLogin && u.Password == UserPassword);
+            if (users != null)
+            {
+                MessageBox.Show("Авторизация прошла успешно");
+                AuthPage page = new AuthPage();
+                this.Close();
+
+                if (isAdmin(UserLogin, UserPassword))
+                {
+                    App.Current.Resources["isAdmin"] = "true";
+                }
+            }
+            else
+            {
+                MessageBox.Show("Данный пользователь отсутствует");
+                
+            }
+
+            return true;
+        }
         private void AuthButton_Click(object sender, RoutedEventArgs e)
         {
-
+            Auth(LoginTextBox.Text, PassBox.Password);
         }
     }
 }

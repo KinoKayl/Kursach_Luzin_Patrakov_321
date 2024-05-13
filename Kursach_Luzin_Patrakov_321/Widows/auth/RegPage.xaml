@@ -31,9 +31,9 @@
         </Grid.ColumnDefinitions>
 
         <Label Content="Имя:" Grid.Row="0" Grid.Column="0" Margin="35,10,18,10" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="TextBoxFirstName" Text="Введите имя..." Foreground="Gray" Grid.Row="0" Margin="12,5,40,5" GotFocus="LoginTextBox_GotFocus" LostFocus="LoginTextBox_LostFocus" Grid.Column="2"/>
+        <TextBox x:Name="TextBoxFirstName" Text="Введите имя..." Foreground="Gray" Grid.Row="0" Margin="12,5,40,5" GotFocus="FirstTextBox_GotFocus" LostFocus="FirstTextBox_LostFocus" Grid.Column="2" />
         <Label Content="Фамилия:" Grid.Row="1" Grid.Column="0" Margin="35,10,18,10" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="TextBoxLastName" Text="Введите фамилию..." Foreground="Gray" Grid.Row="1" Margin="12,5,40,5" GotFocus="LoginTextBox_GotFocus" LostFocus="LoginTextBox_LostFocus" Grid.Column="2"/>
+        <TextBox x:Name="TextBoxLastName" Text="Введите фамилию..." Foreground="Gray" Grid.Row="1" Margin="12,5,40,5" GotFocus="SecondTextBox_GotFocus" LostFocus="SecondTextBox_LostFocus" Grid.Column="2"/>
         
         <Label Content="Логин:" Grid.Row="2" Grid.Column="0" Margin="35,10,18,10" Grid.ColumnSpan="2"/>
         <TextBox x:Name="TextBoxUsername" Text="Введите логин..." Foreground="Gray" Grid.Row="2" Margin="12,5,40,5" GotFocus="LoginTextBox_GotFocus" LostFocus="LoginTextBox_LostFocus" Grid.Column="2"/>

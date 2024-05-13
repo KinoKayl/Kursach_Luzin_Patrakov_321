@@ -94,13 +94,13 @@ namespace Kursach_Luzin_Patrakov_321
 
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
         {
-            if (Registration(TextBoxUsername.Text, PasswordBox.Password, TextBoxFirstName.Text, TextBoxLastName.Text, ComboBoxGender.Text))
+            if (Registration(TextBoxUsername.Text, PasswordBox.Password, TextBoxFirstName.Text, TextBoxLastName.Text, ComboBoxGender.Text, "User"))
             {
                 FrameManager.MainFrame.Navigate(new AuthPage());
             }
         }
 
-        public bool Registration(string UserLogin, string UserPassword, string UserFName, string UserLName, string UserGender)
+        public bool Registration(string UserLogin, string UserPassword, string UserFName, string UserLName, string UserGender, string UserRole)
         {
             if (string.IsNullOrEmpty(UserLogin) || UserLogin == "Введите логин...")
             {
@@ -133,7 +133,17 @@ namespace Kursach_Luzin_Patrakov_321
                 return false;
             }
 
-            KursachEntities1 db = new KursachEntities1();
+            Kursach_Luzin_Patrakov_321Entities db = new Kursach_Luzin_Patrakov_321Entities();
+
+            Users userObject = new Users()
+            {
+                Login = UserLogin,
+                Password = UserPassword,
+                LastName = UserLName,
+                FirstName = UserFName,
+                Gender = UserGender,
+                Role = UserRole,
+            };
 
             Users users = db.Users.AsNoTracking().FirstOrDefault(u => u.Login == UserLogin);
             if (users != null)
@@ -143,18 +153,6 @@ namespace Kursach_Luzin_Patrakov_321
                 
                 return false;
             }
-
-
-            Users userObject = new Users()
-            {
-                Login = UserLogin,
-                Password = UserPassword,
-                LastName = UserLName,
-                FirstName = UserFName,
-                Gender = UserGender,
-            
-    
-            };
 
             db.Users.Add(userObject);
             db.SaveChanges();

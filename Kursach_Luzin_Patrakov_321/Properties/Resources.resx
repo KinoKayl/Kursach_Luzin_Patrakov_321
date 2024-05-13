@@ -123,6 +123,9 @@
   <data name="FstResourse" xml:space="preserve">
     <value />
   </data>
+  <data name="isAdmin" xml:space="preserve">
+    <value />
+  </data>
   <data name="SndResourse" xml:space="preserve">
     <value />
   </data>

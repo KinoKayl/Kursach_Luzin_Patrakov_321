@@ -10,7 +10,7 @@
         Title="AuthPage" Height="515" Width="383">
     <Window.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0,0">
-            <GradientStop Color="#FF7BA6F7" Offset="0"/>
+            <GradientStop  Color="#FF7BA6F7" Offset="0"/>
             <GradientStop Color="#FFAF87E0" Offset="1"/>
         </LinearGradientBrush>
     </Window.Background>
@@ -46,7 +46,7 @@
                 <SolidColorBrush Color="White" Opacity="0.7"/>
             </Button.BorderBrush>
         </Button>
-        <TextBox x:Name="SecNameTextBox"  FontFamily="Montserrat" HorizontalAlignment="Left" Margin="70,214,0,0" TextWrapping="Wrap" Text="Введите логин" VerticalAlignment="Top" Height="26" Width="258" FontSize="16" Foreground="#FFFBF4F4" Background="{x:Null}" BorderBrush="{x:Null}" GotFocus="SecondtextBox_GotFocus" LostFocus="SecondtextBox_LostFocus"/>
+        <TextBox x:Name="LoginTextBox"  FontFamily="Montserrat" HorizontalAlignment="Left" Margin="70,214,0,0" TextWrapping="Wrap" Text="Введите логин" VerticalAlignment="Top" Height="26" Width="258" FontSize="16" Foreground="#FFFBF4F4" Background="{x:Null}" BorderBrush="{x:Null}" GotFocus="SecondtextBox_GotFocus" LostFocus="SecondtextBox_LostFocus"/>
         <Label Content="Label" HorizontalAlignment="Left" Margin="70,298,0,0" VerticalAlignment="Top" Height="2" Width="258">
             <Label.Background>
                 <SolidColorBrush Color="White" Opacity="0.7"/>

@@ -9,7 +9,7 @@
       Title="UsersPage">
 
     <Grid>
-        <DataGrid x:Name="UsersDataGrid" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,0,0,255"/>
+        <DataGrid x:Name="UsersDataGrid"  Margin="0,0,0,255"/>
 
     </Grid>
 </Page>
