@@ -19,9 +19,16 @@ namespace Kursach_Luzin_Patrakov_321
     /// </summary>
     public partial class AboutUsWindow : Window
     {
+        Kursach_Luzin_Patrakov_321Entities1 db = new Kursach_Luzin_Patrakov_321Entities1();
         public AboutUsWindow()
         {
             InitializeComponent();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            var query = from Reviews in db.Reviews select new { Reviews.ReviewID, Reviews.UserID, Reviews.LocationID, Reviews.Review, Reviews.Rating };
+            ReviewsDataGrid.ItemsSource = query.ToList();
         }
     }
 }

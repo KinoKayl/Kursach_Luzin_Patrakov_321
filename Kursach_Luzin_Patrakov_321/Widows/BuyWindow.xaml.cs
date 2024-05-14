@@ -131,11 +131,11 @@ namespace Kursach_Luzin_Patrakov_321
         }
 
         private void BuyButton_Click(object sender, RoutedEventArgs e)
-        {
+        {/*
             if (Buy(App.Current.Resources["Location"], App.Current.Resources["TicketType"], App.Current.Resources["Price"], App.Current.Resources["Date"], 1))
             {
                 FrameManager.MainFrame.Navigate(new AuthPage());
-            }
+            }*/
         }
 
         private void FirstTextBox_TextChanged(object sender, TextChangedEventArgs e)

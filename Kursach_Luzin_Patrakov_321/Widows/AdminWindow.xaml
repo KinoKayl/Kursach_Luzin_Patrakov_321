@@ -35,6 +35,7 @@
             <Button x:Name="SalesButton" Content="Sales" Height="52" VerticalAlignment="Top" Width="134" Margin="-136,55,0,0" Background="{x:Null}" FontSize="22" BorderBrush="{x:Null}" Foreground="White" Click="SalesButton_Click" />
             <Button x:Name="ReportButton" Content="Report" HorizontalAlignment="Left" Height="52" VerticalAlignment="Top" Width="135" Margin="-136,110,0,0" Background="{x:Null}" FontSize="22" BorderBrush="{x:Null}" Foreground="White" Click="ReportButton_Click" />
             <Button x:Name="StallsButton" Content="Stalls" HorizontalAlignment="Left" Height="52" VerticalAlignment="Top" Width="135" Margin="-136,160,0,0" Background="{x:Null}" FontSize="22" BorderBrush="{x:Null}" Foreground="White" Click="StallsButton_Click" />
+            <Button x:Name="CosplayersButton" Content="Cosplayers" HorizontalAlignment="Left" Height="52" VerticalAlignment="Top" Width="135" Margin="-136,210,0,0" Background="{x:Null}" FontSize="22" BorderBrush="{x:Null}" Foreground="White" Click="CosplayersButton_Click"  />
 
         </StackPanel>
 

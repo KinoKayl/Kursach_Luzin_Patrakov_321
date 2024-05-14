@@ -6,10 +6,13 @@
       xmlns:local="clr-namespace:Kursach_Luzin_Patrakov_321.AdminPages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="UsersPage">
+      Title="UsersPage"
+      Loaded="Page_Loaded">
 
     <Grid>
-        <DataGrid x:Name="UsersDataGrid"  Margin="0,0,0,255"/>
-
+        <DataGrid x:Name="UsersDataGrid"  Margin="0,0,0,255"  IsReadOnly="False"/>
+        <Button x:Name="AddButton" Content="Добавить" Margin="34,368,641,33"></Button>
+        <Button x:Name="DeleteButton" Content="Удалить" Margin="188,368,490,33"></Button>
+        <Button x:Name="SaveButton" Content="Сохранить" HorizontalAlignment="Left" Margin="335,368,0,0" VerticalAlignment="Top" Width="122" Height="49" Click="SaveButton_Click"/>
     </Grid>
 </Page>

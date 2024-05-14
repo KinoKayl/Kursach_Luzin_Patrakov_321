@@ -6,9 +6,17 @@
         xmlns:local="clr-namespace:Kursach_Luzin_Patrakov_321"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="AboutUsWindow" Height="450" Width="800">
+        Title="AboutUsWindow" Height="450" Width="800"
+        Loaded="Window_Loaded"
+        >
     <Grid>
-        <TextBlock HorizontalAlignment="Left" Margin="40,43,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="О нас"/><LineBreak/><Run/></TextBlock>
-
+        <Grid.Background>
+            <RadialGradientBrush GradientOrigin="1,1" Center="1,1" RadiusY="1" RadiusX="1">
+                <GradientStop Color="#FF021A43" Offset="0.75"/>
+                <GradientStop Color="#FF17498F" Offset="0.13"/>
+            </RadialGradientBrush>
+        </Grid.Background>
+        <TextBlock HorizontalAlignment="Left" Margin="23,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"><Run Text="О нас"  FontSize="22" Foreground="White"/><LineBreak/><Run/></TextBlock>
+        <DataGrid x:Name="ReviewsDataGrid" Margin="0,71,0,0" ></DataGrid>
     </Grid>
 </Window>

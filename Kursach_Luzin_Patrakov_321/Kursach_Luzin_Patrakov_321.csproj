@@ -175,6 +175,9 @@
     <Compile Include="Addresses.cs">
       <DependentUpon>Kursach.tt</DependentUpon>
     </Compile>
+    <Compile Include="AdminPages\CosplayerPage.xaml.cs">
+      <DependentUpon>CosplayerPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AdminPages\ReportPage.xaml.cs">
       <DependentUpon>ReportPage.xaml</DependentUpon>
     </Compile>
@@ -183,6 +186,9 @@
     </Compile>
     <Compile Include="AdminPages\StallsPage.xaml.cs">
       <DependentUpon>StallsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\UserForm.xaml.cs">
+      <DependentUpon>UserForm.xaml</DependentUpon>
     </Compile>
     <Compile Include="AdminPages\UsersPage.xaml.cs">
       <DependentUpon>UsersPage.xaml</DependentUpon>
@@ -258,7 +264,15 @@
     <Compile Include="Widows\auth\RegPage.xaml.cs">
       <DependentUpon>RegPage.xaml</DependentUpon>
     </Compile>
+    <Page Include="AdminPages\CosplayerPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AdminPages\StallsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdminPages\UserForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
