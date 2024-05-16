@@ -6,10 +6,12 @@
       xmlns:local="clr-namespace:Kursach_Luzin_Patrakov_321.AdminPages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="SalesPage">
+      Title="SalesPage"
+      Loaded="Page_Loaded">
 
     <Grid>
-        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,0,0,225"/>
-
+        <DataGrid x:Name="SalesDataGrid"  Margin="0,0,0,255"  IsReadOnly="False"/>
+        <Button x:Name="DeleteButton" Content="Удалить" Margin="188,368,490,33" Click="DeleteButton_Click"></Button>
+        <Button x:Name="SaveButton" Content="Сохранить" HorizontalAlignment="Left" Margin="335,368,0,0" VerticalAlignment="Top" Width="122" Height="49" Click="SaveButton_Click"/>
     </Grid>
 </Page>

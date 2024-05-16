@@ -21,7 +21,9 @@ namespace Kursach_Luzin_Patrakov_321
             this.Cosplayers = new HashSet<Cosplayers>();
             this.InvitedUsers = new HashSet<InvitedUsers>();
             this.LocationParticipants = new HashSet<LocationParticipants>();
+            this.Organizers = new HashSet<Organizers>();
             this.Photos = new HashSet<Photos>();
+            this.PurchasedItems = new HashSet<PurchasedItems>();
             this.Reviews = new HashSet<Reviews>();
             this.Sales = new HashSet<Sales>();
             this.Tickets = new HashSet<Tickets>();
@@ -45,7 +47,11 @@ namespace Kursach_Luzin_Patrakov_321
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<LocationParticipants> LocationParticipants { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Organizers> Organizers { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Photos> Photos { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PurchasedItems> PurchasedItems { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Reviews> Reviews { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

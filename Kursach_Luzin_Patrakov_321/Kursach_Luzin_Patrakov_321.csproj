@@ -173,7 +173,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Addresses.cs">
-      <DependentUpon>Kursach.tt</DependentUpon>
+      <DependentUpon>kursach.tt</DependentUpon>
     </Compile>
     <Compile Include="AdminPages\CosplayerPageAdmin.xaml.cs">
       <DependentUpon>CosplayerPageAdmin.xaml</DependentUpon>
@@ -195,67 +195,73 @@
     </Compile>
     <Compile Include="class\Users_ADMIN.cs" />
     <Compile Include="ContactInfo.cs">
-      <DependentUpon>Kursach.tt</DependentUpon>
+      <DependentUpon>kursach.tt</DependentUpon>
     </Compile>
     <Compile Include="Cosplayers.cs">
-      <DependentUpon>Kursach.tt</DependentUpon>
+      <DependentUpon>kursach.tt</DependentUpon>
     </Compile>
     <Compile Include="Events.cs">
-      <DependentUpon>Kursach.tt</DependentUpon>
+      <DependentUpon>kursach.tt</DependentUpon>
     </Compile>
     <Compile Include="InvitedUsers.cs">
-      <DependentUpon>Kursach.tt</DependentUpon>
+      <DependentUpon>kursach.tt</DependentUpon>
     </Compile>
-    <Compile Include="Kursach.Context.cs">
+    <Compile Include="kursach.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Kursach.Context.tt</DependentUpon>
+      <DependentUpon>kursach.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Kursach.cs">
+    <Compile Include="kursach.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Kursach.tt</DependentUpon>
+      <DependentUpon>kursach.tt</DependentUpon>
     </Compile>
-    <Compile Include="Kursach.Designer.cs">
+    <Compile Include="kursach.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Kursach.edmx</DependentUpon>
+      <DependentUpon>kursach.edmx</DependentUpon>
     </Compile>
     <Compile Include="LocationParticipants.cs">
-      <DependentUpon>Kursach.tt</DependentUpon>
+      <DependentUpon>kursach.tt</DependentUpon>
     </Compile>
     <Compile Include="Locations.cs">
-      <DependentUpon>Kursach.tt</DependentUpon>
+      <DependentUpon>kursach.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Organizers.cs">
+      <DependentUpon>kursach.tt</DependentUpon>
     </Compile>
     <Compile Include="Photos.cs">
-      <DependentUpon>Kursach.tt</DependentUpon>
+      <DependentUpon>kursach.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PurchasedItems.cs">
+      <DependentUpon>kursach.tt</DependentUpon>
     </Compile>
     <Compile Include="Reviews.cs">
-      <DependentUpon>Kursach.tt</DependentUpon>
+      <DependentUpon>kursach.tt</DependentUpon>
     </Compile>
     <Compile Include="Sales.cs">
-      <DependentUpon>Kursach.tt</DependentUpon>
+      <DependentUpon>kursach.tt</DependentUpon>
     </Compile>
     <Compile Include="Schedule.cs">
-      <DependentUpon>Kursach.tt</DependentUpon>
+      <DependentUpon>kursach.tt</DependentUpon>
     </Compile>
     <Compile Include="Stalls.cs">
-      <DependentUpon>Kursach.tt</DependentUpon>
+      <DependentUpon>kursach.tt</DependentUpon>
     </Compile>
     <Compile Include="sysdiagrams.cs">
-      <DependentUpon>Kursach.tt</DependentUpon>
+      <DependentUpon>kursach.tt</DependentUpon>
     </Compile>
     <Compile Include="TicketInfo.cs">
-      <DependentUpon>Kursach.tt</DependentUpon>
+      <DependentUpon>kursach.tt</DependentUpon>
     </Compile>
     <Compile Include="Tickets.cs">
-      <DependentUpon>Kursach.tt</DependentUpon>
+      <DependentUpon>kursach.tt</DependentUpon>
     </Compile>
     <Compile Include="Users.cs">
-      <DependentUpon>Kursach.tt</DependentUpon>
+      <DependentUpon>kursach.tt</DependentUpon>
     </Compile>
     <Compile Include="Vendors.cs">
-      <DependentUpon>Kursach.tt</DependentUpon>
+      <DependentUpon>kursach.tt</DependentUpon>
     </Compile>
     <Compile Include="Widows\AdminWindow.xaml.cs">
       <DependentUpon>AdminWindow.xaml</DependentUpon>
@@ -378,12 +384,12 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="Kursach.edmx">
+    <EntityDeploy Include="kursach.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Kursach.Designer.cs</LastGenOutput>
+      <LastGenOutput>kursach.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Kursach.edmx.diagram">
-      <DependentUpon>Kursach.edmx</DependentUpon>
+    <None Include="kursach.edmx.diagram">
+      <DependentUpon>kursach.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -414,15 +420,15 @@
     <Resource Include="img\icons8-info-94.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Kursach.Context.tt">
+    <Content Include="kursach.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Kursach.edmx</DependentUpon>
-      <LastGenOutput>Kursach.Context.cs</LastGenOutput>
+      <DependentUpon>kursach.edmx</DependentUpon>
+      <LastGenOutput>kursach.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Kursach.tt">
+    <Content Include="kursach.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Kursach.edmx</DependentUpon>
-      <LastGenOutput>Kursach.cs</LastGenOutput>
+      <DependentUpon>kursach.edmx</DependentUpon>
+      <LastGenOutput>kursach.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

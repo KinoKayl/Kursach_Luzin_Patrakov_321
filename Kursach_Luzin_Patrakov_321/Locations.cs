@@ -21,6 +21,7 @@ namespace Kursach_Luzin_Patrakov_321
             this.Events = new HashSet<Events>();
             this.InvitedUsers = new HashSet<InvitedUsers>();
             this.LocationParticipants = new HashSet<LocationParticipants>();
+            this.Organizers = new HashSet<Organizers>();
             this.Photos = new HashSet<Photos>();
             this.Reviews = new HashSet<Reviews>();
             this.Schedule = new HashSet<Schedule>();
@@ -44,6 +45,8 @@ namespace Kursach_Luzin_Patrakov_321
         public virtual ICollection<InvitedUsers> InvitedUsers { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<LocationParticipants> LocationParticipants { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Organizers> Organizers { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Photos> Photos { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
