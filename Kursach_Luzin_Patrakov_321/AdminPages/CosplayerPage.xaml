@@ -9,6 +9,6 @@
       Title="CosplayerPage">
 
     <Grid>
-        <!--DataGrid></DataGrid-->   
+        <DataGrid></DataGrid>   
     </Grid>
 </Page>

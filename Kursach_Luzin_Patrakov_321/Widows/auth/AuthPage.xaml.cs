@@ -112,6 +112,8 @@ namespace Kursach_Luzin_Patrakov_321
 
                 App.Current.Resources["FstResourse"] = LoginTextBox.Text;
                 App.Current.Resources["SndResourse"] = PassBox.Password;
+                App.Current.Resources["UserID"] = users.UserID;
+
 
                 if (isAdmin(UserLogin, UserPassword))
                 {

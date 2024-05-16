@@ -36,24 +36,21 @@ namespace Kursach_Luzin_Patrakov_321.AdminPages
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
-            // Отображение формы для ввода данных нового пользователя
-            var userForm = new UserForm(); // Предполагается, что у вас есть окно или форма для ввода данных пользователя
+            var userForm = new UserForm(); 
             userForm.ShowDialog();
 
             if (userForm.DialogResult.HasValue && userForm.DialogResult.Value)
             {
-                // Создание нового пользователя с данными из формы
                 var newUser = new Users
                 {
                     Login = userForm.Login,
-                    Password = userForm.Password, // В реальном приложении пароль должен быть захеширован
+                    Password = userForm.Password, 
                     LastName = userForm.LastName,
                     FirstName = userForm.FirstName,
                     Gender = userForm.Gender,
                     Role = userForm.Role
                 };
 
-                // Добавление нового пользователя в базу данных
                 db.Users.Add(newUser);
                 try
                 {

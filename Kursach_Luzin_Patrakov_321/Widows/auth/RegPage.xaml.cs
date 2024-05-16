@@ -22,7 +22,7 @@ namespace Kursach_Luzin_Patrakov_321
     {
         public RegPage()
         {
-            InitializeComponent();
+            InitializeComponent(); 
         }
 
         private void GotFocus(TextBox textBox, string placeholderText, string replacementText)

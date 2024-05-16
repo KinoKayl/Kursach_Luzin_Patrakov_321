@@ -18,7 +18,9 @@ namespace Kursach_Luzin_Patrakov_321
     /// Логика взаимодействия для BuyWindow.xaml
     /// </summary>
     public partial class BuyWindow : Window
+
     {
+        Kursach_Luzin_Patrakov_321Entities1 db = new Kursach_Luzin_Patrakov_321Entities1();
         public BuyWindow()
         {
             InitializeComponent();
@@ -63,16 +65,22 @@ namespace Kursach_Luzin_Patrakov_321
         private void GuestButton_Checked(object sender, RoutedEventArgs e)
         {
             TicketPriceTextBlock.Text = "850 руб.";
+            App.Current.Resources["TicketType"] = "Guest";
+            App.Current.Resources["Price"] = "850";
         }
 
         private void CosButton_Checked(object sender, RoutedEventArgs e)
         {
             TicketPriceTextBlock.Text = "750 руб.";
+            App.Current.Resources["TicketType"] = "Cosplayer";
+            App.Current.Resources["Price"] = "750";
         }
 
         private void VIPButton_Checked(object sender, RoutedEventArgs e)
         {
             TicketPriceTextBlock.Text = "1200 руб.";
+            App.Current.Resources["TicketType"] = "VIP";
+            App.Current.Resources["Price"] = "1200";
         }
 
         public bool Buy(int locationId, string ticketType, decimal price, string purchaseDate, int userId)
@@ -105,7 +113,6 @@ namespace Kursach_Luzin_Patrakov_321
                 }
 
                 //Функционал кнопки
-                Kursach_Luzin_Patrakov_321Entities1 db = new Kursach_Luzin_Patrakov_321Entities1();
 
                 Tickets newTicket = new Tickets
                 {
@@ -131,16 +138,36 @@ namespace Kursach_Luzin_Patrakov_321
         }
 
         private void BuyButton_Click(object sender, RoutedEventArgs e)
-        {/*
-            if (Buy(App.Current.Resources["Location"], App.Current.Resources["TicketType"], App.Current.Resources["Price"], App.Current.Resources["Date"], 1))
+        {
+            Console.WriteLine(App.Current.Resources["Location"]);
+            Console.WriteLine(App.Current.Resources["TicketType"]);
+            Console.WriteLine(App.Current.Resources["Price"]);
+            Console.WriteLine(App.Current.Resources["Date"]);
+            Console.WriteLine(App.Current.Resources["UserID"]);
+
+
+
+            
+            if (Buy((int)App.Current.Resources["Location"], (string)App.Current.Resources["TicketType"], (decimal)App.Current.Resources["Price"], (string)App.Current.Resources["Date"], (int)App.Current.Resources["UserID"]))
             {
-                FrameManager.MainFrame.Navigate(new AuthPage());
-            }*/
+                //FrameManager.MainFrame.Navigate(new AuthPage());
+                
+            }
         }
 
         private void FirstTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private void FirstDateButton_Checked(object sender, RoutedEventArgs e)
+        {
+            App.Current.Resources["Date"] = SecondDateButton.Content;
+        }
+
+        private void SecondDateButton_Checked(object sender, RoutedEventArgs e)
+        {
+            App.Current.Resources["Date"] = SecondDateButton.Content;
         }
     }
 }

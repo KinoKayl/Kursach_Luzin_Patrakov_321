@@ -198,7 +198,7 @@
         <TextBlock FontFamily="Montserrat" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="93,235,0,0" Height="22" Width="40" FontSize="16" Foreground="White"><Run Text="Дата" FontFamily="Montserrat"/></TextBlock>
         <TextBlock FontFamily="Montserrat" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="93,278,0,0" Height="22" Width="114" FontSize="16" Text="Тип билета" Foreground="White"/>
         <StackPanel Margin="163,239,190,340" Orientation="Horizontal">
-            <RadioButton FontFamily="Montserrat" x:Name="FirstDateButton" Content=" . . ." VerticalAlignment="Top" FontSize="14" Margin="0,0,10,0" Foreground="White" Width="97">
+            <RadioButton FontFamily="Montserrat" x:Name="FirstDateButton" Content=" . . ." VerticalAlignment="Top" FontSize="14" Margin="0,0,10,0" Foreground="White" Width="97" Checked="FirstDateButton_Checked">
                 <RadioButton.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="15"/>
@@ -211,7 +211,7 @@
                     </LinearGradientBrush>
                 </RadioButton.Background>
             </RadioButton>
-            <RadioButton FontFamily="Montserrat" x:Name="SecondDateButton" Content=" . . ." FontSize="14" Margin="5,0,0,0"  VerticalAlignment="Top" Foreground="White">
+            <RadioButton FontFamily="Montserrat" x:Name="SecondDateButton" Content=" . . ." FontSize="14" Margin="5,0,0,6" Foreground="White" Checked="SecondDateButton_Checked">
                 <RadioButton.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="15"/>
