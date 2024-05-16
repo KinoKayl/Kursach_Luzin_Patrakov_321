@@ -51,8 +51,8 @@ namespace Kursach_Luzin_Patrakov_321
 
         private void CosplayersButton_Click(object sender, RoutedEventArgs e)
         {
-            CospayersPage cospayersPage = new CospayersPage();
-            PageFrame.Content = cospayersPage;
+            CosplayerPageAdmin cospayersPageAdmin = new CosplayerPageAdmin();
+            PageFrame.Content = cospayersPageAdmin;
         }
     }
 }

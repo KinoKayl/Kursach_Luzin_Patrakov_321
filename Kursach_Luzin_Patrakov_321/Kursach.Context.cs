@@ -13,10 +13,10 @@ namespace Kursach_Luzin_Patrakov_321
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Kursach_Luzin_Patrakov_321Entities1 : DbContext
+    public partial class Kursach_Luzin_Patrakov_321Entities : DbContext
     {
-        public Kursach_Luzin_Patrakov_321Entities1()
-            : base("name=Kursach_Luzin_Patrakov_321Entities1")
+        public Kursach_Luzin_Patrakov_321Entities()
+            : base("name=Kursach_Luzin_Patrakov_321Entities")
         {
         }
     

@@ -97,7 +97,7 @@
           <Property Name="SaleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="UserID" Type="int" />
           <Property Name="Amount" Type="decimal" Precision="10" Scale="2" />
-          <Property Name="SaleDate" Type="date" />
+          <Property Name="SaleDate" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="Schedule">
           <Key>
@@ -677,7 +677,7 @@
           <Property Name="SaleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="UserID" Type="Int32" />
           <Property Name="Amount" Type="Decimal" Precision="10" Scale="2" />
-          <Property Name="SaleDate" Type="DateTime" Precision="0" />
+          <Property Name="SaleDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Users" Relationship="Self.FK__Sales__UserID__3D5E1FD2" FromRole="Sales" ToRole="Users" />
         </EntityType>
         <EntityType Name="Schedule">
@@ -1045,7 +1045,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="Kursach_Luzin_Patrakov_321Entities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="Kursach_Luzin_Patrakov_321Entities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Addresses" EntityType="Self.Addresses" />
           <EntitySet Name="ContactInfo" EntityType="Self.ContactInfo" />
           <EntitySet Name="Cosplayers" EntityType="Self.Cosplayers" />
@@ -1161,7 +1161,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище Kursach_Luzin_Patrakov_321ModelContainer" CdmEntityContainer="Kursach_Luzin_Patrakov_321Entities1">
+        <EntityContainerMapping StorageEntityContainer="Хранилище Kursach_Luzin_Patrakov_321ModelContainer" CdmEntityContainer="Kursach_Luzin_Patrakov_321Entities">
           <EntitySetMapping Name="Addresses">
             <EntityTypeMapping TypeName="Kursach_Luzin_Patrakov_321Model.Addresses">
               <MappingFragment StoreEntitySet="Addresses">

@@ -16,13 +16,13 @@ using System.Windows.Shapes;
 namespace Kursach_Luzin_Patrakov_321.AdminPages
 {
     /// <summary>
-    /// Interaction logic for SalesPage.xaml
+    /// Логика взаимодействия для CosplayerPageAdmin.xaml
     /// </summary>
-    public partial class SalesPage : Page
+    public partial class CosplayerPageAdmin : Page
     {
-        public SalesPage()
+        public CosplayerPageAdmin()
         {
-             InitializeComponent();
+            InitializeComponent();
         }
     }
 }

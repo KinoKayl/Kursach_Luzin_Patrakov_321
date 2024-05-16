@@ -21,7 +21,7 @@ namespace Kursach_Luzin_Patrakov_321.AdminPages
     /// </summary>
     public partial class UsersPage : Page
     {
-        Kursach_Luzin_Patrakov_321Entities1 db = new Kursach_Luzin_Patrakov_321Entities1();
+        Kursach_Luzin_Patrakov_321Entities db = new Kursach_Luzin_Patrakov_321Entities();
         public UsersPage()
         {
             InitializeComponent();

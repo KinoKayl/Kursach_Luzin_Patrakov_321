@@ -85,7 +85,7 @@ namespace Kursach_Luzin_Patrakov_321
 
         public bool isAdmin(string UserLogin, string UserPassword)
         {
-            Kursach_Luzin_Patrakov_321Entities1 db = new Kursach_Luzin_Patrakov_321Entities1();
+            Kursach_Luzin_Patrakov_321Entities db = new Kursach_Luzin_Patrakov_321Entities();
 
             // Проверяем, существует ли пользователь с таким логином и паролем
             Users user = db.Users.AsNoTracking().FirstOrDefault(u => u.Login == UserLogin && u.Password == UserPassword);
@@ -95,7 +95,7 @@ namespace Kursach_Luzin_Patrakov_321
 
         public bool Auth(string UserLogin, string UserPassword)
         {
-            Kursach_Luzin_Patrakov_321Entities1 db = new Kursach_Luzin_Patrakov_321Entities1();
+            Kursach_Luzin_Patrakov_321Entities db = new Kursach_Luzin_Patrakov_321Entities();
 
             Users userObject = new Users()
             {

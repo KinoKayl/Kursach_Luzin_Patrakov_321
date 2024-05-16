@@ -20,7 +20,7 @@ namespace Kursach_Luzin_Patrakov_321
     public partial class BuyWindow : Window
 
     {
-        Kursach_Luzin_Patrakov_321Entities1 db = new Kursach_Luzin_Patrakov_321Entities1();
+        Kursach_Luzin_Patrakov_321Entities db = new Kursach_Luzin_Patrakov_321Entities();
         public BuyWindow()
         {
             InitializeComponent();
@@ -66,21 +66,23 @@ namespace Kursach_Luzin_Patrakov_321
         {
             TicketPriceTextBlock.Text = "850 руб.";
             App.Current.Resources["TicketType"] = "Guest";
-            App.Current.Resources["Price"] = "850";
+            App.Current.Resources["Price"] = 850m;
+            //decimal count = (decimal)App.Current.Resources["Price"];
         }
 
         private void CosButton_Checked(object sender, RoutedEventArgs e)
         {
             TicketPriceTextBlock.Text = "750 руб.";
             App.Current.Resources["TicketType"] = "Cosplayer";
-            App.Current.Resources["Price"] = "750";
+            App.Current.Resources["Price"] = 750m;
+            //decimal count = (decimal)App.Current.Resources["Price"];
         }
 
         private void VIPButton_Checked(object sender, RoutedEventArgs e)
         {
             TicketPriceTextBlock.Text = "1200 руб.";
             App.Current.Resources["TicketType"] = "VIP";
-            App.Current.Resources["Price"] = "1200";
+            App.Current.Resources["Price"] = 1200m;
         }
 
         public bool Buy(int locationId, string ticketType, decimal price, string purchaseDate, int userId)
@@ -123,35 +125,44 @@ namespace Kursach_Luzin_Patrakov_321
                     UserID = userId
                 };
 
-                
-                db.Tickets.Add(newTicket);
+                Sales sales = new Sales
+                {
+                    UserID = userId,
+                    Amount = price,
+                    SaleDate = purchaseDate,
+                };
 
+
+
+                db.Tickets.Add(newTicket);
+                db.Sales.Add(sales);
                 // Сохранение изменений в базе данных
                 db.SaveChanges();
-                
 
+                MessageBox.Show("Билет оформлен");
+                this.Close();
 
                 return true;
-                MessageBox.Show("Билет оформлен");
             }
             
         }
 
         private void BuyButton_Click(object sender, RoutedEventArgs e)
         {
-            Console.WriteLine(App.Current.Resources["Location"]);
-            Console.WriteLine(App.Current.Resources["TicketType"]);
-            Console.WriteLine(App.Current.Resources["Price"]);
-            Console.WriteLine(App.Current.Resources["Date"]);
-            Console.WriteLine(App.Current.Resources["UserID"]);
+            Console.WriteLine($"Location Type: {App.Current.Resources["Location"]?.GetType()} - Value: {App.Current.Resources["Location"]}");
+            Console.WriteLine($"TicketType Type: {App.Current.Resources["TicketType"]?.GetType()} - Value: {App.Current.Resources["TicketType"]}");
+            Console.WriteLine($"Price Type: {App.Current.Resources["Price"]?.GetType()} - Value: {App.Current.Resources["Price"]}");
+            Console.WriteLine($"Date Type: {App.Current.Resources["Date"]?.GetType()} - Value: {App.Current.Resources["Date"]}");
+            Console.WriteLine($"UserID Type: {App.Current.Resources["UserID"]?.GetType()} - Value: {App.Current.Resources["UserID"]}");
 
 
 
-            
+
+
             if (Buy((int)App.Current.Resources["Location"], (string)App.Current.Resources["TicketType"], (decimal)App.Current.Resources["Price"], (string)App.Current.Resources["Date"], (int)App.Current.Resources["UserID"]))
             {
                 //FrameManager.MainFrame.Navigate(new AuthPage());
-                
+
             }
         }
 

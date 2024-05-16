@@ -17,7 +17,7 @@ namespace Kursach_Luzin_Patrakov_321
         public int SaleID { get; set; }
         public Nullable<int> UserID { get; set; }
         public Nullable<decimal> Amount { get; set; }
-        public Nullable<System.DateTime> SaleDate { get; set; }
+        public string SaleDate { get; set; }
     
         public virtual Users Users { get; set; }
     }

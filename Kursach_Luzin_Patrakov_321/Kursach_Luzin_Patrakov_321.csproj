@@ -175,8 +175,8 @@
     <Compile Include="Addresses.cs">
       <DependentUpon>Kursach.tt</DependentUpon>
     </Compile>
-    <Compile Include="AdminPages\CosplayerPage.xaml.cs">
-      <DependentUpon>CosplayerPage.xaml</DependentUpon>
+    <Compile Include="AdminPages\CosplayerPageAdmin.xaml.cs">
+      <DependentUpon>CosplayerPageAdmin.xaml</DependentUpon>
     </Compile>
     <Compile Include="AdminPages\ReportPage.xaml.cs">
       <DependentUpon>ReportPage.xaml</DependentUpon>
@@ -264,7 +264,10 @@
     <Compile Include="Widows\auth\RegPage.xaml.cs">
       <DependentUpon>RegPage.xaml</DependentUpon>
     </Compile>
-    <Page Include="AdminPages\CosplayerPage.xaml">
+    <Compile Include="Widows\TicketWindow.xaml.cs">
+      <DependentUpon>TicketWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="AdminPages\CosplayerPageAdmin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -352,6 +355,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Widows\TicketWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -368,7 +375,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EntityDeploy Include="Kursach.edmx">

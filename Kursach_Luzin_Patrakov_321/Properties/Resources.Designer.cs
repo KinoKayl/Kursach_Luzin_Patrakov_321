@@ -22,7 +22,7 @@ namespace Kursach_Luzin_Patrakov_321.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace Kursach_Luzin_Patrakov_321.Properties {
         ///   Возвращает кэшированный экземпляр ResourceManager, использованный этим классом.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Kursach_Luzin_Patrakov_321.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace Kursach_Luzin_Patrakov_321.Properties {
         ///   обращений к ресурсу с помощью этого класса ресурса со строгой типизацией.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace Kursach_Luzin_Patrakov_321.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на .
         /// </summary>
-        internal static string CosName {
+        public static string CosName {
             get {
                 return ResourceManager.GetString("CosName", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace Kursach_Luzin_Patrakov_321.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на .
         /// </summary>
-        internal static string Date {
+        public static string Date {
             get {
                 return ResourceManager.GetString("Date", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace Kursach_Luzin_Patrakov_321.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на .
         /// </summary>
-        internal static string FstResourse {
+        public static string FstResourse {
             get {
                 return ResourceManager.GetString("FstResourse", resourceCulture);
             }
@@ -90,7 +90,7 @@ namespace Kursach_Luzin_Patrakov_321.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на .
         /// </summary>
-        internal static string isAdmin {
+        public static string isAdmin {
             get {
                 return ResourceManager.GetString("isAdmin", resourceCulture);
             }
@@ -99,7 +99,7 @@ namespace Kursach_Luzin_Patrakov_321.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на .
         /// </summary>
-        internal static string Location {
+        public static string Location {
             get {
                 return ResourceManager.GetString("Location", resourceCulture);
             }
@@ -108,7 +108,7 @@ namespace Kursach_Luzin_Patrakov_321.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на .
         /// </summary>
-        internal static string Price {
+        public static string Price {
             get {
                 return ResourceManager.GetString("Price", resourceCulture);
             }
@@ -117,7 +117,7 @@ namespace Kursach_Luzin_Patrakov_321.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на .
         /// </summary>
-        internal static string SndResourse {
+        public static string SndResourse {
             get {
                 return ResourceManager.GetString("SndResourse", resourceCulture);
             }
@@ -126,7 +126,7 @@ namespace Kursach_Luzin_Patrakov_321.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на .
         /// </summary>
-        internal static string TicketType {
+        public static string TicketType {
             get {
                 return ResourceManager.GetString("TicketType", resourceCulture);
             }
@@ -135,7 +135,7 @@ namespace Kursach_Luzin_Patrakov_321.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на .
         /// </summary>
-        internal static string TrdResourse {
+        public static string TrdResourse {
             get {
                 return ResourceManager.GetString("TrdResourse", resourceCulture);
             }
@@ -144,7 +144,7 @@ namespace Kursach_Luzin_Patrakov_321.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на .
         /// </summary>
-        internal static string UserID {
+        public static string UserID {
             get {
                 return ResourceManager.GetString("UserID", resourceCulture);
             }

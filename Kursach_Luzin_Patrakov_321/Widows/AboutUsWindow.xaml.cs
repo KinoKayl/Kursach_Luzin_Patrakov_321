@@ -19,7 +19,7 @@ namespace Kursach_Luzin_Patrakov_321
     /// </summary>
     public partial class AboutUsWindow : Window
     {
-        Kursach_Luzin_Patrakov_321Entities1 db = new Kursach_Luzin_Patrakov_321Entities1();
+        Kursach_Luzin_Patrakov_321Entities db = new Kursach_Luzin_Patrakov_321Entities();
         public AboutUsWindow()
         {
             InitializeComponent();

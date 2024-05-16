@@ -10,19 +10,20 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Kursach_Luzin_Patrakov_321.AdminPages
+namespace Kursach_Luzin_Patrakov_321.Widows
 {
     /// <summary>
-    /// Логика взаимодействия для CosplayerPage.xaml
+    /// Логика взаимодействия для TicketWindow.xaml
     /// </summary>
-    public partial class CosplayerPage : Page
+    public partial class TicketWindow : Window
     {
-        public CosplayerPage()
+        public TicketWindow()
         {
             InitializeComponent();
         }
+
+        
     }
 }
