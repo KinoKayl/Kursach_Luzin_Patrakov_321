@@ -9,8 +9,8 @@
       Title="ReportPage">
 
     <Grid>
-        <Frame Margin="168,0,0,0"></Frame>
-        <Button x:Name="SalesButton" Content="Отчет по продажам" HorizontalAlignment="Left" Margin="27,23,0,0" VerticalAlignment="Top" Width="117" Height="64"/>
-        <Button x:Name="UsersButton" Content="Отчет по пользователям" HorizontalAlignment="Left" Margin="27,108,0,0" VerticalAlignment="Top" Width="117" Height="64"/>
+        <Frame x:Name="ReportFrame" Margin="168,0,0,0"></Frame>
+        <Button x:Name="SalesButton" Content="Отчет по продажам" HorizontalAlignment="Left" Margin="27,23,0,0" VerticalAlignment="Top" Width="117" Height="64" Click="SalesButton_Click"/>
+        <Button x:Name="UsersButton" Content="Отчет по пользователям" HorizontalAlignment="Left" Margin="27,108,0,0" VerticalAlignment="Top" Width="117" Height="64" Click="UsersButton_Click"/>
     </Grid>
 </Page>

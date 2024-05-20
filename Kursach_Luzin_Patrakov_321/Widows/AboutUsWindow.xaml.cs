@@ -27,8 +27,20 @@ namespace Kursach_Luzin_Patrakov_321
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            var query = from Reviews in db.Reviews select new { Reviews.ReviewID, Reviews.UserID, Reviews.LocationID, Reviews.Review, Reviews.Rating };
-            ReviewsDataGrid.ItemsSource = query.ToList();
+            
+                var query = from review in db.Reviews
+                            join user in db.Users on review.UserID equals user.UserID
+                            join location in db.Locations on review.LocationID equals location.LocationID                          
+                            select new
+                            {
+                                review.ReviewID,
+                                User = user.Login, 
+                                Location = location.Name,
+                                review.Review,
+                                review.Rating
+                            };
+                ReviewsDataGrid.ItemsSource = query.ToList();
+            
         }
     }
 }

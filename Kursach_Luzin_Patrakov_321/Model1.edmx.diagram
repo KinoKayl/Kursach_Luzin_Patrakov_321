@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="8811054471bf451d87ef5e81676c5313" Name="Diagram1">
+      <Diagram DiagramId="d9d3a7fd205443dba3723c64aac0d028" Name="Diagram1">
         <EntityTypeShape EntityType="Kursach_Luzin_Patrakov_321Model.Addresses" Width="1.5" PointX="1.5" PointY="4.375" IsExpanded="true" />
         <EntityTypeShape EntityType="Kursach_Luzin_Patrakov_321Model.ContactInfo" Width="1.5" PointX="3" PointY="13" IsExpanded="true" />
         <EntityTypeShape EntityType="Kursach_Luzin_Patrakov_321Model.Cosplayers" Width="1.5" PointX="3" PointY="16.375" IsExpanded="true" />
@@ -17,7 +17,7 @@
         <EntityTypeShape EntityType="Kursach_Luzin_Patrakov_321Model.Photos" Width="1.5" PointX="3" PointY="19.375" IsExpanded="true" />
         <EntityTypeShape EntityType="Kursach_Luzin_Patrakov_321Model.PurchasedItems" Width="1.5" PointX="11.75" PointY="15.5" IsExpanded="true" />
         <EntityTypeShape EntityType="Kursach_Luzin_Patrakov_321Model.Reviews" Width="1.5" PointX="9" PointY="14.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="Kursach_Luzin_Patrakov_321Model.Sales" Width="1.5" PointX="0.5" PointY="20.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Kursach_Luzin_Patrakov_321Model.Sales" Width="1.5" PointX="3" PointY="33.375" IsExpanded="true" />
         <EntityTypeShape EntityType="Kursach_Luzin_Patrakov_321Model.Schedule" Width="1.5" PointX="5.25" PointY="5.375" IsExpanded="true" />
         <EntityTypeShape EntityType="Kursach_Luzin_Patrakov_321Model.Stalls" Width="1.5" PointX="8.5" PointY="18" IsExpanded="true" />
         <EntityTypeShape EntityType="Kursach_Luzin_Patrakov_321Model.sysdiagrams" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />

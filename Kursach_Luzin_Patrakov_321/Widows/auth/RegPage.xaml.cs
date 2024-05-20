@@ -89,14 +89,16 @@ namespace Kursach_Luzin_Patrakov_321
 
         private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
-            FrameManager.MainFrame.GoBack();
+            AuthPage authPage = new AuthPage();
+            MainFrame.Content = authPage;
         }
 
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
         {
             if (Registration(TextBoxUsername.Text, PasswordBox.Password, TextBoxFirstName.Text, TextBoxLastName.Text, ComboBoxGender.Text, "User"))
             {
-                FrameManager.MainFrame.Navigate(new AuthPage());
+                AuthPage authPage = new AuthPage();
+                MainFrame.Content = authPage;
             }
         }
 
@@ -142,7 +144,7 @@ namespace Kursach_Luzin_Patrakov_321
                 LastName = UserLName,
                 FirstName = UserFName,
                 Gender = UserGender,
-                Role = UserRole,
+                Role = "User",
             };
 
             Users users = db.Users.AsNoTracking().FirstOrDefault(u => u.Login == UserLogin);

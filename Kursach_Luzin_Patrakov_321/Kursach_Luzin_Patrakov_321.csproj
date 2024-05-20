@@ -184,11 +184,17 @@
     <Compile Include="AdminPages\SalesPage.xaml.cs">
       <DependentUpon>SalesPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AdminPages\SalesReportPage.xaml.cs">
+      <DependentUpon>SalesReportPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AdminPages\StallsPage.xaml.cs">
       <DependentUpon>StallsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="AdminPages\UserForm.xaml.cs">
       <DependentUpon>UserForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\UserReportPage.xaml.cs">
+      <DependentUpon>UserReportPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="AdminPages\UsersPage.xaml.cs">
       <DependentUpon>UsersPage.xaml</DependentUpon>
@@ -292,11 +298,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="AdminPages\SalesReportPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AdminPages\StallsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AdminPages\UserForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdminPages\UserReportPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

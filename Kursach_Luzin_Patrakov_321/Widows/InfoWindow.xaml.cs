@@ -26,8 +26,11 @@ namespace Kursach_Luzin_Patrakov_321
         public InfoWindow()
         {
             InitializeComponent();
-            
-
+            if (App.Current.Resources.Contains("isAdmin") && App.Current.Resources["isAdmin"] == "true")
+            {
+                Add_News_Button.Visibility = Visibility.Visible;
+                Delete_News_Button.Visibility = Visibility.Visible;
+            }
         }
 
         private void Add_Button_Click(object sender, RoutedEventArgs e)
@@ -64,7 +67,7 @@ namespace Kursach_Luzin_Patrakov_321
 
         public class NewsViewModel
         {
-
+            public int NewsID { get; set; }
             public string Newsdate { get; set; }
             public string title { get; set; }
         }
@@ -74,11 +77,27 @@ namespace Kursach_Luzin_Patrakov_321
             var query = from news in db.News
                         select new NewsViewModel
                         {
+                            NewsID = news.NewsID,
                             Newsdate = news.Newsdate,
                             title = news.title
-
                         };
             InfoDataGrid.ItemsSource = query.ToList();
+        }
+
+
+        private void Delete_Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (InfoDataGrid.SelectedItem != null)
+            {
+                var newsToDelete = (NewsViewModel)InfoDataGrid.SelectedItem;
+                var news = db.News.Find(newsToDelete.NewsID);
+                if (news != null)
+                {
+                    db.News.Remove(news);
+                    db.SaveChanges();
+                    RefreshDataGrid();
+                }
+            }
         }
     }
 }

@@ -17,16 +17,22 @@
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <RadialGradientBrush GradientOrigin="1,1" Center="1,1" RadiusY="1" RadiusX="1">
+                <GradientStop Color="#FF021A43" Offset="0.75"/>
+                <GradientStop Color="#FF17498F" Offset="0.13"/>
+            </RadialGradientBrush>
+        </Grid.Background>
 
-        <Label Grid.Row="0" Grid.Column="0" Content="Дата новости:"></Label>
+        <Label Grid.Row="0" Grid.Column="0" Content="Дата новости:" Foreground="White"></Label>
         <TextBox Grid.Row="0" Grid.Column="1" x:Name="NewsDataTextBox"/>
 
-        <Label Grid.Row="1" Grid.Column="0" Content="Новость:"/>
+        <Label Grid.Row="1" Grid.Column="0" Content="Новость:" Foreground="White"/>
         <TextBox Grid.Row="1" Grid.Column="1" x:Name="NewsTitleTextBox"/>
 
-        <StackPanel Grid.Row="6" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right">
-            <Button Content="Отмена" Click="CancelButton_Click"/>
-            <Button Content="Подтвердить" Click="ConfirmButton_Click" Margin="10,0,0,0"/>
+        <StackPanel Grid.Row="5" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Content="Отмена" Click="CancelButton_Click" Height="30" Margin="0,168,0,169"/>
+            <Button Content="Подтвердить" Click="ConfirmButton_Click" Margin="10,168,0,169" Height="30"/>
         </StackPanel>
     </Grid>
 </Window>

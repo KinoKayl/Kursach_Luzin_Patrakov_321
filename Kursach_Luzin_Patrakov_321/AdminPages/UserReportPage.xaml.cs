@@ -16,25 +16,22 @@ using System.Windows.Shapes;
 namespace Kursach_Luzin_Patrakov_321.AdminPages
 {
     /// <summary>
-    /// Interaction logic for ReportPage.xaml
+    /// Логика взаимодействия для UserReportPage.xaml
     /// </summary>
-    public partial class ReportPage : Page
+    public partial class UserReportPage : Page
     {
-        public ReportPage()
+        Kursach_Luzin_Patrakov_321Entities db = new Kursach_Luzin_Patrakov_321Entities();
+        public UserReportPage()
         {
             InitializeComponent();
         }
 
-        private void SalesButton_Click(object sender, RoutedEventArgs e)
+        private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            SalesReportPage salesReportPage = new SalesReportPage();
-            ReportFrame.Content = salesReportPage;
-        }
+            var userCount = db.Users.Count();
 
-        private void UsersButton_Click(object sender, RoutedEventArgs e)
-        {
-            UserReportPage userReportPage = new UserReportPage();
-            ReportFrame.Content = userReportPage;
+            string report = $"Количество зарегестрированных пользователей: {userCount}";
+            UsersReportText.Text = report;
         }
     }
 }

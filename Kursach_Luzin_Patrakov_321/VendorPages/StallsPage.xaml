@@ -10,6 +10,12 @@
       Loaded="Page_Loaded">
 
     <Grid>
+        <Grid.Background>
+            <RadialGradientBrush GradientOrigin="1,1" Center="1,1" RadiusY="1" RadiusX="1">
+                <GradientStop Color="#FF021A43" Offset="0.75"/>
+                <GradientStop Color="#FF17498F" Offset="0.13"/>
+            </RadialGradientBrush>
+        </Grid.Background>
         <DataGrid x:Name="StallsPageDataGrid"></DataGrid>
     </Grid>
 </Page>

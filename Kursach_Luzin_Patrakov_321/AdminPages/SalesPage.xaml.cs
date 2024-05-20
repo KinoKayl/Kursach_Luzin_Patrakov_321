@@ -26,14 +26,20 @@ namespace Kursach_Luzin_Patrakov_321.AdminPages
              InitializeComponent();
         }
 
-        private void SaveButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
 
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
-
+            if (SalesDataGrid.SelectedItem != null)
+            {
+                var salesToDelete = (SalesViewModel)SalesDataGrid.SelectedItem;
+                var sales = db.Sales.Find(salesToDelete.SaleID);
+                if (sales != null)
+                {
+                    db.Sales.Remove(sales);
+                    db.SaveChanges();
+                    RefreshDataGrid();
+                }
+            }
         }
 
 
@@ -44,6 +50,20 @@ namespace Kursach_Luzin_Patrakov_321.AdminPages
             public Nullable<decimal> Amount { get; set; }
             public string SaleDate { get; set; }
 
+        }
+
+        private void RefreshDataGrid()
+        {
+            var query = from sales in db.Sales
+                        select new SalesViewModel
+                        {
+                            SaleID = sales.SaleID,
+                            UserID = sales.UserID,
+                            Amount = sales.Amount,
+                            SaleDate = sales.SaleDate,
+
+                        };
+            SalesDataGrid.ItemsSource = query.ToList();
         }
 
 

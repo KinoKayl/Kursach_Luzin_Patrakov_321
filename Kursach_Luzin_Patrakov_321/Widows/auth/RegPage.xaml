@@ -65,5 +65,6 @@
                 </Style>
             </Button.Resources>
         </Button>
+        <Frame x:Name="MainFrame"  Visibility="Hidden" Content="" Margin="0,-16,0,0"></Frame>
     </Grid>
 </Page>

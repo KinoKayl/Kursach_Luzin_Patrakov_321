@@ -75,7 +75,7 @@
           <Key>
             <PropertyRef Name="NewsID" />
           </Key>
-          <Property Name="NewsID" Type="int" Nullable="false" />
+          <Property Name="NewsID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Newsdate" Type="nvarchar(max)" />
           <Property Name="title" Type="nvarchar(max)" />
         </EntityType>
@@ -747,7 +747,7 @@
           <Key>
             <PropertyRef Name="NewsID" />
           </Key>
-          <Property Name="NewsID" Type="Int32" Nullable="false" />
+          <Property Name="NewsID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Newsdate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
