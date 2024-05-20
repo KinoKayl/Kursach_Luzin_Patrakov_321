@@ -20,9 +20,33 @@ namespace Kursach_Luzin_Patrakov_321.AdminPages
     /// </summary>
     public partial class CosplayerPageAdmin : Page
     {
+        Kursach_Luzin_Patrakov_321Entities db = new Kursach_Luzin_Patrakov_321Entities();
         public CosplayerPageAdmin()
         {
             InitializeComponent();
+        }
+
+        public class CosplayersViewModel
+        {
+            public int CosplayerID { get; set; }
+            public Nullable<int> UserID { get; set; }
+            public Nullable<int> LocationID { get; set; }
+            public string Costume { get; set; }
+        }
+
+
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            var query = from Cosplayers in db.Cosplayers
+                        select new CosplayersViewModel
+                        {
+                            CosplayerID = Cosplayers.CosplayerID,
+                            UserID = Cosplayers.UserID,
+                            LocationID = Cosplayers.LocationID,
+                            Costume = Cosplayers.Costume
+                        };
+            CosplayersDataGrid.ItemsSource = query.ToList();
         }
     }
 }

@@ -99,6 +99,15 @@ namespace Kursach_Luzin_Patrakov_321.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на .
         /// </summary>
+        public static string isVendor {
+            get {
+                return ResourceManager.GetString("isVendor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на .
+        /// </summary>
         public static string Location {
             get {
                 return ResourceManager.GetString("Location", resourceCulture);
@@ -147,6 +156,15 @@ namespace Kursach_Luzin_Patrakov_321.Properties {
         public static string UserID {
             get {
                 return ResourceManager.GetString("UserID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на .
+        /// </summary>
+        public static string Vendorid {
+            get {
+                return ResourceManager.GetString("Vendorid", resourceCulture);
             }
         }
     }

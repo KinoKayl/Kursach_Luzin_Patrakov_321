@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:Kursach_Luzin_Patrakov_321"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="InfoWindow" Height="450" Width="800">
+        Title="InfoWindow" Height="450" Width="800"
+        Loaded="Window_Loaded">
     <Grid>
         <Grid.Background>
             <RadialGradientBrush GradientOrigin="1,1" Center="1,1" RadiusY="1" RadiusX="1">
@@ -18,7 +19,7 @@
         <DataGrid x:Name="InfoDataGrid" AutoGenerateColumns="True" ItemsSource="{Binding MyCollection}" Margin="0,0,0,123" Background="{x:Null}">
             
         </DataGrid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="34,367,0,0" VerticalAlignment="Top" Height="31" Width="66" Click="Button_Click"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="34,367,0,0" VerticalAlignment="Top" Height="31" Width="66" Click="Add_Button_Click"/>
 
     </Grid>
 </Window>

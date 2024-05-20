@@ -1,32 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Kursach_Luzin_Patrakov_321.AdminPages
 {
-    /// <summary>
-    /// Interaction logic for UsersPage.xaml
-    /// </summary>
     public partial class UsersPage : Page
     {
         Kursach_Luzin_Patrakov_321Entities db = new Kursach_Luzin_Patrakov_321Entities();
+
         public UsersPage()
         {
             InitializeComponent();
             AddButton.Click += AddButton_Click;
             DeleteButton.Click += DeleteButton_Click;
+            SaveButton.Click += SaveButton_Click;
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
@@ -36,7 +25,7 @@ namespace Kursach_Luzin_Patrakov_321.AdminPages
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
-            var userForm = new UserForm(); 
+            var userForm = new UserForm();
             userForm.ShowDialog();
 
             if (userForm.DialogResult.HasValue && userForm.DialogResult.Value)
@@ -44,7 +33,7 @@ namespace Kursach_Luzin_Patrakov_321.AdminPages
                 var newUser = new Users
                 {
                     Login = userForm.Login,
-                    Password = userForm.Password, 
+                    Password = userForm.Password,
                     LastName = userForm.LastName,
                     FirstName = userForm.FirstName,
                     Gender = userForm.Gender,
@@ -88,7 +77,6 @@ namespace Kursach_Luzin_Patrakov_321.AdminPages
             public string FirstName { get; set; }
             public string Gender { get; set; }
             public string Role { get; set; }
-
         }
 
         private void RefreshDataGrid()
@@ -102,15 +90,41 @@ namespace Kursach_Luzin_Patrakov_321.AdminPages
                             LastName = user.LastName,
                             FirstName = user.FirstName,
                             Gender = user.Gender,
-                            Role = user.Role,
-
+                            Role = user.Role
                         };
             UsersDataGrid.ItemsSource = query.ToList();
         }
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
-        {    
-            db.SaveChanges();
+        {
+            foreach (var item in UsersDataGrid.ItemsSource)
+            {
+                var userViewModel = item as UserViewModel;
+                if (userViewModel != null)
+                {
+                    var user = db.Users.Find(userViewModel.UserID);
+                    if (user != null)
+                    {
+                        user.Login = userViewModel.Login;
+                        user.Password = userViewModel.Password;
+                        user.LastName = userViewModel.LastName;
+                        user.FirstName = userViewModel.FirstName;
+                        user.Gender = userViewModel.Gender;
+                        user.Role = userViewModel.Role;
+                    }
+                }
+            }
+
+            try
+            {
+                db.SaveChanges();
+                MessageBox.Show("Изменения сохранены успешно.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ошибка при сохранении изменений: " + ex.Message);
+            }
         }
     }
 }
+

@@ -95,7 +95,7 @@
             <Button x:Name="EventsButton" Content="EVENTS" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="190" Margin="10,10,0,0" Background="{x:Null}" FontSize="22" BorderBrush="{x:Null}" Foreground="White" Click="EventsButton_Click"/>
             <Button x:Name="AboutUsButton" Content="ABOUT US" Height="80" VerticalAlignment="Top" Width="172" Margin="15,10,0,0" Background="{x:Null}" FontSize="22" BorderBrush="{x:Null}" Foreground="White" Click="AboutUsButton_Click"/>
             <Button x:Name="AdminButton" Content="ADMINISTRATION" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Visibility="Hidden" Width="190" Margin="20,10,0,0" Background="{x:Null}" FontSize="22" BorderBrush="{x:Null}" Foreground="White" Click="AdminButton_Click"/>
-
+            <Button x:Name="VendorButton" Content="VENDOR" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Visibility="Hidden" Width="190" Margin="-190,10,0,0" Background="{x:Null}" FontSize="22" BorderBrush="{x:Null}" Foreground="White" Click="VendorButton_Click"/>
         </StackPanel>
 
         <Label Content="" HorizontalAlignment="Left" Margin="916,463,0,0" VerticalAlignment="Top" Height="380" Width="297" BorderBrush="Black">

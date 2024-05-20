@@ -32,6 +32,7 @@ namespace Kursach_Luzin_Patrakov_321
         public virtual DbSet<InvitedUsers> InvitedUsers { get; set; }
         public virtual DbSet<LocationParticipants> LocationParticipants { get; set; }
         public virtual DbSet<Locations> Locations { get; set; }
+        public virtual DbSet<News> News { get; set; }
         public virtual DbSet<Organizers> Organizers { get; set; }
         public virtual DbSet<Photos> Photos { get; set; }
         public virtual DbSet<PurchasedItems> PurchasedItems { get; set; }

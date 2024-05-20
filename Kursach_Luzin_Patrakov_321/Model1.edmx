@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Хранилище Kursach_Luzin_Patrakov_321_model" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="Хранилище Kursach_Luzin_Patrakov_321Model" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Addresses">
           <Key>
             <PropertyRef Name="AddressID" />
@@ -71,6 +71,14 @@
           <Property Name="AddressID" Type="int" Nullable="false" />
           <Property Name="Description" Type="nvarchar(max)" />
         </EntityType>
+        <EntityType Name="News">
+          <Key>
+            <PropertyRef Name="NewsID" />
+          </Key>
+          <Property Name="NewsID" Type="int" Nullable="false" />
+          <Property Name="Newsdate" Type="nvarchar(max)" />
+          <Property Name="title" Type="nvarchar(max)" />
+        </EntityType>
         <EntityType Name="Organizers">
           <Key>
             <PropertyRef Name="OrganizerID" />
@@ -97,7 +105,8 @@
           <Property Name="Item" Type="varchar" MaxLength="100" />
           <Property Name="Quantity" Type="int" />
           <Property Name="Amount" Type="decimal" Precision="10" Scale="2" />
-          <Property Name="PurchaseDate" Type="date" />
+          <Property Name="PurchaseDate" Type="nvarchar" MaxLength="50" />
+          <Property Name="Stall" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Reviews">
           <Key>
@@ -131,7 +140,7 @@
           <Key>
             <PropertyRef Name="StallID" />
           </Key>
-          <Property Name="StallID" Type="int" Nullable="false" />
+          <Property Name="StallID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="LocationID" Type="int" />
           <Property Name="VendorID" Type="int" />
           <Property Name="StallName" Type="varchar" MaxLength="100" />
@@ -182,7 +191,7 @@
           <Key>
             <PropertyRef Name="VendorID" />
           </Key>
-          <Property Name="VendorID" Type="int" Nullable="false" />
+          <Property Name="VendorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="UserID" Type="int" />
           <Property Name="CompanyName" Type="varchar" MaxLength="100" />
           <Property Name="ContactInfoID" Type="int" />
@@ -487,6 +496,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_PurchasedItems_Stalls">
+          <End Role="Stalls" Type="Self.Stalls" Multiplicity="1" />
+          <End Role="PurchasedItems" Type="Self.PurchasedItems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Stalls">
+              <PropertyRef Name="StallID" />
+            </Principal>
+            <Dependent Role="PurchasedItems">
+              <PropertyRef Name="Stall" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Schedule_Events">
           <End Role="Events" Type="Self.Events" Multiplicity="1" />
           <End Role="Schedule" Type="Self.Schedule" Multiplicity="*" />
@@ -499,7 +520,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="Хранилище Kursach_Luzin_Patrakov_321_modelContainer">
+        <EntityContainer Name="Хранилище Kursach_Luzin_Patrakov_321ModelContainer">
           <EntitySet Name="Addresses" EntityType="Self.Addresses" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ContactInfo" EntityType="Self.ContactInfo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Cosplayers" EntityType="Self.Cosplayers" Schema="dbo" store:Type="Tables" />
@@ -507,6 +528,7 @@
           <EntitySet Name="InvitedUsers" EntityType="Self.InvitedUsers" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="LocationParticipants" EntityType="Self.LocationParticipants" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Locations" EntityType="Self.Locations" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="News" EntityType="Self.News" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Organizers" EntityType="Self.Organizers" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Photos" EntityType="Self.Photos" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PurchasedItems" EntityType="Self.PurchasedItems" Schema="dbo" store:Type="Tables" />
@@ -619,6 +641,10 @@
             <End Role="Addresses" EntitySet="Addresses" />
             <End Role="Locations" EntitySet="Locations" />
           </AssociationSet>
+          <AssociationSet Name="FK_PurchasedItems_Stalls" Association="Self.FK_PurchasedItems_Stalls">
+            <End Role="Stalls" EntitySet="Stalls" />
+            <End Role="PurchasedItems" EntitySet="PurchasedItems" />
+          </AssociationSet>
           <AssociationSet Name="FK_Schedule_Events" Association="Self.FK_Schedule_Events">
             <End Role="Events" EntitySet="Events" />
             <End Role="Schedule" EntitySet="Schedule" />
@@ -628,7 +654,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="Kursach_Luzin_Patrakov_321_model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="Kursach_Luzin_Patrakov_321Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Addresses">
           <Key>
             <PropertyRef Name="AddressID" />
@@ -717,6 +743,14 @@
           <NavigationProperty Name="Stalls" Relationship="Self.FK__Stalls__Location__4B7734FF" FromRole="Locations" ToRole="Stalls" />
           <NavigationProperty Name="Tickets" Relationship="Self.FK__Tickets__Locatio__286302EC" FromRole="Locations" ToRole="Tickets" />
         </EntityType>
+        <EntityType Name="News">
+          <Key>
+            <PropertyRef Name="NewsID" />
+          </Key>
+          <Property Name="NewsID" Type="Int32" Nullable="false" />
+          <Property Name="Newsdate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
         <EntityType Name="Organizers">
           <Key>
             <PropertyRef Name="OrganizerID" />
@@ -747,8 +781,10 @@
           <Property Name="Item" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="Quantity" Type="Int32" />
           <Property Name="Amount" Type="Decimal" Precision="10" Scale="2" />
-          <Property Name="PurchaseDate" Type="DateTime" Precision="0" />
+          <Property Name="PurchaseDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Stall" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Users" Relationship="Self.FK__Purchased__UserI__6BE40491" FromRole="PurchasedItems" ToRole="Users" />
+          <NavigationProperty Name="Stalls" Relationship="Self.FK_PurchasedItems_Stalls" FromRole="PurchasedItems" ToRole="Stalls" />
         </EntityType>
         <EntityType Name="Reviews">
           <Key>
@@ -787,12 +823,13 @@
           <Key>
             <PropertyRef Name="StallID" />
           </Key>
-          <Property Name="StallID" Type="Int32" Nullable="false" />
+          <Property Name="StallID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="LocationID" Type="Int32" />
           <Property Name="VendorID" Type="Int32" />
           <Property Name="StallName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Locations" Relationship="Self.FK__Stalls__Location__4B7734FF" FromRole="Stalls" ToRole="Locations" />
+          <NavigationProperty Name="PurchasedItems" Relationship="Self.FK_PurchasedItems_Stalls" FromRole="Stalls" ToRole="PurchasedItems" />
           <NavigationProperty Name="Vendors" Relationship="Self.FK__Stalls__VendorID__4C6B5938" FromRole="Stalls" ToRole="Vendors" />
         </EntityType>
         <EntityType Name="sysdiagrams">
@@ -855,7 +892,7 @@
           <Key>
             <PropertyRef Name="VendorID" />
           </Key>
-          <Property Name="VendorID" Type="Int32" Nullable="false" />
+          <Property Name="VendorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="UserID" Type="Int32" />
           <Property Name="CompanyName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="ContactInfoID" Type="Int32" />
@@ -1103,6 +1140,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_PurchasedItems_Stalls">
+          <End Role="Stalls" Type="Self.Stalls" Multiplicity="1" />
+          <End Role="PurchasedItems" Type="Self.PurchasedItems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Stalls">
+              <PropertyRef Name="StallID" />
+            </Principal>
+            <Dependent Role="PurchasedItems">
+              <PropertyRef Name="Stall" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__Reviews__UserID__403A8C7D">
           <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
           <End Role="Reviews" Type="Self.Reviews" Multiplicity="*" />
@@ -1183,6 +1232,7 @@
           <EntitySet Name="InvitedUsers" EntityType="Self.InvitedUsers" />
           <EntitySet Name="LocationParticipants" EntityType="Self.LocationParticipants" />
           <EntitySet Name="Locations" EntityType="Self.Locations" />
+          <EntitySet Name="News" EntityType="Self.News" />
           <EntitySet Name="Organizers" EntityType="Self.Organizers" />
           <EntitySet Name="Photos" EntityType="Self.Photos" />
           <EntitySet Name="PurchasedItems" EntityType="Self.PurchasedItems" />
@@ -1275,6 +1325,10 @@
             <End Role="Users" EntitySet="Users" />
             <End Role="PurchasedItems" EntitySet="PurchasedItems" />
           </AssociationSet>
+          <AssociationSet Name="FK_PurchasedItems_Stalls" Association="Self.FK_PurchasedItems_Stalls">
+            <End Role="Stalls" EntitySet="Stalls" />
+            <End Role="PurchasedItems" EntitySet="PurchasedItems" />
+          </AssociationSet>
           <AssociationSet Name="FK__Reviews__UserID__403A8C7D" Association="Self.FK__Reviews__UserID__403A8C7D">
             <End Role="Users" EntitySet="Users" />
             <End Role="Reviews" EntitySet="Reviews" />
@@ -1305,9 +1359,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище Kursach_Luzin_Patrakov_321_modelContainer" CdmEntityContainer="Kursach_Luzin_Patrakov_321Entities">
+        <EntityContainerMapping StorageEntityContainer="Хранилище Kursach_Luzin_Patrakov_321ModelContainer" CdmEntityContainer="Kursach_Luzin_Patrakov_321Entities">
           <EntitySetMapping Name="Addresses">
-            <EntityTypeMapping TypeName="Kursach_Luzin_Patrakov_321_model.Addresses">
+            <EntityTypeMapping TypeName="Kursach_Luzin_Patrakov_321Model.Addresses">
               <MappingFragment StoreEntitySet="Addresses">
                 <ScalarProperty Name="AddressID" ColumnName="AddressID" />
                 <ScalarProperty Name="Country" ColumnName="Country" />
@@ -1318,7 +1372,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ContactInfo">
-            <EntityTypeMapping TypeName="Kursach_Luzin_Patrakov_321_model.ContactInfo">
+            <EntityTypeMapping TypeName="Kursach_Luzin_Patrakov_321Model.ContactInfo">
               <MappingFragment StoreEntitySet="ContactInfo">
                 <ScalarProperty Name="ContactID" ColumnName="ContactID" />
                 <ScalarProperty Name="UserID" ColumnName="UserID" />
@@ -1328,7 +1382,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Cosplayers">
-            <EntityTypeMapping TypeName="Kursach_Luzin_Patrakov_321_model.Cosplayers">
+            <EntityTypeMapping TypeName="Kursach_Luzin_Patrakov_321Model.Cosplayers">
               <MappingFragment StoreEntitySet="Cosplayers">
                 <ScalarProperty Name="CosplayerID" ColumnName="CosplayerID" />
                 <ScalarProperty Name="UserID" ColumnName="UserID" />
@@ -1338,7 +1392,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Events">
-            <EntityTypeMapping TypeName="Kursach_Luzin_Patrakov_321_model.Events">
+            <EntityTypeMapping TypeName="Kursach_Luzin_Patrakov_321Model.Events">
               <MappingFragment StoreEntitySet="Events">
                 <ScalarProperty Name="EventID" ColumnName="EventID" />
                 <ScalarProperty Name="LocationID" ColumnName="LocationID" />
@@ -1348,7 +1402,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="InvitedUsers">
-            <EntityTypeMapping TypeName="Kursach_Luzin_Patrakov_321_model.InvitedUsers">
+            <EntityTypeMapping TypeName="Kursach_Luzin_Patrakov_321Model.InvitedUsers">
               <MappingFragment StoreEntitySet="InvitedUsers">
                 <ScalarProperty Name="InvitationID" ColumnName="InvitationID" />
                 <ScalarProperty Name="UserID" ColumnName="UserID" />
@@ -1357,7 +1411,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="LocationParticipants">
-            <EntityTypeMapping TypeName="Kursach_Luzin_Patrakov_321_model.LocationParticipants">
+            <EntityTypeMapping TypeName="Kursach_Luzin_Patrakov_321Model.LocationParticipants">
               <MappingFragment StoreEntitySet="LocationParticipants">
                 <ScalarProperty Name="ParticipantID" ColumnName="ParticipantID" />
                 <ScalarProperty Name="UserID" ColumnName="UserID" />
@@ -1368,7 +1422,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Locations">
-            <EntityTypeMapping TypeName="Kursach_Luzin_Patrakov_321_model.Locations">
+            <EntityTypeMapping TypeName="Kursach_Luzin_Patrakov_321Model.Locations">
               <MappingFragment StoreEntitySet="Locations">
                 <ScalarProperty Name="LocationID" ColumnName="LocationID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -1379,8 +1433,17 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="News">
+            <EntityTypeMapping TypeName="Kursach_Luzin_Patrakov_321Model.News">
+              <MappingFragment StoreEntitySet="News">
+                <ScalarProperty Name="NewsID" ColumnName="NewsID" />
+                <ScalarProperty Name="Newsdate" ColumnName="Newsdate" />
+                <ScalarProperty Name="title" ColumnName="title" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Organizers">
-            <EntityTypeMapping TypeName="Kursach_Luzin_Patrakov_321_model.Organizers">
+            <EntityTypeMapping TypeName="Kursach_Luzin_Patrakov_321Model.Organizers">
               <MappingFragment StoreEntitySet="Organizers">
                 <ScalarProperty Name="OrganizerID" ColumnName="OrganizerID" />
                 <ScalarProperty Name="UserID" ColumnName="UserID" />
@@ -1389,7 +1452,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Photos">
-            <EntityTypeMapping TypeName="Kursach_Luzin_Patrakov_321_model.Photos">
+            <EntityTypeMapping TypeName="Kursach_Luzin_Patrakov_321Model.Photos">
               <MappingFragment StoreEntitySet="Photos">
                 <ScalarProperty Name="PhotoID" ColumnName="PhotoID" />
                 <ScalarProperty Name="Photo" ColumnName="Photo" />
@@ -1399,7 +1462,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="PurchasedItems">
-            <EntityTypeMapping TypeName="Kursach_Luzin_Patrakov_321_model.PurchasedItems">
+            <EntityTypeMapping TypeName="Kursach_Luzin_Patrakov_321Model.PurchasedItems">
               <MappingFragment StoreEntitySet="PurchasedItems">
                 <ScalarProperty Name="PurchaseID" ColumnName="PurchaseID" />
                 <ScalarProperty Name="UserID" ColumnName="UserID" />
@@ -1407,11 +1470,12 @@
                 <ScalarProperty Name="Quantity" ColumnName="Quantity" />
                 <ScalarProperty Name="Amount" ColumnName="Amount" />
                 <ScalarProperty Name="PurchaseDate" ColumnName="PurchaseDate" />
+                <ScalarProperty Name="Stall" ColumnName="Stall" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Reviews">
-            <EntityTypeMapping TypeName="Kursach_Luzin_Patrakov_321_model.Reviews">
+            <EntityTypeMapping TypeName="Kursach_Luzin_Patrakov_321Model.Reviews">
               <MappingFragment StoreEntitySet="Reviews">
                 <ScalarProperty Name="ReviewID" ColumnName="ReviewID" />
                 <ScalarProperty Name="UserID" ColumnName="UserID" />
@@ -1422,7 +1486,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Sales">
-            <EntityTypeMapping TypeName="Kursach_Luzin_Patrakov_321_model.Sales">
+            <EntityTypeMapping TypeName="Kursach_Luzin_Patrakov_321Model.Sales">
               <MappingFragment StoreEntitySet="Sales">
                 <ScalarProperty Name="SaleID" ColumnName="SaleID" />
                 <ScalarProperty Name="UserID" ColumnName="UserID" />
@@ -1432,7 +1496,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Schedule">
-            <EntityTypeMapping TypeName="Kursach_Luzin_Patrakov_321_model.Schedule">
+            <EntityTypeMapping TypeName="Kursach_Luzin_Patrakov_321Model.Schedule">
               <MappingFragment StoreEntitySet="Schedule">
                 <ScalarProperty Name="ScheduleID" ColumnName="ScheduleID" />
                 <ScalarProperty Name="LocationID" ColumnName="LocationID" />
@@ -1442,7 +1506,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Stalls">
-            <EntityTypeMapping TypeName="Kursach_Luzin_Patrakov_321_model.Stalls">
+            <EntityTypeMapping TypeName="Kursach_Luzin_Patrakov_321Model.Stalls">
               <MappingFragment StoreEntitySet="Stalls">
                 <ScalarProperty Name="StallID" ColumnName="StallID" />
                 <ScalarProperty Name="LocationID" ColumnName="LocationID" />
@@ -1453,7 +1517,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="Kursach_Luzin_Patrakov_321_model.sysdiagrams">
+            <EntityTypeMapping TypeName="Kursach_Luzin_Patrakov_321Model.sysdiagrams">
               <MappingFragment StoreEntitySet="sysdiagrams">
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -1464,7 +1528,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="TicketInfo">
-            <EntityTypeMapping TypeName="Kursach_Luzin_Patrakov_321_model.TicketInfo">
+            <EntityTypeMapping TypeName="Kursach_Luzin_Patrakov_321Model.TicketInfo">
               <MappingFragment StoreEntitySet="TicketInfo">
                 <ScalarProperty Name="TicketInfoID" ColumnName="TicketInfoID" />
                 <ScalarProperty Name="TicketID" ColumnName="TicketID" />
@@ -1473,7 +1537,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Tickets">
-            <EntityTypeMapping TypeName="Kursach_Luzin_Patrakov_321_model.Tickets">
+            <EntityTypeMapping TypeName="Kursach_Luzin_Patrakov_321Model.Tickets">
               <MappingFragment StoreEntitySet="Tickets">
                 <ScalarProperty Name="TicketID" ColumnName="TicketID" />
                 <ScalarProperty Name="LocationID" ColumnName="LocationID" />
@@ -1485,7 +1549,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Users">
-            <EntityTypeMapping TypeName="Kursach_Luzin_Patrakov_321_model.Users">
+            <EntityTypeMapping TypeName="Kursach_Luzin_Patrakov_321Model.Users">
               <MappingFragment StoreEntitySet="Users">
                 <ScalarProperty Name="UserID" ColumnName="UserID" />
                 <ScalarProperty Name="Login" ColumnName="Login" />
@@ -1498,7 +1562,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Vendors">
-            <EntityTypeMapping TypeName="Kursach_Luzin_Patrakov_321_model.Vendors">
+            <EntityTypeMapping TypeName="Kursach_Luzin_Patrakov_321Model.Vendors">
               <MappingFragment StoreEntitySet="Vendors">
                 <ScalarProperty Name="VendorID" ColumnName="VendorID" />
                 <ScalarProperty Name="UserID" ColumnName="UserID" />

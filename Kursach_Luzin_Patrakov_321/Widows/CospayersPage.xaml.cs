@@ -19,6 +19,7 @@ namespace Kursach_Luzin_Patrakov_321
     /// </summary>
     public partial class CospayersPage : Window
     {
+        Kursach_Luzin_Patrakov_321Entities db = new Kursach_Luzin_Patrakov_321Entities();
         public CospayersPage()
         {
             InitializeComponent();
@@ -110,9 +111,6 @@ namespace Kursach_Luzin_Patrakov_321
                 this.Close();
 
             }
-
-
-            //Из CostumeNameTextBlock_memory занести в бд
         }
 
         private void Window_Closed(object sender, EventArgs e)

@@ -10,9 +10,21 @@
       Loaded="Page_Loaded">
 
     <Grid>
-        <DataGrid x:Name="UsersDataGrid"  Margin="0,0,0,255"  IsReadOnly="False"/>
-        <Button x:Name="AddButton" Content="Добавить" Margin="34,368,641,33"></Button>
-        <Button x:Name="DeleteButton" Content="Удалить" Margin="188,368,490,33"></Button>
-        <Button x:Name="SaveButton" Content="Сохранить" HorizontalAlignment="Left" Margin="335,368,0,0" VerticalAlignment="Top" Width="122" Height="49" Click="SaveButton_Click"/>
+        <DataGrid x:Name="UsersDataGrid" Margin="0,0,0,255" IsReadOnly="False" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="UserID" Binding="{Binding UserID}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Login" Binding="{Binding Login}"/>
+                <DataGridTextColumn Header="Password" Binding="{Binding Password}"/>
+                <DataGridTextColumn Header="LastName" Binding="{Binding LastName}"/>
+                <DataGridTextColumn Header="FirstName" Binding="{Binding FirstName}"/>
+                <DataGridTextColumn Header="Gender" Binding="{Binding Gender}"/>
+                <DataGridTextColumn Header="Role" Binding="{Binding Role}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <StackPanel Margin="66,342,277,59" Orientation="Horizontal">
+            <Button x:Name="AddButton" Content="Добавить" Width="122" Height="49" Margin="0,0,0,0"/>
+            <Button x:Name="DeleteButton" Content="Удалить" Width="122" Height="49" Margin="20,0,0,0"/>
+            <Button x:Name="SaveButton" Content="Сохранить" Margin="20,0,0,0" Width="122" Height="49"/>
+        </StackPanel>
     </Grid>
 </Page>

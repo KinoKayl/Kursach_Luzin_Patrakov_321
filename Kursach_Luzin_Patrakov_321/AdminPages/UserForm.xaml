@@ -41,7 +41,9 @@
 
         <Label Grid.Row="5" Grid.Column="0" Content="Роль:"/>
         <ComboBox Grid.Row="5" Grid.Column="1" x:Name="RoleComboBox">
-            <!-- Здесь должны быть добавлены элементы ComboBoxItem с ролями -->
+            <ComboBoxItem Content="User"></ComboBoxItem>
+            <ComboBoxItem Content="Admin"></ComboBoxItem>
+            <ComboBoxItem Content="Vendor"></ComboBoxItem>
         </ComboBox>
 
         <StackPanel Grid.Row="6" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right">

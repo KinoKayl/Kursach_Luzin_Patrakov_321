@@ -12,17 +12,10 @@ namespace Kursach_Luzin_Patrakov_321
     using System;
     using System.Collections.Generic;
     
-    public partial class PurchasedItems
+    public partial class News
     {
-        public int PurchaseID { get; set; }
-        public Nullable<int> UserID { get; set; }
-        public string Item { get; set; }
-        public Nullable<int> Quantity { get; set; }
-        public Nullable<decimal> Amount { get; set; }
-        public string PurchaseDate { get; set; }
-        public int Stall { get; set; }
-    
-        public virtual Users Users { get; set; }
-        public virtual Stalls Stalls { get; set; }
+        public int NewsID { get; set; }
+        public string Newsdate { get; set; }
+        public string title { get; set; }
     }
 }

@@ -1,0 +1,32 @@
+﻿<Window x:Class="Kursach_Luzin_Patrakov_321.Widows.NewsForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kursach_Luzin_Patrakov_321.Widows"
+        mc:Ignorable="d"
+        Title="NewsForm" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Content="Дата новости:"></Label>
+        <TextBox Grid.Row="0" Grid.Column="1" x:Name="NewsDataTextBox"/>
+
+        <Label Grid.Row="1" Grid.Column="0" Content="Новость:"/>
+        <TextBox Grid.Row="1" Grid.Column="1" x:Name="NewsTitleTextBox"/>
+
+        <StackPanel Grid.Row="6" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Content="Отмена" Click="CancelButton_Click"/>
+            <Button Content="Подтвердить" Click="ConfirmButton_Click" Margin="10,0,0,0"/>
+        </StackPanel>
+    </Grid>
+</Window>

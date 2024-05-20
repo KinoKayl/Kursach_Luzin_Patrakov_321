@@ -112,6 +112,15 @@ namespace Kursach_Luzin_Patrakov_321
                     CospayersPage cospayers = new CospayersPage();
                     cospayers.ShowDialog();
                     CosName_memory.Text = (string)App.Current.Resources["CosName"];
+                    Cosplayers newCosplayers = new Cosplayers
+                    {
+                        UserID = userId,
+                        LocationID = locationId,
+                        Costume = (string)App.Current.Resources["CosName"]
+                    };
+
+                    db.Cosplayers.Add(newCosplayers);
+                    db.SaveChanges();
                 }
 
                 //Функционал кнопки
@@ -134,6 +143,7 @@ namespace Kursach_Luzin_Patrakov_321
 
 
 
+
                 db.Tickets.Add(newTicket);
                 db.Sales.Add(sales);
                 // Сохранение изменений в базе данных
@@ -149,11 +159,11 @@ namespace Kursach_Luzin_Patrakov_321
 
         private void BuyButton_Click(object sender, RoutedEventArgs e)
         {
-            Console.WriteLine($"Location Type: {App.Current.Resources["Location"]?.GetType()} - Value: {App.Current.Resources["Location"]}");
+         /* Console.WriteLine($"Location Type: {App.Current.Resources["Location"]?.GetType()} - Value: {App.Current.Resources["Location"]}");
             Console.WriteLine($"TicketType Type: {App.Current.Resources["TicketType"]?.GetType()} - Value: {App.Current.Resources["TicketType"]}");
             Console.WriteLine($"Price Type: {App.Current.Resources["Price"]?.GetType()} - Value: {App.Current.Resources["Price"]}");
             Console.WriteLine($"Date Type: {App.Current.Resources["Date"]?.GetType()} - Value: {App.Current.Resources["Date"]}");
-            Console.WriteLine($"UserID Type: {App.Current.Resources["UserID"]?.GetType()} - Value: {App.Current.Resources["UserID"]}");
+            Console.WriteLine($"UserID Type: {App.Current.Resources["UserID"]?.GetType()} - Value: {App.Current.Resources["UserID"]}");*/
 
 
 

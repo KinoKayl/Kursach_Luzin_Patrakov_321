@@ -129,6 +129,9 @@
   <data name="isAdmin" xml:space="preserve">
     <value />
   </data>
+  <data name="isVendor" xml:space="preserve">
+    <value />
+  </data>
   <data name="Location" xml:space="preserve">
     <value />
   </data>
@@ -145,6 +148,9 @@
     <value />
   </data>
   <data name="UserID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Vendorid" xml:space="preserve">
     <value />
   </data>
 </root>

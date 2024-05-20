@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Kursach_Luzin_Patrakov_321.Widows;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,10 +29,16 @@ namespace Kursach_Luzin_Patrakov_321
             auth.ShowDialog(); 
 
             
+            if (App.Current.Resources.Contains("isVendor") && App.Current.Resources["isVendor"] == "true")
+            {
+                VendorButton.Visibility = Visibility.Visible;
+                AdminRectangle.Visibility = Visibility.Visible; 
+            }
+
             if (App.Current.Resources.Contains("isAdmin") && App.Current.Resources["isAdmin"] == "true")
             {
                 AdminButton.Visibility = Visibility.Visible;
-                AdminRectangle.Visibility = Visibility.Visible; 
+                AdminRectangle.Visibility = Visibility.Visible;
             }
         }
 
@@ -71,6 +78,12 @@ namespace Kursach_Luzin_Patrakov_321
         {
             AdminWindow AdminWindow = new AdminWindow();
             AdminWindow.Show();
+        }
+
+        private void VendorButton_Click(object sender, RoutedEventArgs e)
+        {
+            VendorWindow vendorWindow = new VendorWindow();
+            vendorWindow.Show();
         }
     }
 }

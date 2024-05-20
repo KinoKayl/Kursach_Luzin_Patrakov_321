@@ -93,6 +93,18 @@ namespace Kursach_Luzin_Patrakov_321
             return user != null && user.Role == "Admin";
         }
 
+        public bool isVendor(string UserLogin, string UserPassword)
+        {
+            Kursach_Luzin_Patrakov_321Entities db = new Kursach_Luzin_Patrakov_321Entities();
+
+            // Проверяем, существует ли пользователь с таким логином и паролем
+            Users user = db.Users.AsNoTracking().FirstOrDefault(u => u.Login == UserLogin && u.Password == UserPassword);
+
+            return user != null && user.Role == "Vendor";
+        }
+
+
+
         public bool Auth(string UserLogin, string UserPassword)
         {
             Kursach_Luzin_Patrakov_321Entities db = new Kursach_Luzin_Patrakov_321Entities();
@@ -118,6 +130,22 @@ namespace Kursach_Luzin_Patrakov_321
                 if (isAdmin(UserLogin, UserPassword))
                 {
                     App.Current.Resources["isAdmin"] = "true";
+                }
+                if (isVendor(UserLogin, UserPassword))
+                {
+                    App.Current.Resources["isVendor"] = "true";
+                    if ((string)App.Current.Resources["FstResourse"] == "Vendor_1")
+                    {
+                        App.Current.Resources["Vendorid"] = 1;
+                    }
+                    if ((string)App.Current.Resources["FstResourse"] == "Vendor_2")
+                    {
+                        App.Current.Resources["Vendorid"] = 2;
+                    }
+                    if ((string)App.Current.Resources["FstResourse"] == "Vendor_3")
+                    {
+                        App.Current.Resources["Vendorid"] = 3;
+                    }
                 }
             }
             else

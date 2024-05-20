@@ -14,6 +14,12 @@ namespace Kursach_Luzin_Patrakov_321
     
     public partial class Stalls
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Stalls()
+        {
+            this.PurchasedItems = new HashSet<PurchasedItems>();
+        }
+    
         public int StallID { get; set; }
         public Nullable<int> LocationID { get; set; }
         public Nullable<int> VendorID { get; set; }
@@ -21,6 +27,8 @@ namespace Kursach_Luzin_Patrakov_321
         public string Description { get; set; }
     
         public virtual Locations Locations { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PurchasedItems> PurchasedItems { get; set; }
         public virtual Vendors Vendors { get; set; }
     }
 }

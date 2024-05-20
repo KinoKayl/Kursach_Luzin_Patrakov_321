@@ -13,10 +13,10 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Kursach_Luzin_Patrakov_321.AdminPages
+namespace Kursach_Luzin_Patrakov_321.VendorPages
 {
     /// <summary>
-    /// Interaction logic for StallsPage.xaml
+    /// Логика взаимодействия для StallsPage.xaml
     /// </summary>
     public partial class StallsPage : Page
     {
@@ -47,22 +47,7 @@ namespace Kursach_Luzin_Patrakov_321.AdminPages
                             StallName = Stalls.StallName,
                             Description = Stalls.Description
                         };
-            StallsDataGrid.ItemsSource = query.ToList();
-        }
-
-        private void AddButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void DeleteButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void SaveButton_Click(object sender, RoutedEventArgs e)
-        {
-
+            StallsPageDataGrid.ItemsSource = query.ToList();
         }
     }
 }

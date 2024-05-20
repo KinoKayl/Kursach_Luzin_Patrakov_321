@@ -6,9 +6,10 @@
       xmlns:local="clr-namespace:Kursach_Luzin_Patrakov_321.AdminPages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="CosplayerPageAdmin">
+      Title="CosplayerPageAdmin"
+      Loaded="Page_Loaded">
 
     <Grid>
-        <DataGrid></DataGrid>
+        <DataGrid x:Name="CosplayersDataGrid"></DataGrid>
     </Grid>
 </Page>
