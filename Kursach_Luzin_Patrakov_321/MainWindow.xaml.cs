@@ -85,5 +85,11 @@ namespace Kursach_Luzin_Patrakov_321
             VendorWindow vendorWindow = new VendorWindow();
             vendorWindow.Show();
         }
+
+        private void TicketButton_Click(object sender, RoutedEventArgs e)
+        {
+            TicketWindow ticketWindow = new TicketWindow();
+            ticketWindow.Show();
+        }
     }
 }

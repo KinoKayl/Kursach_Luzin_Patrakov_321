@@ -47,7 +47,7 @@ namespace Kursach_Luzin_Patrakov_321.VendorPages
                             StallName = Stalls.StallName,
                             Description = Stalls.Description
                         };
-            StallsPageDataGrid.ItemsSource = query.ToList();
+            StallsPageDataGrid.ItemsSource =  query.ToList();
         }
     }
 }

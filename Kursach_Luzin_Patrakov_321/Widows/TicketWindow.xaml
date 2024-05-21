@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Kursach_Luzin_Patrakov_321.Widows"
         mc:Ignorable="d"
-        Title="TicketWindow" Height="515" Width="446.934">
+        Title="TicketWindow" Height="515" Width="446.934"
+        Loaded="Window_Loaded">
 
     <Window.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0,0">
@@ -17,7 +18,6 @@
     
     <Grid>
         <Label Margin="10,27" Background="White"/>
-        <TextBox x:Name="Ticket" Height="35" TextWrapping="Wrap" Text="Билет №" Width="104" FontSize="22" Margin="28,40,307,409" BorderBrush="{x:Null}"/>
-        <TextBox x:Name="Number"  Height="35" TextWrapping="Wrap" Text="0" FontSize="22" Margin="137,40,197,409" BorderBrush="{x:Null}"/>
+        <DataGrid x:Name="TicketDataGrid"></DataGrid>
     </Grid>
 </Window>

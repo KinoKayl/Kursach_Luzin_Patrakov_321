@@ -63,7 +63,6 @@ namespace Kursach_Luzin_Patrakov_321.VendorPages
 
             var vendorId = (int)App.Current.Resources["Vendorid"];
 
-            // Вычисляем сумму перемноженных значений Quantity и Amount
             var totalAmount = db.PurchasedItems
                                 .Where(purchasedItem => purchasedItem.Stall == vendorId)
                                 .Sum(purchasedItem => purchasedItem.Quantity * purchasedItem.Amount);

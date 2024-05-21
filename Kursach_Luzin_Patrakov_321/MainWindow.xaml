@@ -127,6 +127,19 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
+        <Button FontFamily="Montserrat" x:Name="TicketButton" Content="Мой билет" HorizontalAlignment="Left" VerticalAlignment="Top" Width="213" Margin="333,753,0,0" Height="75" Click="TicketButton_Click" FontSize="28" Foreground="#FFFFFCFC" BorderBrush="{x:Null}">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="1,0">
+                    <GradientStop Color="#FF07A7D6" Offset="0"/>
+                    <GradientStop Color="#FF007ACC" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
         <Label FontFamily="Montserrat" Content="ESCAPE FROM NANBA" HorizontalAlignment="Left" Margin="92,463,0,0" VerticalAlignment="Top" Height="60" Width="445" FontSize="36" Foreground="White" ToolTip="Фу анимешник"/>
         <Label FontFamily="Montserrat" Content="Аниме фестиваль по мотивам аниме&#xD;&#xA;Nanbaka" HorizontalAlignment="Left" Margin="92,525,0,0" VerticalAlignment="Top" Height="75" Width="445" FontSize="22" Foreground="White"/>
 

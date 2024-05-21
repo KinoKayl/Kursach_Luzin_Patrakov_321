@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Diagnostics;
 
 namespace Kursach_Luzin_Patrakov_321
 {
@@ -40,7 +41,28 @@ namespace Kursach_Luzin_Patrakov_321
                                 review.Rating
                             };
                 ReviewsDataGrid.ItemsSource = query.ToList();
+
             
+        }
+
+        private void UrlButton1_Click(object sender, RoutedEventArgs e)
+        {
+            string url = "https://vk.com/lo4d1ng"; // Замените на нужный вам URL
+            Process.Start(new ProcessStartInfo
+            {
+                FileName = url,
+                UseShellExecute = true
+            });
+        }
+
+        private void UrlButton2_Click(object sender, RoutedEventArgs e)
+        {
+            string url = "https://web.telegram.org/k/#@Just_Danya_xD"; // Замените на нужный вам URL
+            Process.Start(new ProcessStartInfo
+            {
+                FileName = url,
+                UseShellExecute = true
+            });
         }
     }
 }

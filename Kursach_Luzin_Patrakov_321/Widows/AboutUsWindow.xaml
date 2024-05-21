@@ -18,5 +18,34 @@
         </Grid.Background>
         <TextBlock HorizontalAlignment="Left" Margin="23,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"><Run Text="О нас"  FontSize="22" Foreground="White"/><LineBreak/><Run/></TextBlock>
         <DataGrid x:Name="ReviewsDataGrid" Margin="0,71,0,0" ></DataGrid>
+        <Button Content="Add_Button" HorizontalAlignment="Left" Margin="10,389,0,0" VerticalAlignment="Top" Width="50"/>
+        <Button x:Name="UrlButton1" Content="" HorizontalAlignment="Left" Margin="643,10,0,0" VerticalAlignment="Top" Width="47" Height="47" Click="UrlButton1_Click" BorderBrush="{x:Null}">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="25"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <ImageBrush ImageSource="1486147202-social-media-circled-network10_79475 (1).png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="UrlButton2" Content="" HorizontalAlignment="Left" Margin="711,10,0,0" VerticalAlignment="Top" Width="47" Height="47" Click="UrlButton2_Click" BorderBrush="{x:Null}">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="25"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <ImageBrush ImageSource="telegram_icon-icons.com_72055.png"/>
+            </Button.Background>
+        </Button>
+        <Label Content="" HorizontalAlignment="Left" Margin="431,4,0,0" VerticalAlignment="Top" Height="37" Width="32">
+            <Label.Background>
+                <ImageBrush ImageSource="mail-box-email-post-delivery-envelope_108534.png" RenderOptions.BitmapScalingMode="HighQuality"/>
+            </Label.Background>
+        </Label>
+        <TextBlock HorizontalAlignment="Left" Margin="472,13,0,0" TextWrapping="Wrap" Text="EscapeFromNan@gmail.com" VerticalAlignment="Top" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="489,46,0,0" TextWrapping="Wrap" Text="+7 (968) 945 18 45" VerticalAlignment="Top" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="430,46,0,0" TextWrapping="Wrap" Text="Телефон:" VerticalAlignment="Top" Foreground="White"/>
     </Grid>
 </Window>

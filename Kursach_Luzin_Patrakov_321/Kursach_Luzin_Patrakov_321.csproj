@@ -475,6 +475,9 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Resource Include="Widows\1486147202-social-media-circled-network10_79475 %281%29.png" />
+    <Resource Include="Widows\telegram_icon-icons.com_72055.png" />
+    <Resource Include="Widows\mail-box-email-post-delivery-envelope_108534.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
