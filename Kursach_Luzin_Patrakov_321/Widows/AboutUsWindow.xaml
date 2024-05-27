@@ -18,7 +18,6 @@
         </Grid.Background>
         <TextBlock HorizontalAlignment="Left" Margin="23,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"><Run Text="О нас"  FontSize="22" Foreground="White"/><LineBreak/><Run/></TextBlock>
         <DataGrid x:Name="ReviewsDataGrid" Margin="0,71,0,0" ></DataGrid>
-        <Button Content="Add_Button" HorizontalAlignment="Left" Margin="10,389,0,0" VerticalAlignment="Top" Width="50"/>
         <Button x:Name="UrlButton1" Content="" HorizontalAlignment="Left" Margin="643,10,0,0" VerticalAlignment="Top" Width="47" Height="47" Click="UrlButton1_Click" BorderBrush="{x:Null}">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
