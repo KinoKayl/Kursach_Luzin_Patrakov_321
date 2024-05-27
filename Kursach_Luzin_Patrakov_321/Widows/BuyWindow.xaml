@@ -197,7 +197,7 @@
         <TextBlock FontFamily="Montserrat" HorizontalAlignment="Left" Margin="92,187,0,0" TextWrapping="Wrap" Text="Адрес" VerticalAlignment="Top" FontSize="16" Foreground="White"/>
         <TextBlock FontFamily="Montserrat" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="93,235,0,0" Height="22" Width="40" FontSize="16" Foreground="White"><Run Text="Дата" FontFamily="Montserrat"/></TextBlock>
         <TextBlock FontFamily="Montserrat" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="93,278,0,0" Height="22" Width="114" FontSize="16" Text="Тип билета" Foreground="White"/>
-        <StackPanel Margin="163,239,190,340" Orientation="Horizontal">
+        <StackPanel Margin="163,239,190,328" Orientation="Horizontal">
             <RadioButton FontFamily="Montserrat" x:Name="FirstDateButton" Content=" . . ." VerticalAlignment="Top" FontSize="14" Margin="0,0,10,0" Foreground="White" Width="97" Checked="FirstDateButton_Checked">
                 <RadioButton.Resources>
                     <Style TargetType="{x:Type Border}">
@@ -286,7 +286,7 @@
         </Button>
         <TextBlock FontFamily="Montserrat" x:Name="TicketTextBlock" Text="Цена билета: " HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="93,446,0,0" Height="22" Width="114" FontSize="16" Foreground="White"/>
         <TextBlock FontFamily="Montserrat" x:Name="TicketPriceTextBlock" Text="" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="218,446,0,0" Height="22" Width="99" FontSize="16" Foreground="White"/>
-        <TextBlock x:Name="CosName_memory" HorizontalAlignment="Left" Margin="93,348,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="79" Width="371"/>
+        <TextBlock x:Name="CosName_memory" HorizontalAlignment="Left" Margin="93,348,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="79" Width="371" Visibility="Hidden"/>
         <Label Content="" HorizontalAlignment="Left" Margin="448,278,0,0" VerticalAlignment="Top" Width="25" Height="25">
             <Label.ToolTip>
                 <ToolTip>

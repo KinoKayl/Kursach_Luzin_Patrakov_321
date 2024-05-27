@@ -79,8 +79,9 @@ namespace Kursach_Luzin_Patrakov_321
             //FrameManager.MainFrame.Navigate(reg);
             MainFrame.Content = reg;
 
+            CancelButton.Visibility = Visibility.Visible;
             MainFrame.Visibility = Visibility.Visible;
-            
+            Canvas.SetZIndex(CancelButton, 5);
         }
 
         public bool isAdmin(string UserLogin, string UserPassword)
@@ -158,6 +159,16 @@ namespace Kursach_Luzin_Patrakov_321
         private void AuthButton_Click(object sender, RoutedEventArgs e)
         {
             Auth(LoginTextBox.Text, PassBox.Password);
+        }
+        public void close() 
+        {
+            Canvas.SetZIndex(CancelButton, -1);
+        }
+        private void CancelButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Visibility = Visibility.Hidden;
+            CancelButton.Visibility = Visibility.Hidden;
+            close();
         }
     }
 }

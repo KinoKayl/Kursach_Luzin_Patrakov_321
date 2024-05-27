@@ -87,18 +87,13 @@ namespace Kursach_Luzin_Patrakov_321
 
         //конец пропадающего текста
 
-        private void CancelButton_Click(object sender, RoutedEventArgs e)
-        {
-            AuthPage authPage = new AuthPage();
-            MainFrame.Content = authPage;
-        }
-
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
         {
             if (Registration(TextBoxUsername.Text, PasswordBox.Password, TextBoxFirstName.Text, TextBoxLastName.Text, ComboBoxGender.Text, "User"))
             {
-                AuthPage authPage = new AuthPage();
-                MainFrame.Content = authPage;
+                MessageBox.Show("Регистрация прошла успешно");
+                this.NavigationService.RemoveBackEntry();
+
             }
         }
 
@@ -158,7 +153,9 @@ namespace Kursach_Luzin_Patrakov_321
 
             db.Users.Add(userObject);
             db.SaveChanges();
-            MessageBox.Show("Регистрайия прошла успешно");
+            
+            AuthPage authPage = new AuthPage();
+            authPage.close();
             return true;
         }
     }

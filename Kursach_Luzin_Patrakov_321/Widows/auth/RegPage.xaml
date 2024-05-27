@@ -58,13 +58,6 @@
             </Button.Resources>
         </Button>
 
-        <Button x:Name="CancelButton" Content="Отмена" Grid.Row="7" Grid.Column="2" Margin="66,61,94,-35" Click="CancelButton_Click" ToolTip="Отменить регистрацию">
-            <Button.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="3"/>
-                </Style>
-            </Button.Resources>
-        </Button>
-        <Frame x:Name="MainFrame"  Visibility="Hidden" Content="" Margin="0,-16,0,0"></Frame>
+        
     </Grid>
 </Page>
